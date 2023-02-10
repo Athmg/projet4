@@ -1,0 +1,59 @@
+
+
+%txt-compsition-menu{
+    font-weight: 500px;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+%txt{
+    font-weight : 400px; // faire une fonction avec paramètres les tailles
+    font-size : 16px;
+    line-height: 18px
+}
+
+%titre-sect{
+    font-size: 24px;
+    font-weight: 700px;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+
+%titre-card-rest{
+    font-weight: 700px;
+    font-size: 18px; //eviter repetition?
+    line-height: 21px;
+}
+
+%titre-card-menu{
+    font-weight: 500px;
+    font-size: 18px; //eviter repetition?
+    line-height: 21px;
+}
+
+%titre-menu{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.grid {
+    display: grid;
+    row-gap: 1.5rem;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+}
+.flex-btwn{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.flex-arwd{
+    display: flex;
+    justify-content:space-around;
+}

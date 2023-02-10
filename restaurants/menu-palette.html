@@ -14,67 +14,76 @@
       src="https://kit.fontawesome.com/00a609464e.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" type="text/css" href="../sass/sass-style.css" >
+    <link rel="stylesheet" type="text/css" href="../sass/style.css" >
     <title>OhMyFood</title>
   </head>
 
   <body>
     <div class="grid" id="page">
       <header class="">
-        <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
-        <img
-          src="../assets/images/logo/ohmyfood.png"
-          alt="logo"
-          class="header-logo"
-        >
+       <div class="flex-arwd"> 
+          <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+          <img
+            src="../assets/images/logo/ohmyfood.png"
+            alt="logo" class="header__logo"
+          >
+        </div>
       </header>
 
       <main class="grid">
         <section class="header-img">
-          <div class="card__img-box">
+          
             <img
               src="../assets/images/img-restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
               alt="image palette-gout"
-              class="card_img"
+              class="card-img"
             >
-          </div>
+      
         </section>
 
         <!--
           Menu du restaurant la palette goût 
         -->
         <section class="menu-restaurant grid">
-          <h1>Le délice des sens</h1>
-          <i class="fa-solid fa-heart icon-like"></i>
+          <div class="flex-btwn">
+            <h1>Le délice des sens</h1>
+            <i class="fa-solid fa-heart icon-like"></i>
+          </div>
 
           <!--
                 Entrées 
           -->
           <article>
             <div><h2>Entrées</h2></div> 
-            <div>
-              <div class="card">
-                <h3 class="card__titre">Tartare de thon</h3>
-                <p class="card__description">Assaisonné au yuzu</p>
+            <div class="card ">
+              <div class="flex-btwn card__desc-box">
+                <div>
+                  <h3 class="card__titre">Tartare de thon</h3>
+                  <p class="card__description">Assaisonné au yuzu</p>
+                </div>
+                <p class="card__prix icon-right">25€</p>
               </div>
-              <p class="card__prix">25€</p>
             </div>  
 
-            <div>
-              <div class="card">
-                <h3 class="card__titre">Bouchée de homard croustillant</h3>
-                <p class="card__description">Et sa farandole de petits légumes</p>
+            <div class="card">
+              <div class="flex-btwn card__desc-box">
+                <div >
+                  <h3 class="card__titre">Bouchée de homard croustillant</h3>
+                  <p class="card__description">Et sa farandole de petits légumes</p>
+                </div>
+                <p class="card__prix icon-right">35€</p>
               </div>
-              <p class="card__prix">35€</p>
             </div>
 
-            <div>
-              <div class="card">
-                <h3 class="card__titre">Velouté de cèpes</h3>
-                <p class="card__description">Aux truffes</p>
+            <div class="card">
+              <div class="flex-btwn card__desc-box">
+                <div >
+                  <h3 class="card__titre">Velouté de cèpes</h3>
+                  <p class="card__description">Aux truffes</p>
+                </div>
+                <p class="card__prix icon-right">20€</p>
               </div>
-              <p class="card__prix">20€</p>
-          </div>          
+            </div>          
           </article>
 
           <!--
@@ -82,29 +91,32 @@
           -->
           <article>
             <div><h2>plats</h2></div> 
-            <div>
-              <div class="card">
+            <div class="card">
+              <div class="flex-btwn card__desc-box">
+              <div>
                 <h3 class="card__titre">Poulet rôti aux herbes de Prove...</h3>
                 <p class="card__description"> Et sa crème de truffe</p>
               </div>
               <p class="card__prix">40€</p>
-            </div>  
+            </div> </div> 
 
-            <div>
-              <div class="card">
+            <div class="card">
+              <div class="flex-btwn card__desc-box">
+                <div >
                 <h3 class="card__titre">Langouste rôtie</h3>
                 <p class="card__description"> Et ses légumes de saison</p>
               </div>
               <p class="card__prix">35€</p>
-            </div>
+            </div></div>
 
-            <div>
-              <div class="card">
+            <div  class="card">
+              <div class="flex-btwn card__desc-box">
+              <div>
                 <h3 class="card__titre">Côte de bœuf Angus</h3>
                 <p class="card__description">Et sa purée de panais</p>
               </div>
               <p class="card__prix">44€</p>
-          </div>          
+          </div>  </div>        
           </article>
 
           <!--
@@ -112,37 +124,39 @@
           -->
           <article>
             <div><h2>deserts</h2></div> 
-            <div>
-              <div class="card">
+            <div  class="card">
+              <div class="flex-btwn card__desc-box">
+              <div >
                 <h3 class="card__titre">Farandole de desserts</h3>
                 <p class="card__description"> Du chef</p>
               </div>
               <p class="card__prix">18€</p>
-            </div>  
+            </div></div>  
 
-            <div>
-              <div class="card">
+            <div  class="card">
+              <div class="flex-btwn card__desc-box">
+              <div>
                 <h3 class="card__titre">Crème brûlée</h3>             
                 <p class="card__description"> Revisitée</p>
               </div>
               <p class="card__prix">22€</p>
-            </div>
+            </div></div>
 
-            <div>
-              <div class="card">
+            <div  class="card">
+              <div class="flex-btwn card__desc-box">
+              <div>
                 <h3 class="card__titre">Tiramisu </h3>
                 <p class="card__description">À la noisette</p>
               </div>
               <p class="card__prix">23€</p>
-          </div>          
-          </article>          
-        </section>
+          </div> </div>         
+          </article>  
 
-        <!--
-          Button pour commander
-        -->
-        <section class="btn-submit">
-          <button>Commander</button>
+           <!--
+            Button pour commander
+          --> 
+          <button class="btn">Commander</button> 
+
         </section>
       </main>
 
