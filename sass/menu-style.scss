@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import "./utils/_vars";
+@import "./utils/_mixins";
+@import "./layouts/header";
+@import "./components/buttons";
+@import "./components/cards";
+@import "./layouts/body";
+@import "./breakpoints.scss";
+@import "./layouts/footer";
+
+
+.menu-img{  
+    img{
+        object-fit:cover;
+        width: 100%;
+        height: 100%;       
+    }
+}
+
+.menu-restaurant{ 
+
+    position: relative;
+    background-color:$bckg-gray;
+    border-radius: 40px 40px 0 0;  
+    top: -60px;
+
+    h1{        
+        padding: 20px 13px 0px;
+        font-family: $font-fam-header;
+        @include font(400, 28px, 41px);
+        white-space: nowrap;
+    }
+    
+    i{
+        padding: 32px 40px 0 0;
+    }
+}
+
+article{
+    font-family: $font-fam-body();
+    margin: 0 10px;
+    
+    h2{
+        text-transform: uppercase;
+        @include font(300 , 16px, 19px);
+        margin: 30px 0px 20px 0;
+        text-decoration: underline  $color-surligner 3px;
+    }
+
+    h3{
+        @include font(500 , 18px, 21px);
+        font-weight: $font-weight-bold;
+        white-space: nowrap;
+    }
+    p{
+        @include font(300, 15px, 17px);
+    }
+}
+
+.card {
+    @include card;   
+    width: 98%;
+    margin-bottom: 20px;  
+    padding-right:5px;
+    padding-left: 5px;
+
+    &__desc-box{
+        min-width: 320px;
+    }
+
+    &__prix{        
+        padding-top: 42px;
+        font-weight: $font-weight-bold;
+    }
+
+    i{
+        display: none;
+    }
+}
+ 
+  //@include pour le bouton
+  
+  .btn{
+    @include button($color-txt, $hover-color);
+    margin: 0 auto;       
+}
+
+.section__footer{
+    @include footer;   
+  
+}
+ 

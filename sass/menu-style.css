@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/**
+(
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.15),
+        rgba(255, 255, 255, 0.15)
+    ),
+    linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%));
+**/
+.heading {
+  place-self: center;
+  padding-top: 20px;
+}
+.heading img {
+  height: 44px;
+  width: 162px;
+}
+.heading i {
+  position: relative;
+  top: -15px;
+  left: -46px;
+}
+
+body {
+  height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, p {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+input, button {
+  border: none;
+  text-decoration: none;
+}
+
+#page {
+  max-width: 767px;
+}
+
+.letter-space {
+  letter-spacing: 0em;
+}
+
+.grid {
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-btwn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-arwd {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-alignement {
+  display: flex;
+}
+
+footer {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.section__footer {
+  background-color: #353535;
+  color: #ffffff;
+}
+.section__footer .header__logo {
+  font-family: "Shrikhand", sans-serif, italic;
+}
+.section__footer span {
+  padding-left: 20px;
+  align-items: center;
+}
+.section__footer i {
+  height: 12px;
+  width: 11px;
+}
+.section__footer a {
+  color: #ffffff;
+}
+
+.menu-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-restaurant {
+  position: relative;
+  background-color: #EAEAEA;
+  border-radius: 40px 40px 0 0;
+  top: -60px;
+}
+.menu-restaurant h1 {
+  padding: 20px 13px 0px;
+  font-family: "Shrikhand", sans-serif, italic;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 41px;
+  white-space: nowrap;
+}
+.menu-restaurant i {
+  padding: 32px 40px 0 0;
+}
+
+article {
+  font-family: "Roboto", sans-serif;
+  margin: 0 10px;
+}
+article h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 30px 0px 20px 0;
+  -webkit-text-decoration: underline #99E2D0 3px;
+          text-decoration: underline #99E2D0 3px;
+}
+article h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+article p {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.card {
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  width: 98%;
+  margin-bottom: 20px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.card h3 {
+  margin-top: 10px;
+}
+.card p {
+  color: #353535;
+}
+.card i:hover {
+  color: #9356DC;
+}
+.card__img-box {
+  height: 230px;
+}
+.card__desc-box {
+  padding-right: 20px;
+}
+.card__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+.card__titre-txt {
+  margin-left: 10px;
+}
+.card__titre {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+}
+.card__description {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 20px;
+  color: #353535;
+}
+.card .icon-right {
+  margin-top: 16px;
+}
+.card__new {
+  background-color: #99E2D0;
+  position: absolute;
+  padding: 5px 9px;
+  border-radius: 2px;
+  right: 20px;
+  top: 25px;
+}
+.card__desc-box {
+  min-width: 320px;
+}
+.card__prix {
+  padding-top: 42px;
+  font-weight: bold;
+}
+.card i {
+  display: none;
+}
+
+.btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  display: block;
+  margin: 20px;
+  width: 218px;
+  height: 50px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 25px;
+  background-color: #9356dc;
+  margin: 0 auto;
+}
+.btn:hover {
+  background-color: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+}
+
+.section__footer {
+  background-color: #353535;
+  color: #ffffff;
+}
+.section__footer .header__logo {
+  font-family: "Shrikhand", sans-serif, italic;
+}
+.section__footer span {
+  padding-left: 20px;
+  align-items: center;
+}
+.section__footer i {
+  height: 12px;
+  width: 11px;
+}/*# sourceMappingURL=menu-style.css.map */

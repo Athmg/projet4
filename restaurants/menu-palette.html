@@ -1,44 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="preconnect" href="https://fonts.googleapis.com" >
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap"
-      rel="stylesheet"
-    >
-    <script
-      src="https://kit.fontawesome.com/00a609464e.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" type="text/css" href="../sass/style.css" >
-    <title>OhMyFood</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+  <script 
+    src="https://kit.fontawesome.com/00a609464e.js" crossorigin="anonymous">
+  </script> 
+  <link rel="stylesheet" type="text/css" href="../sass/menu-style.css">
+  <title>Ohmyfood</title>
+</head>
 
   <body>
     <div class="grid" id="page">
-      <header class="">
-       <div class="flex-arwd"> 
-          <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
-          <img
-            src="../assets/images/logo/ohmyfood.png"
-            alt="logo" class="header__logo"
-          >
-        </div>
+      <header class="heading">       
+        <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <img
+          src="../assets/images/logo/ohmyfood.png" alt="logo" 
+        >        
       </header>
 
       <main class="grid">
-        <section class="header-img">
-          
-            <img
-              src="../assets/images/img-restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-              alt="image palette-gout"
-              class="card-img"
-            >
-      
+        <section class="menu-img">
+          <img
+            src="../assets/images/img-restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+            alt="image palette-gout"
+            class="header-img"
+          />
         </section>
 
         <!--
@@ -46,7 +34,7 @@
         -->
         <section class="menu-restaurant grid">
           <div class="flex-btwn">
-            <h1>Le délice des sens</h1>
+            <h1>La palette du goût</h1>
             <i class="fa-solid fa-heart icon-like"></i>
           </div>
 
@@ -54,120 +42,144 @@
                 Entrées 
           -->
           <article>
-            <div><h2>Entrées</h2></div> 
-            <div class="card ">
-              <div class="flex-btwn card__desc-box">
-                <div>
-                  <h3 class="card__titre">Tartare de thon</h3>
-                  <p class="card__description">Assaisonné au yuzu</p>
-                </div>
-                <p class="card__prix icon-right">25€</p>
-              </div>
-            </div>  
-
+            <div><h2>Entrées</h2></div>
             <div class="card">
-              <div class="flex-btwn card__desc-box">
-                <div >
-                  <h3 class="card__titre">Bouchée de homard croustillant</h3>
-                  <p class="card__description">Et sa farandole de petits légumes</p>
+              <div class="flex-btwn">
+                <div>
+                  <h3 class="card__titre">Fricassée d'escargots</h3>
+                  <p class="card__description">Au piment d'Espelette</p>
                 </div>
-                <p class="card__prix icon-right">35€</p>
+                <p class="card__prix">25€</p>
               </div>
             </div>
 
             <div class="card">
-              <div class="flex-btwn card__desc-box">
-                <div >
-                  <h3 class="card__titre">Velouté de cèpes</h3>
-                  <p class="card__description">Aux truffes</p>
+              <div class="flex-btwn">
+                <div>
+                  <h3 class="card__titre">Foie gras de canard mi-cuit</h3>
+                  <p class="card__description">
+                    Et ses copeaux de truffe noire
+                  </p>
                 </div>
-                <p class="card__prix icon-right">20€</p>
+                <p class="card__prix">35€</p>
               </div>
-            </div>          
+            </div>
+
+            <div class="card">
+              <div class="flex-btwn">
+                <div>
+                  <h3 class="card__titre">Œuf au plat</h3>
+                  <p class="card__description">
+                    Assaisonné à la truffe sur lit de...
+                  </p>
+                </div>
+                <p class="card__prix">20€</p>
+              </div>
+            </div>
           </article>
 
           <!--
                 Plats 
           -->
           <article>
-            <div><h2>plats</h2></div> 
+            <div><h2>plats</h2></div>
             <div class="card">
-              <div class="flex-btwn card__desc-box">
-              <div>
-                <h3 class="card__titre">Poulet rôti aux herbes de Prove...</h3>
-                <p class="card__description"> Et sa crème de truffe</p>
+              <div class="flex-btwn">
+                <div>
+                  <h3 class="card__titre">Filet de bœuf aux herbes</h3>
+                  <p class="card__description">
+                    Accompagné de sa ribambelle de légu..
+                  </p>
+                </div>
+                <p class="card__prix">40€</p>
               </div>
-              <p class="card__prix">40€</p>
-            </div> </div> 
+            </div>
 
             <div class="card">
-              <div class="flex-btwn card__desc-box">
-                <div >
-                <h3 class="card__titre">Langouste rôtie</h3>
-                <p class="card__description"> Et ses légumes de saison</p>
+              <div class="flex-btwn">
+                <div>
+                  <h3 class="card__titre">Parmentier de queue de bœuf</h3>
+                  <p class="card__description">
+                    À la truffe noire sur sa purée de panais
+                  </p>
+                </div>
+                <p class="card__prix">35€</p>
               </div>
-              <p class="card__prix">35€</p>
-            </div></div>
+            </div>
 
-            <div  class="card">
-              <div class="flex-btwn card__desc-box">
-              <div>
-                <h3 class="card__titre">Côte de bœuf Angus</h3>
-                <p class="card__description">Et sa purée de panais</p>
+            <div class="card">
+              <div class="flex-btwn">
+                <div>
+                  <h3 class="card__titre">Filet de turbot</h3>
+                  <p class="card__description">Aux agrumes</p>
+                </div>
+                <p class="card__prix">44€</p>
               </div>
-              <p class="card__prix">44€</p>
-          </div>  </div>        
+            </div>
           </article>
 
           <!--
                 Deserts 
           -->
           <article>
-            <div><h2>deserts</h2></div> 
-            <div  class="card">
-              <div class="flex-btwn card__desc-box">
-              <div >
-                <h3 class="card__titre">Farandole de desserts</h3>
-                <p class="card__description"> Du chef</p>
+            <div><h2>deserts</h2></div>
+
+            <div class="card">
+              <div class="flex-btwn">
+                <div>
+                  <h3 class="card__titre">Paris-Brest</h3>
+                  <p class="card__description">Revisité</p>
+                </div>
+                <p class="card__prix">18€</p>
               </div>
-              <p class="card__prix">18€</p>
-            </div></div>  
+            </div>
 
-            <div  class="card">
-              <div class="flex-btwn card__desc-box">
-              <div>
-                <h3 class="card__titre">Crème brûlée</h3>             
-                <p class="card__description"> Revisitée</p>
+            <div class="card">
+              <div class="flex-btwn">
+                <div>
+                  <h3 class="card__titre">Macaron au chocolat d'exception</h3>
+                  <p class="card__description">
+                    Et glace à la vanille de Madagascar
+                  </p>
+                </div>
+                <p class="card__prix">22€</p>
               </div>
-              <p class="card__prix">22€</p>
-            </div></div>
+            </div>
 
-            <div  class="card">
-              <div class="flex-btwn card__desc-box">
-              <div>
-                <h3 class="card__titre">Tiramisu </h3>
-                <p class="card__description">À la noisette</p>
+            <div class="card">
+              <div class="flex-btwn">
+                <div>
+                  <h3 class="card__titre">Mousse au chocolat</h3>
+                  <p class="card__description">
+                    Au piment d'Espelette et à la truffe noire
+                  </p>
+                </div>
+                <p class="card__prix">23€</p>
               </div>
-              <p class="card__prix">23€</p>
-          </div> </div>         
-          </article>  
+            </div>
+          </article>
 
-           <!--
-            Button pour commander
-          --> 
-          <button class="btn">Commander</button> 
-
+          <button class="btn">Commander</button>
         </section>
+
+        <!--
+          Button pour commander
+        -->
       </main>
 
       <footer class="section__footer">
-        <img scr="./assets/images/logo/ohmyfood.png" alt="footer__logo" />
-        <p><i class="fa-solid fa-utensils"></i>Proposer un restaurant</p>
-        <p><i class="fa-solid fa-handshake-angle"></i>partenaire</p>
+        <p class="header__logo">ohmyfood</p>
+        <p>
+          <i class="fa-solid fa-utensils"></i
+          ><span>Proposer un restaurant</span>
+        </p>
+        <p>
+          <i class="fa-solid fa-handshake-angle"></i
+          ><span>Devenir partenaire</span>
+        </p>
         <p>Mentions légales</p>
         <p>Contact</p>
       </footer>
     </div>
   </body>
 </html>
-

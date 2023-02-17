@@ -1,0 +1,29 @@
+
+footer{
+  padding-left:$margin-bor;
+  padding-top:$margin-bor;
+
+}
+
+@mixin footer {
+  background-color: $color-gray;
+  color: $color-txt;
+  .header__logo{
+     font-family: $font-fam-header;
+  }
+  span{
+      padding-left: 20px;
+      align-items: center;
+  }
+  i{
+      height: 12px;
+      width: 11px;
+  }
+}
+
+.section__footer{
+    @include footer; 
+    a{
+      color: $color-txt;
+    }
+  }

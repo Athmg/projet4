@@ -1,3 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/**
+(
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.15),
+        rgba(255, 255, 255, 0.15)
+    ),
+    linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%));
+**/
+.heading {
+  place-self: center;
+  padding-top: 20px;
+}
+.heading img {
+  height: 44px;
+  width: 162px;
+}
+.heading i {
+  position: relative;
+  top: -15px;
+  left: -46px;
+}
+
+body {
+  height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, p {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+input, button {
+  border: none;
+  text-decoration: none;
+}
+
+#page {
+  max-width: 767px;
+}
+
+.letter-space {
+  letter-spacing: 0em;
+}
+
+.grid {
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-btwn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-arwd {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-alignement {
+  display: flex;
+}
+
+footer {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.section__footer {
+  background-color: #353535;
+  color: #ffffff;
+}
+.section__footer .header__logo {
+  font-family: "Shrikhand", sans-serif, italic;
+}
+.section__footer span {
+  padding-left: 20px;
+  align-items: center;
+}
+.section__footer i {
+  height: 12px;
+  width: 11px;
+}
+.section__footer a {
+  color: #ffffff;
+}
+
 /**
 (
     background: linear-gradient(
@@ -383,4 +488,4 @@ section {
   .section__footer a {
     order: 1;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */

@@ -1,149 +1,137 @@
 
 @import "./utils/_vars";
-@import "./utils/_placeholders";
+@import "./utils/_mixins";
+@import "./layouts/header";
+@import "./layouts/body";
+@import "./components/buttons";
+@import "./components/cards";
+@import "./layouts/footer";
+@import "./breakpoints.scss";
+
 
 body{
-    height: 100%;
+    margin: 10px auto;
+    font-family: $font-fam-body;
 }
 
-*{
-    padding: 0;
-    margin: 0;
+section{
+    padding:$margin-bor;
 }
 
-p,h1,h2,h3{
-    margin: 15px 0;
-}
+.formulaire{
+    @include center;   
+    height: 50px;
+    input{
+    @include font(500, 16px, 18px);
+    color: $color-gray;
+    }
 
-a{
-    text-decoration: none;
-    color: black;
-}
-
-input,button{
-    border: none;
-    text-decoration: none;
-}
-
-footer{
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.footer__logo{
-    height: 27px;
-    width: 137px;    
-}
-
-#page {
-    max-width: 767px;
-}
-section,footer{
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-
-
-.card-img{
-    width: 100%;  
-    height: 275px;
-}
-
-
-.header__logo{
-    width: 162px;
-    height: 44px;
-    margin-bottom: 20px;
-}
-
-
-
-.header__icon{
-    margin-right: 10px;
-}
-
-.btn{
-    background: $second-color;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 25px; 
-    width: 218px; 
-    height: 50px;      
+    i{
+    margin-right: 20px;
+    margin-left: 45px;
+   }
 }
 
 .section__reservation{
-    background-color:$bckg-gray;  
-
+    text-align: center;
+    .btn{
+        @include button($color-txt, $hover-color);
+        margin: 0 auto;
+    }
 }
 
-.menu-restaurant{
-    background-color:$bckg-gray;
-    border-radius: 20px 20px 0 0;
-    
-    place-self: center;
-    
-    
+.section__fonctionnement{
 
     .card{
-        margin-top: 20px;
-        
+        @include card;    
+       // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+       // border-radius: 20px;
     }
 
-}
-
-//les boutons
-
-.fonct-choix{
-    margin-bottom: 20px;
-
-    
-    &__cercle{
-        background-color:$primar-color;
-        width: 45px;
-        height: 45px;
-        padding: 2px;
-        border-radius: 100%;
-    }
-    &__icon{
-        margin: 18px;
-    }
-}
-
-// les cartes
-.card {
-    background: #ffffff;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-
-    .card__img-box {
-        height:$height-img;      
-    }
-
-    .card__desc-box{
-        padding: 0 20px;
-    }
-
-    .card__img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10px 10px 0 0;
-    }
-    .card__titre{
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 21px;
-       
-    }
-    .card__description{
-        font-weight: 300;
-        font-size: 17px;
-        line-height: 20px;
-       
-    }
-    .icon-right{
-        margin-top: 16px;
+    .fonct-choix{
+        height: 70px; 
+        margin-bottom: 25px; 
+        @include font(500, 16px, 19px);
+      
+        &__cercle{  
+            @include font(500, 14px, 17px);        
+            background-color:$primar-color;
+            color:$color-txt;
+            width: 24px;
+            height: 24px;
+            padding: 3px 6px;
+            border-radius: 100%;
+        }
+        &__icon{
+            margin: 18px;
+            margin-top: 25px;
+            color: $color-gray;
+        } 
+        &:hover{
+            background-color: $primar-color;
+        }   
     }
 }
 
+.section__fonctionnement{
+  /*  @include mobile{
+        display: grid;        
+        background-color: rgb(13, 154, 95);
+    }*/
+
+    @include tablette{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 10px;
+        h2{
+            display: none;
+        }    
+    }
+}
+
+
+  
+.section__restaurant{ 
+    .card{
+        @include card;
+    }
+
+/*@include mobile{
+    display: grid;        
+    background-color: rgb(216, 10, 28);
+}
+*/
+@include tablette{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+    h2{
+        display: none;
+    }
+    .card{
+        @include card;        
+        width: 250px;
+    }     
+}
+
+}
+
+.section__footer{
+
+    @include tablette{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        gap: 25px;
+        white-space: nowrap;
+  
+   .header__logo{
+    order: 6;        
+
+    }
+    a{
+        order:1;
+    }
+    }
+
+}
 

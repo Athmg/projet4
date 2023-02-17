@@ -1,9 +1,52 @@
-// variables
+// variables couleurs
 
 $primar-color: #9356DC;
 $second-color: #FF79DA;
 $terti-color: #99E2D0;
+$color-txt: #ffffff;
+$color-gray:#353535;
+$color-surligner: #99E2D0;
+$color-black:#000000;
+
+
+
+// les backgrounds
+
+$bckg-color-btn:$primar-color;
 $bckg-gray:#EAEAEA;
-$font-fam:('Roboto', 'Shrikhand', sans-serif);
+$bckg-header:#D2D2D2;
+
+// les font-family
+
+$font-fam-body:('Roboto', sans-serif);
+$font-fam-header:('Shrikhand', sans-serif, italic);
+$font-weight-bold: bold;
+
+//$background-btn:linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+
+/**
+(
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.15),
+        rgba(255, 255, 255, 0.15)
+    ),
+    linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%));
+**/
+
+
+// les marges 
+
+$margin:10px;
+$margin-bor:20px;
+
+
 $shadow:(0 42px 13.37px hotpink);
-$height-img: 230px !default;
+
+$hover-color: $terti-color;
+
+
+
+
+
+

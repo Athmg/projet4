@@ -1,0 +1,32 @@
+$breakpoints:(
+    small : 320px,
+    medium : 768px,
+    large : 1400px
+);
+
+@mixin mobile
+{
+    @media screen and (min-width: map-get($breakpoints, small))
+    {
+        @content;
+    }
+}
+
+@mixin tablette
+{
+    @media screen and (min-width: map-get($breakpoints, medium))
+    {
+        @content;
+    }
+}
+
+@mixin desck
+{
+    @media screen and (max-width: map-get($breakpoints, large))
+    {
+        @content;
+    }
+}
+
+
+
