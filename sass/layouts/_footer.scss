@@ -6,7 +6,7 @@ footer{
 }
 
 @mixin footer {
-  background-color: $color-gray;
+  background-color: $color-gray-3;
   color: $color-txt;
   .header__logo{
      font-family: $font-fam-header;

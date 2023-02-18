@@ -10,10 +10,7 @@
         margin-top: $margin;
     }
     p{
-        color: $color-gray;
-    }
-    i:hover{
-        color: $primar-color;
+        color: $color-gray-3;
     }
 
     &__img-box {
@@ -38,11 +35,17 @@
     }
     &__description{        
         @include font(300, 17px, 20px);
-        color: $color-gray;
+        color: $color-gray-3;
     }
 
     .icon-right{
         margin-top: 16px;
+        color:$color-black;
+        transition: color 400ms;
+    }
+
+    i:hover{
+        color: $primar-color;
     }
 
     &__new{

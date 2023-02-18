@@ -12,43 +12,95 @@
 body{
     margin: 10px auto;
     font-family: $font-fam-body;
+
+   
 }
 
 section{
     padding:$margin-bor;
 }
 
+
+
+
+
 .formulaire{
-    @include center;   
+    background-color: $color-gray-1;
+    @include center;      
     height: 50px;
     input{
     @include font(500, 16px, 18px);
-    color: $color-gray;
+    color: $color-gray-3;
     }
 
     i{
     margin-right: 20px;
     margin-left: 45px;
    }
+  
 }
 
 .section__reservation{
+    background-color:$color-gray-2; 
     text-align: center;
     .btn{
         @include button($color-txt, $hover-color);
         margin: 0 auto;
     }
+
+    span{
+        font-weight: font(400, 16px, 20px);
+        font-family:$font-fam-header ;
+        color: $primar-color;
+        position: relative;
+        right: 257px;
+        top: -60px;
+    }
+
+    .loading{        
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color:$color-gray-2;
+        animation: myfood 3s linear infinite;
+
+        &::before{   
+            content: '';   
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgb(255, 255, 255, 0.3);
+        }
+    }
+
+    @keyframes myfood {
+        0%{
+            transform: rotate(0deg);
+            box-shadow: 1px 5px 2px $primar-color;
+        }
+        50%{
+            transform: rotate(180deg);
+            box-shadow: 1px 5px 2px   #808b96 ;
+            
+        }
+        100%{
+            transform: rotate(360deg);
+            box-shadow: 1px 5px 2px $terti-color;
+        }
+        
+    }  
+
 }
 
 .section__fonctionnement{
+    
 
     .card{
-        @include card;    
-       // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-       // border-radius: 20px;
+        @include card;     
     }
 
     .fonct-choix{
+        background-color:$color-gray-2;
         height: 70px; 
         margin-bottom: 25px; 
         @include font(500, 16px, 19px);
@@ -65,11 +117,15 @@ section{
         &__icon{
             margin: 18px;
             margin-top: 25px;
-            color: $color-gray;
-        } 
+            color: $color-gray-3;
+        }
         &:hover{
-            background-color: $primar-color;
-        }   
+            background-color: $color-primar-2;
+            &__icon{
+            color: $primar-color;
+            }
+        } 
+        
     }
 }
 

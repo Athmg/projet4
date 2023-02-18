@@ -9,7 +9,12 @@
 **/
 .heading {
   place-self: center;
-  padding-top: 20px;
+  /* Shadow/Badge */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+.heading__img {
+  background: #FFFFFF;
+  width: 100%;
 }
 .heading img {
   height: 44px;
@@ -46,6 +51,8 @@ input, button {
 
 #page {
   max-width: 767px;
+  padding: 0;
+  margin: 0;
 }
 
 .letter-space {
@@ -111,6 +118,7 @@ section {
 }
 
 .formulaire {
+  background-color: #D2D2D2;
   place-self: center;
   height: 50px;
 }
@@ -126,6 +134,7 @@ section {
 }
 
 .section__reservation {
+  background-color: #EAEAEA;
   text-align: center;
 }
 .section__reservation .btn {
@@ -142,10 +151,49 @@ section {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
   border-radius: 25px;
   background-color: #9356dc;
+  transition: background-image 400ms;
+  transition: box-shadow 500ms;
   margin: 0 auto;
 }
 .section__reservation .btn:hover {
-  background-color: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+  background-image: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 255, 0.2);
+}
+.section__reservation span {
+  font-weight: font(400, 16px, 20px);
+  font-family: "Shrikhand", sans-serif, italic;
+  color: #9356DC;
+  position: relative;
+  right: 257px;
+  top: -60px;
+}
+.section__reservation .loading {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #EAEAEA;
+  animation: myfood 3s linear infinite;
+}
+.section__reservation .loading::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+@keyframes myfood {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px #9356DC;
+  }
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 2px #808b96;
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px #99E2D0;
+  }
 }
 
 .section__fonctionnement .card {
@@ -159,9 +207,6 @@ section {
 }
 .section__fonctionnement .card p {
   color: #353535;
-}
-.section__fonctionnement .card i:hover {
-  color: #9356DC;
 }
 .section__fonctionnement .card__img-box {
   height: 230px;
@@ -192,6 +237,11 @@ section {
 }
 .section__fonctionnement .card .icon-right {
   margin-top: 16px;
+  color: #000000;
+  transition: color 400ms;
+}
+.section__fonctionnement .card i:hover {
+  color: #9356DC;
 }
 .section__fonctionnement .card__new {
   background-color: #99E2D0;
@@ -202,6 +252,7 @@ section {
   top: 25px;
 }
 .section__fonctionnement .fonct-choix {
+  background-color: #EAEAEA;
   height: 70px;
   margin-bottom: 25px;
   font-weight: 500;
@@ -225,7 +276,10 @@ section {
   color: #353535;
 }
 .section__fonctionnement .fonct-choix:hover {
-  background-color: #9356DC;
+  background-color: #F5EDFF;
+}
+.section__fonctionnement .fonct-choix:hover__icon {
+  color: #9356DC;
 }
 
 .section__fonctionnement {
@@ -264,9 +318,6 @@ section {
 .section__restaurant .card p {
   color: #353535;
 }
-.section__restaurant .card i:hover {
-  color: #9356DC;
-}
 .section__restaurant .card__img-box {
   height: 230px;
 }
@@ -296,6 +347,11 @@ section {
 }
 .section__restaurant .card .icon-right {
   margin-top: 16px;
+  color: #000000;
+  transition: color 400ms;
+}
+.section__restaurant .card i:hover {
+  color: #9356DC;
 }
 .section__restaurant .card__new {
   background-color: #99E2D0;
@@ -327,9 +383,6 @@ section {
   .section__restaurant .card p {
     color: #353535;
   }
-  .section__restaurant .card i:hover {
-    color: #9356DC;
-  }
   .section__restaurant .card__img-box {
     height: 230px;
   }
@@ -359,6 +412,11 @@ section {
   }
   .section__restaurant .card .icon-right {
     margin-top: 16px;
+    color: #000000;
+    transition: color 400ms;
+  }
+  .section__restaurant .card i:hover {
+    color: #9356DC;
   }
   .section__restaurant .card__new {
     background-color: #99E2D0;
