@@ -1,20 +1,8 @@
-/**
-(
-    background: linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 0.15),
-        rgba(255, 255, 255, 0.15)
-    ),
-    linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%));
-**/
 .heading {
-  place-self: center;
-  /* Shadow/Badge */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-}
-.heading__img {
-  background: #FFFFFF;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
 }
 .heading img {
   height: 44px;
@@ -22,7 +10,6 @@
 }
 .heading i {
   position: relative;
-  top: -15px;
   left: -46px;
 }
 
@@ -33,6 +20,7 @@ body {
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 h1, h2, h3, p {
@@ -61,7 +49,6 @@ input, button {
 
 .grid {
   display: grid;
-  row-gap: 1.5rem;
 }
 
 .flex-column {
@@ -111,22 +98,43 @@ footer {
 body {
   margin: 10px auto;
   font-family: "Roboto", sans-serif;
+  position: relative;
 }
 
-section {
-  padding: 20px;
+h1, h2 {
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
+.fonc-resto {
+  padding: 40px 20px;
+}
+@media screen and (min-width: 768px) {
+  .fonc-resto {
+    padding: 0 100px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .fonc-resto {
+    padding: 0 193px;
+  }
 }
 
 .formulaire {
+  color: #353535;
   background-color: #D2D2D2;
-  place-self: center;
-  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
 }
 .formulaire input {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   color: #353535;
+  background-color: #D2D2D2;
 }
 .formulaire i {
   margin-right: 20px;
@@ -153,47 +161,19 @@ section {
   background-color: #9356dc;
   transition: background-image 400ms;
   transition: box-shadow 500ms;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 .section__reservation .btn:hover {
   background-image: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
-  box-shadow: 3px 3px 3px 3px rgba(0, 0, 255, 0.2);
+  box-shadow: 4px 3px 3px 4px #353535;
 }
 .section__reservation span {
   font-weight: font(400, 16px, 20px);
   font-family: "Shrikhand", sans-serif, italic;
   color: #9356DC;
-  position: relative;
-  right: 257px;
-  top: -60px;
-}
-.section__reservation .loading {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: #EAEAEA;
-  animation: myfood 3s linear infinite;
-}
-.section__reservation .loading::before {
-  content: "";
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-}
-@keyframes myfood {
-  0% {
-    transform: rotate(0deg);
-    box-shadow: 1px 5px 2px #9356DC;
-  }
-  50% {
-    transform: rotate(180deg);
-    box-shadow: 1px 5px 2px #808b96;
-  }
-  100% {
-    transform: rotate(360deg);
-    box-shadow: 1px 5px 2px #99E2D0;
-  }
+  /* position: relative;
+   right: 257px;
+   top: -60px;*/
 }
 
 .section__fonctionnement .card {
@@ -236,12 +216,24 @@ section {
   color: #353535;
 }
 .section__fonctionnement .card .icon-right {
+  position: relative;
   margin-top: 16px;
   color: #000000;
   transition: color 400ms;
 }
-.section__fonctionnement .card i:hover {
-  color: #9356DC;
+.section__fonctionnement .card .icon-right-color {
+  position: absolute;
+  right: 1.3em;
+  bottom: 2.4rem;
+  color: transparent;
+  opacity: 0;
+}
+.section__fonctionnement .card__txt {
+  @un;
+}
+.section__fonctionnement .card:hover .icon-right-color {
+  opacity: 1;
+  color: rgb(219, 12, 151);
 }
 .section__fonctionnement .card__new {
   background-color: #99E2D0;
@@ -263,48 +255,81 @@ section {
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
+  border-radius: 100%;
   background-color: #9356DC;
   color: #ffffff;
-  width: 24px;
-  height: 24px;
   padding: 3px 6px;
-  border-radius: 100%;
 }
 .section__fonctionnement .fonct-choix__icon {
   margin: 18px;
   margin-top: 25px;
   color: #353535;
 }
-.section__fonctionnement .fonct-choix:hover {
-  background-color: #F5EDFF;
+.section__fonctionnement .fonct-choix__txt {
+  width: 211px;
+  word-spacing: nowrap;
 }
-.section__fonctionnement .fonct-choix:hover__icon {
+.section__fonctionnement .fonct-choix:hover .section__fonctionnement .fonct-choix__icon {
+  animation: test;
+  cursor: pointer;
+  background-color: #F5EDFF;
   color: #9356DC;
 }
-
-.section__fonctionnement {
-  /*  @include mobile{
-        display: grid;        
-        background-color: rgb(13, 154, 95);
-    }*/
+.section__fonctionnement .fonct-choix__txt {
+  color: black;
 }
 @media screen and (min-width: 768px) {
+  .section__fonctionnement .section__fonctionnement h2 {
+    padding-bottom: 20px;
+  }
+  .section__fonctionnement .section__fonctionnement .fonctionnement__choix {
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 35px;
+         column-gap: 35px;
+    row-gap: 20px;
+  }
+  .section__fonctionnement .section__fonctionnement .fonctionnement__choix div:nth-child(3) {
+    grid-column: 1/-1;
+    width: 49%;
+    margin: 0 auto;
+  }
+  .section__fonctionnement .section__fonctionnement .fonctionnement__choix .fonct-choix__txt {
+    color: red;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .section__fonctionnement .section__restaurant {
+    padding-top: 5px;
+    background-color: #EAEAEA;
+    margin: 60px 0;
+  }
+  .section__fonctionnement .section__restaurant .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 25px;
+         column-gap: 25px;
+    row-gap: 10px;
+  }
+}
+@media screen and (min-width: 1400px) {
   .section__fonctionnement {
+    height: 262px;
+  }
+  .section__fonctionnement .fonctionnement__choix {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 25px;
   }
-  .section__fonctionnement h2 {
-    display: none;
+  .section__fonctionnement .fonctionnement__choix span__txt {
+    color: red;
   }
 }
 
 .section__restaurant {
-  /*@include mobile{
-      display: grid;        
-      background-color: rgb(216, 10, 28);
-  }
-  */
+  padding-top: 40px;
 }
 .section__restaurant .card {
   position: relative;
@@ -346,12 +371,24 @@ section {
   color: #353535;
 }
 .section__restaurant .card .icon-right {
+  position: relative;
   margin-top: 16px;
   color: #000000;
   transition: color 400ms;
 }
-.section__restaurant .card i:hover {
-  color: #9356DC;
+.section__restaurant .card .icon-right-color {
+  position: absolute;
+  right: 1.3em;
+  bottom: 2.4rem;
+  color: transparent;
+  opacity: 0;
+}
+.section__restaurant .card__txt {
+  @un;
+}
+.section__restaurant .card:hover .icon-right-color {
+  opacity: 1;
+  color: rgb(219, 12, 151);
 }
 .section__restaurant .card__new {
   background-color: #99E2D0;
@@ -361,21 +398,24 @@ section {
   right: 20px;
   top: 25px;
 }
-@media screen and (min-width: 768px) {
-  .section__restaurant {
+.section__restaurant article {
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 1400px) {
+  .section__restaurant .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
+    -moz-column-gap: 25px;
+         column-gap: 25px;
   }
   .section__restaurant h2 {
-    display: none;
+    grid-column: 1/-1;
   }
   .section__restaurant .card {
     position: relative;
     background: #ffffff;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    width: 250px;
   }
   .section__restaurant .card h3 {
     margin-top: 10px;
@@ -411,12 +451,24 @@ section {
     color: #353535;
   }
   .section__restaurant .card .icon-right {
+    position: relative;
     margin-top: 16px;
     color: #000000;
     transition: color 400ms;
   }
-  .section__restaurant .card i:hover {
-    color: #9356DC;
+  .section__restaurant .card .icon-right-color {
+    position: absolute;
+    right: 1.3em;
+    bottom: 2.4rem;
+    color: transparent;
+    opacity: 0;
+  }
+  .section__restaurant .card__txt {
+    @un;
+  }
+  .section__restaurant .card:hover .icon-right-color {
+    opacity: 1;
+    color: rgb(219, 12, 151);
   }
   .section__restaurant .card__new {
     background-color: #99E2D0;
@@ -426,19 +478,70 @@ section {
     right: 20px;
     top: 25px;
   }
+  .section__restaurant .card__img {
+    height: 230px;
+    width: 341px;
+  }
 }
 
-@media screen and (min-width: 768px) {
+.load {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(196, 207, 207, 0.395);
+  animation: dispa 3s 3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.load .loading {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(#9356DC, #EAEAEA, #FF79DA);
+  animation: load load-cycle 3s 1s cubic-bezier(0.6, 0.04, 0.98, 0.34) both infinite running;
+}
+
+@keyframes load {
+  0% {
+    opacity: 1;
+    transform: rotate(360deg);
+    box-shadow: 1px 2px 2px #FF79DA;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(300deg);
+  }
+}
+@keyframes load-cycle {
+  from {
+    transform: scale(0);
+    opacity: 0;
+    box-shadow: 1px 2px 2px #FF79DA;
+  }
+  to {
+    transform: translateX(768px);
+    transform: scale(3);
+    opacity: 1;
+  }
+}
+@keyframes dispa {
+  to {
+    transform: scale3d(0);
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 1400px) {
   .section__footer {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 25px;
-    white-space: nowrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
   .section__footer .header__logo {
-    order: 6;
+    order: 2;
   }
-  .section__footer a {
-    order: 1;
+  .section__footer div {
+    display: flex;
+    justify-content: space-around;
+    width: 65%;
   }
 }/*# sourceMappingURL=style.css.map */

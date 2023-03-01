@@ -18,9 +18,9 @@
     transition: background-image 400ms;
     transition: box-shadow 500ms;    
 
-    &:hover {       
-       background-image: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
-       box-shadow: 3px 3px 3px 3px rgba(0, 0, 255, .2);      
+    &:hover {   
+        @include gardient;
+       box-shadow: 4px 3px 3px 4px $color-gray-3;      
     }
 }
 

@@ -1,4 +1,3 @@
-
 @import "./utils/_vars";
 @import "./utils/_mixins";
 @import "./layouts/header";
@@ -8,186 +7,248 @@
 @import "./layouts/footer";
 @import "./breakpoints.scss";
 
-
-body{
-    margin: 10px auto;
-    font-family: $font-fam-body;
-
-   
-}
-
-section{
-    padding:$margin-bor;
-}
-
-
-
-
-
-.formulaire{
-    background-color: $color-gray-1;
-    @include center;      
-    height: 50px;
-    input{
-    @include font(500, 16px, 18px);
-    color: $color-gray-3;
-    }
-
-    i{
-    margin-right: 20px;
-    margin-left: 45px;
-   }
-  
-}
-
-.section__reservation{
-    background-color:$color-gray-2; 
-    text-align: center;
-    .btn{
-        @include button($color-txt, $hover-color);
-        margin: 0 auto;
-    }
-
-    span{
-        font-weight: font(400, 16px, 20px);
-        font-family:$font-fam-header ;
-        color: $primar-color;
+    body {
+        margin: 10px auto;
+        font-family: $font-fam-body;
         position: relative;
-        right: 257px;
-        top: -60px;
     }
 
-    .loading{        
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background-color:$color-gray-2;
-        animation: myfood 3s linear infinite;
+    h1,h2 {
+        padding-top: $padding-top;
+        padding-bottom: $margin;
+    }
 
-        &::before{   
-            content: '';   
-            height: 100%;
-            width: 100%;
-            border-radius: 50%;
-            box-shadow: 0 0 5px rgb(255, 255, 255, 0.3);
+// un div qui englobe la section fonctionnement et la section restaurant
+    .fonc-resto {
+        padding: $padding-top $margin-bor;
+
+        @include tablette {
+            padding: 0 100px;
+        }
+
+        @include desck {
+            padding: 0 193px;
         }
     }
 
-    @keyframes myfood {
-        0%{
-            transform: rotate(0deg);
-            box-shadow: 1px 5px 2px $primar-color;
-        }
-        50%{
-            transform: rotate(180deg);
-            box-shadow: 1px 5px 2px   #808b96 ;
-            
-        }
-        100%{
-            transform: rotate(360deg);
-            box-shadow: 1px 5px 2px $terti-color;
-        }
-        
-    }  
+// formulaire de recherche d'un restaurant
+    .formulaire {
+        color: $color-gray-3;
+        background-color: $color-gray-1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
 
-}
+        input {
+            @include font(500, 16px, 18px);
+            color: $color-gray-3;
+            background-color: $color-gray-1;
+        }
 
-.section__fonctionnement{
-    
-
-    .card{
-        @include card;     
+        i {
+            margin-right: 20px;
+            margin-left: 45px;
+        }
     }
 
-    .fonct-choix{
-        background-color:$color-gray-2;
-        height: 70px; 
-        margin-bottom: 25px; 
-        @include font(500, 16px, 19px);
-      
-        &__cercle{  
-            @include font(500, 14px, 17px);        
-            background-color:$primar-color;
-            color:$color-txt;
-            width: 24px;
-            height: 24px;
+// reservation menu explorer et decouvrir les restaurants
+    .section__reservation {
+        background-color: $color-gray-2;
+        text-align: center;
+
+        .btn {
+            @include button($color-txt, $hover-color);
+            margin: 30px auto;
+        }
+
+        span {
+            font-weight: font(400, 16px, 20px);
+            font-family: $font-fam-header;
+            color: $primar-color;
+            /* position: relative;
+                right: 257px;
+                top: -60px;*/
+        }
+    }
+
+// fonctionnement : choix des menus
+    .section__fonctionnement {
+        .card {
+            @include card;
+        }
+
+        .fonct-choix {
+            background-color: $color-gray-2;
+            height: 70px;
+            margin-bottom: 25px;
+            @include font(500, 16px, 19px);
+
+            &__cercle {
+            @include font(500, 14px, 17px);
+            @include cercle;
+            background-color: $primar-color;
+            color: $color-txt;
             padding: 3px 6px;
-            border-radius: 100%;
-        }
-        &__icon{
+            }
+
+            &__icon {
             margin: 18px;
             margin-top: 25px;
             color: $color-gray-3;
-        }
-        &:hover{
+            }
+
+            &__txt {
+            width: 211px;
+            word-spacing: nowrap;
+            }
+
+            &:hover &__icon {
+            animation: test;
+            cursor: pointer;
             background-color: $color-primar-2;
-            &__icon{
             color: $primar-color;
             }
-        } 
+
+            &__txt {
+            color: black;
+            }
+        }
+   // }
+
+        @include tablette {
+        //  .section__fonctionnement {
+                h2 {
+                    padding-bottom: 20px;
+                }
+
+                .fonctionnement__choix {
+                    background-color: aqua;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    column-gap: 35px;
+                    row-gap: 20px;
+
+                    div:nth-child(3) {
+                        grid-column: 1 / -1;
+                        width: 49%;
+                        margin: 0 auto;
+                    }
+
+                }   
+        // }
+        }
+
+  //  medias query pour desktop
+        @include desck {
+            height: 262px;
+            width: 60%;
+            background-color: aquamarine;
+
+            .fonctionnement__choix {
+                //background-color: aquamarine;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+                
+                div{
+                    @include card;
+                    .card{
+                        width: 322px;                                     
+                        color: red;
+                        @include font(500, 16px, 19px);
+                    }
+                        
+                }
+            }
+        }
+    }
+    
+
+// les differents restaurant à la carte
+    .section__restaurant {
+        padding-top: $padding-top;
+        .card {
+            @include card;
+        }
+        article {
+            padding-bottom: $margin-bor;
+        }
+
+  // media query tablette // restaurants
+        @include tablette {
+                    
+            padding-top: 5px;
+            background-color: #d51717;
+            margin: 60px 0;
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 25px;
+                row-gap: 10px;
+            }
         
-    }
-}
+        }
 
-.section__fonctionnement{
-  /*  @include mobile{
-        display: grid;        
-        background-color: rgb(13, 154, 95);
-    }*/
+  // media query desktop
+        @include desck {
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                column-gap: 25px;
+            }
 
-    @include tablette{
-        display:grid;
-        grid-template-columns: repeat(3,1fr);
-        gap: 10px;
-        h2{
-            display: none;
-        }    
-    }
-}
+            h2 {
+                grid-column: 1 / -1;
+            }
 
+            .card {
+                @include card;
 
-  
-.section__restaurant{ 
-    .card{
-        @include card;
-    }
-
-/*@include mobile{
-    display: grid;        
-    background-color: rgb(216, 10, 28);
-}
-*/
-@include tablette{
-    display:grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 5px;
-    h2{
-        display: none;
-    }
-    .card{
-        @include card;        
-        width: 250px;
-    }     
-}
-
-}
-
-.section__footer{
-
-    @include tablette{
-        display: grid;
-        grid-template-columns: repeat(5,1fr);
-        gap: 25px;
-        white-space: nowrap;
-  
-   .header__logo{
-    order: 6;        
-
-    }
-    a{
-        order:1;
-    }
+                &__img {
+                    height: 230px;
+                    width: 341px;
+                }
+            }
+        }
     }
 
-}
+    .load {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(196, 207, 207, 0.395);
+        animation: dispa 3s 3s;
+        @include center;
+
+        .loading {
+            // position: absolute  ;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient($primar-color, $color-gray-2, $second-color);
+            animation: load load-cycle 3s 1s cubic-bezier(0.6, 0.04, 0.98, 0.34) both
+            infinite running;
+        }
+    }
+
+
+// footer
+    .section__footer {
+        @include desck {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .header__logo {
+                order: 2;
+            }
+            div {
+                display: flex;
+                justify-content: space-around;
+                width: 65%;
+            }
+        }
+    }
+
 

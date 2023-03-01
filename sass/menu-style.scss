@@ -9,86 +9,173 @@
 @import "./layouts/body";
 @import "./breakpoints.scss";
 @import "./layouts/footer";
+@import"animation";
 
 
-.menu-img{  
-    img{
-        object-fit:cover;
+
+.menu-img {
+    img {
+        object-fit: cover;
         width: 100%;
-        height: 100%;       
+        height: 100%;
     }
 }
 
-.menu-restaurant{ 
+.menu-restaurant {
 
     position: relative;
-    background-color:$color-gray-2;
-    border-radius: 40px 40px 0 0;  
+    background-color: $color-gray-2;
+    border-radius: 40px 40px 0 0;
     top: -60px;
 
-    h1{        
-        padding: 20px 13px 0px;
-        font-family: $font-fam-header;
-        @include font(400, 28px, 41px);
-        white-space: nowrap;
+    &__div {
+        padding: 0 16px;
     }
-    
-    i{
-        padding: 32px 40px 0 0;
+
+    &__header {
+        @include flex-btwn;
+
+       h1 {
+            padding-top: 20px;
+            font-family: $font-fam-header;
+            @include font(400, 28px, 41px);
+            white-space: nowrap;
+       }
+        i {
+            margin-right: 20px;
+
+        }
+    }
+
+    //  medias query pour desktop
+    @include desck {
+        margin: 0 70px;
+        border-radius: 20px 20px 0 0;
+
+        &__div {
+            padding: 0 80px;
+        }
+
+        &__header {
+            justify-content: center;
+
+            i {
+                padding: 0px 24px;
+                margin-bottom: -12px;
+            }
+        }
+
+
     }
 }
 
-article{
+article {
     font-family: $font-fam-body();
-    margin: 0 10px;
-    
-    h2{
+
+    h2 {
         text-transform: uppercase;
-        @include font(300 , 16px, 19px);
+        @include font(300, 16px, 19px);
         margin: 30px 0px 20px 0;
-        text-decoration: underline  $color-surligner 3px;
+        position: relative;
+        opacity: 0;
+        animation: jump 0.4s  ease-in forwards;
+        transition: font-size 4s 3s ;
+    }
+    // surligner
+    h2::after {
+        content: "";
+        color: $terti-color;
+        position: absolute;
+        left: 0;
+        bottom: -7px;
+        width: 40px;
+        border-bottom: 3px solid $terti-color;
     }
 
-    h3{
-        @include font(500 , 18px, 21px);
+    h3 {
+        @include font(500, 18px, 21px);
         font-weight: $font-weight-bold;
         white-space: nowrap;
+     
     }
-    p{
+
+    p {
         @include font(300, 15px, 17px);
+        margin-right: 20px;
+        display: inline block;
+       
+       
     }
+
 }
 
 .card {
-    @include card;   
+    opacity: 0;
+    animation: appar 5s 1s ease-in-out forwards ;
+    position: relative;
+    @include card;
     width: 98%;
-    margin-bottom: 20px;  
-    padding-right:5px;
-    padding-left: 5px;
-
-    &__desc-box{
-        min-width: 320px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    cursor: pointer; 
+    &__box {
+        @include flex-btwn;
+       // position: relative;
     }
 
-    &__prix{        
+    &__prix {
         padding-top: 42px;
         font-weight: $font-weight-bold;
     }
 
-    i{
-        display: none;
+    &:hover &__prix{
+        margin-right: 6rem;
+        animation: appartX 100ms forwards; 
     }
-}
+
+    &__check {
+        @include center;
+        cursor: pointer;
+        opacity: 0;
+        width: 20%; // 20px;
+        height:  100%;  //70px; 
+        background-color:$terti-color;
+        position: absolute;
+        right: -5rem;
+        border-radius: 0px 15px 15px 0px;       
+              
+    }
+    &:hover &__check{  
+        right: 0;
+        animation: appartX 100ms forwards;   
+    } 
+   
+   /**/  
+
+    &__checkbox{
+        @include cercle;
+        @include center;
+        color:$terti-color;
+        background-color:  #ffffff ;  
+        input{
+            background-color: $terti-color;  
+            color:$terti-color;
+            border: rgba(255, 255, 255, .5);
+        } 
+    }
+   
  
-  //@include pour le bouton
-  
-  .btn{
-    @include button($color-txt, $hover-color);
-    margin: 0 auto;       
 }
 
-.section__footer{
-    @include footer;   
-  
+
+//@include pour le bouton
+
+.btn {
+    @include button($color-txt, $hover-color);
+    margin: 40px auto;
 }
- 
+
+.section__footer {
+    @include footer;
+
+}

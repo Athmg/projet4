@@ -1,22 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-/**
-(
-    background: linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 0.15),
-        rgba(255, 255, 255, 0.15)
-    ),
-    linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%));
-**/
 .heading {
-  place-self: center;
-  /* Shadow/Badge */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-}
-.heading__img {
-  background: #FFFFFF;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
 }
 .heading img {
   height: 44px;
@@ -24,7 +12,6 @@
 }
 .heading i {
   position: relative;
-  top: -15px;
   left: -46px;
 }
 
@@ -35,6 +22,7 @@ body {
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 h1, h2, h3, p {
@@ -63,7 +51,6 @@ input, button {
 
 .grid {
   display: grid;
-  row-gap: 1.5rem;
 }
 
 .flex-column {
@@ -110,6 +97,217 @@ footer {
   color: #ffffff;
 }
 
+.section__reservation {
+  /* h1{
+     animation: itemAppear 3s 200ms;
+   }*/
+  /* button{
+      animation: itemAppear 3s infinite 200ms;
+   }*/
+}
+.section__reservation .cacher-vue .btn {
+  margin-right: -100px;
+  opacity: 0;
+  cursor: pointer;
+  transition: margin-right 2.5s ease-in;
+}
+.section__reservation .cacher-vue .btn:hover {
+  opacity: 1;
+  margin-right: 50px;
+}
+.section__reservation .parent {
+  height: 100vh;
+  animation: test 0.2s;
+}
+.section__reservation .bloc {
+  background-color: orangered;
+  padding: 30px;
+  margin: 20px;
+  width: 400px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.section__reservation .bloc:hover button {
+  background-color: red;
+}
+.section__reservation .b1 {
+  animation: test 0.5s;
+}
+.section__reservation .b2 {
+  animation: test 0.9s;
+}
+.section__reservation .b3 {
+  animation: test 1.2s;
+}
+.section__reservation .parent {
+  height: 100vh;
+  animation: test 0.2s;
+}
+.section__reservation .bloc {
+  background-color: orangered;
+  padding: 30px;
+  margin: 20px;
+  width: 400px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.section__reservation .b1 {
+  animation: jump 6s infinite running;
+}
+.section__reservation .circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  position: absolute;
+  animation: loader 3s 2s infinite;
+}
+.section__reservation .circle-1 {
+  background: #99E2D0;
+  animation: load 3s 1s infinite;
+}
+.section__reservation .circle-2 {
+  background: #FF79DA;
+  left: 40px;
+  animation: load 3s 1s infinite;
+}
+.section__reservation .circle-3 {
+  background: #9356DC;
+  left: 20px;
+  top: 40px;
+  animation: load 3s 1s infinite;
+}
+.section__reservation .isolate {
+  isolation: isolate; /* Without isolation, the background color will be taken into account */
+  position: relative;
+}
+
+.section-svg {
+  /* -----
+  SVG Icons - svgicons.sparkk.fr
+  ----- */
+}
+.section-svg .svg-icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+.section-svg .svg-icon path,
+.section-svg .svg-icon polygon,
+.section-svg .svg-icon rect {
+  fill: black;
+}
+.section-svg .svg-icon polygon {
+  stroke: red;
+  fill-rule: evenodd;
+}
+.section-svg .svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
+}
+
+@keyframes load {
+  0% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(300deg);
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.5rem);
+  }
+  75% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes test {
+  0% {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes appar {
+  0% {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes appartX {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes apparition-bloc {
+  0% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+/**/
+@keyframes annim-checkbox {
+  100% {
+    opacity: 1;
+    background-color: #99E2D0;
+  }
+} /**/
+/*
+h1 {
+    background-color: #9356dc;
+    animation: itemAppear 0.6s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-fill-mode: none;
+    animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+    animation-fill-mode: both;
+    transform: scale(2);
+    max-width: 100%;
+
+  }*/
 .menu-img img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -123,21 +321,44 @@ footer {
   border-radius: 40px 40px 0 0;
   top: -60px;
 }
-.menu-restaurant h1 {
-  padding: 20px 13px 0px;
+.menu-restaurant__div {
+  padding: 0 16px;
+}
+.menu-restaurant__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-restaurant__header h1 {
+  padding-top: 20px;
   font-family: "Shrikhand", sans-serif, italic;
   font-weight: 400;
   font-size: 28px;
   line-height: 41px;
   white-space: nowrap;
 }
-.menu-restaurant i {
-  padding: 32px 40px 0 0;
+.menu-restaurant__header i {
+  margin-right: 20px;
+}
+@media screen and (min-width: 1400px) {
+  .menu-restaurant {
+    margin: 0 70px;
+    border-radius: 20px 20px 0 0;
+  }
+  .menu-restaurant__div {
+    padding: 0 80px;
+  }
+  .menu-restaurant__header {
+    justify-content: center;
+  }
+  .menu-restaurant__header i {
+    padding: 0px 24px;
+    margin-bottom: -12px;
+  }
 }
 
 article {
   font-family: "Roboto", sans-serif;
-  margin: 0 10px;
 }
 article h2 {
   text-transform: uppercase;
@@ -145,8 +366,19 @@ article h2 {
   font-size: 16px;
   line-height: 19px;
   margin: 30px 0px 20px 0;
-  -webkit-text-decoration: underline #99E2D0 3px;
-          text-decoration: underline #99E2D0 3px;
+  position: relative;
+  opacity: 0;
+  animation: jump 0.4s ease-in forwards;
+  transition: font-size 4s 3s;
+}
+article h2::after {
+  content: "";
+  color: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 40px;
+  border-bottom: 3px solid #99E2D0;
 }
 article h3 {
   font-weight: 500;
@@ -159,17 +391,26 @@ article p {
   font-weight: 300;
   font-size: 15px;
   line-height: 17px;
+  margin-right: 20px;
+  display: inline block;
 }
 
 .card {
+  opacity: 0;
+  animation: appar 5s 1s ease-in-out forwards;
+  position: relative;
   position: relative;
   background: #ffffff;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   width: 98%;
   margin-bottom: 20px;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding: 0 10px;
+  cursor: pointer;
+  /**/
+  /* &:hover &__checkbox {
+       transform: rotate(0);
+   }*/
 }
 .card h3 {
   margin-top: 10px;
@@ -205,12 +446,24 @@ article p {
   color: #353535;
 }
 .card .icon-right {
+  position: relative;
   margin-top: 16px;
   color: #000000;
   transition: color 400ms;
 }
-.card i:hover {
-  color: #9356DC;
+.card .icon-right-color {
+  position: absolute;
+  right: 1.3em;
+  bottom: 2.4rem;
+  color: transparent;
+  opacity: 0;
+}
+.card__txt {
+  @un;
+}
+.card:hover .icon-right-color {
+  opacity: 1;
+  color: rgb(219, 12, 151);
 }
 .card__new {
   background-color: #99E2D0;
@@ -220,15 +473,51 @@ article p {
   right: 20px;
   top: 25px;
 }
-.card__desc-box {
-  min-width: 320px;
+.card__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .card__prix {
   padding-top: 42px;
   font-weight: bold;
 }
-.card i {
-  display: none;
+.card:hover .card__prix {
+  margin-right: 6rem;
+  animation: appartX 100ms forwards;
+}
+.card__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  width: 20%;
+  height: 100%;
+  background-color: #99E2D0;
+  position: absolute;
+  right: -5rem;
+  border-radius: 0px 15px 15px 0px;
+}
+.card:hover .card__check {
+  right: 0;
+  animation: appartX 100ms forwards;
+}
+.card__checkbox {
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #99E2D0;
+  background-color: #ffffff;
+}
+.card__checkbox input:checked {
+  width: 20px;
+}
+.card__checkbox input {
+  background-color: #99E2D0;
+  color: #99E2D0;
+  border: rgba(255, 255, 255, 0.5);
 }
 
 .btn {
@@ -247,11 +536,11 @@ article p {
   background-color: #9356dc;
   transition: background-image 400ms;
   transition: box-shadow 500ms;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 .btn:hover {
   background-image: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
-  box-shadow: 3px 3px 3px 3px rgba(0, 0, 255, 0.2);
+  box-shadow: 4px 3px 3px 4px #353535;
 }
 
 .section__footer {

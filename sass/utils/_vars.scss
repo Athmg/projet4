@@ -8,8 +8,8 @@ $color-txt: #ffffff;
 $color-gray-1:#D2D2D2;
 $color-gray-2:#EAEAEA;
 $color-gray-3:#353535;
-$color-surligner: #99E2D0;
 $color-black:#000000;
+
 
 
 
@@ -24,23 +24,11 @@ $font-fam-body:('Roboto', sans-serif);
 $font-fam-header:('Shrikhand', sans-serif, italic);
 $font-weight-bold: bold;
 
-//$background-btn:linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
-
-/**
-(
-    background: linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 0.15),
-        rgba(255, 255, 255, 0.15)
-    ),
-    linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%));
-**/
-
-
 // les marges 
 
 $margin:10px;
 $margin-bor:20px;
+$padding-top: 40px;
 
 
 $shadow:(0 42px 13.37px hotpink);

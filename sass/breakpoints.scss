@@ -1,8 +1,8 @@
 $breakpoints:(
     small : 320px,
     medium : 768px,
-    large : 1400px
-);
+    large : 1400px, 
+)  !default;
 
 @mixin mobile
 {
@@ -22,7 +22,7 @@ $breakpoints:(
 
 @mixin desck
 {
-    @media screen and (max-width: map-get($breakpoints, large))
+    @media screen and (min-width: map-get($breakpoints, large))
     {
         @content;
     }

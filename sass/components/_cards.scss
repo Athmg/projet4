@@ -39,17 +39,31 @@
     }
 
     .icon-right{
+        position: relative;
         margin-top: 16px;
         color:$color-black;
         transition: color 400ms;
     }
+    .icon-right-color{        
+        position: absolute;
+        right: 1.3em;
+        bottom: 2.4rem;
+        color: transparent;
+        opacity: 0;     
+    }
+    &__txt{
+        @include font;
+    }
 
-    i:hover{
-        color: $primar-color;
+    &:hover .icon-right-color{
+        opacity: 1;
+        color:rgb(219 12 151 / 100%);
+        
+        
     }
 
     &__new{
-        background-color: $color-surligner;
+        background-color: $terti-color;
         position: absolute; 
         padding: 5px 9px;  
         border-radius: 2px;    
