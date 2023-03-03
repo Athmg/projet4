@@ -1,16 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
 @import "./utils/_vars";
 @import "./utils/_mixins";
-@import "./layouts/header";
+@import "./breakpoints";
 @import "./components/buttons";
 @import "./components/cards";
-@import "./layouts/body";
-@import "./breakpoints.scss";
-@import "./layouts/footer";
-@import"animation";
-
+@import "animation";
 
 
 .menu-img {
@@ -22,7 +15,6 @@
 }
 
 .menu-restaurant {
-
     position: relative;
     background-color: $color-gray-2;
     border-radius: 40px 40px 0 0;
@@ -33,7 +25,7 @@
     }
 
     &__header {
-        @include flex-btwn;
+       @include flex-btwn;
 
        h1 {
             padding-top: 20px;
@@ -42,81 +34,29 @@
             white-space: nowrap;
        }
         i {
-            margin-right: 20px;
+            margin-right: 24px;
+            padding-top: 20px;
 
         }
+      
     }
-
-    @include tablette {
-        margin: 0 70px;
-        border-radius: 20px 20px 0 0;
-
-        &__div {
-            padding: 0 80px;
-        }
-
-        &__header {
-            justify-content: center;
-
-            i {
-                padding: 0px 24px;
-                margin-bottom: -12px;
-            }
-        }
-        article{
-
-        }
-
+    .bloc-menu__entree{
+        opacity: 0;
+        animation: appar 3s 5ms ease-in-out forwards ;
 
     }
-
-    //  medias query pour desktop
-    @include desck {
-
-        margin: 0 193px;
-        border-radius: 20px 20px 0 0;
-        article{
-            margin: 0 120px;
-        }
-
-        &__header {
-            margin-top: 50px;
-            justify-content: center;
-
-            i {
-                padding: 0px 24px;
-                margin-bottom: -12px;
-            }
-        }
-
-
+    .bloc-menu__plats{
+        opacity: 0;
+        animation: appar 6s 5ms ease-in-out forwards ;
     }
-
-    //  medias query pour tablette
-
-    @include tablette {
-        .bloc-menu{
-            margin: 0 50px;
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            grid-template-rows: auto;
-            column-gap: 40px;
-
-            .bloc-menu__desserts{
-                grid-column: 1 / -1;
-                @include center;   
-            }
-
-            
-
-
-        }
-
+    .bloc-menu__desserts{
+        opacity: 0;
+        animation: appar 9s 5ms ease-in-out forwards ;
     }
 }
 
 article {
-    font-family: $font-fam-body();
+    font-family: $font-fam-body;
 
     h2 {
         text-transform: uppercase;
@@ -124,8 +64,8 @@ article {
         margin: 30px 0px 20px 0;
         position: relative;
         opacity: 0;
-        animation: jump 0.4s  ease-in forwards;
-        transition: font-size 4s 3s ;
+        animation: jump 2s  ease-in forwards;
+       // transition: font-size 4s 3s ;
     }
     // surligner
     h2::after {
@@ -156,11 +96,11 @@ article {
 }
 
 .card {
-    opacity: 0;
-    animation: appar 5s 1s ease-in-out forwards ;
+   opacity: 0;
+   animation: appar ease-in-out forwards ;
     position: relative;
     @include card;
-    width: 98%;
+   // width: 98%;
     margin-bottom: 20px;
     padding: 0 10px;
     cursor: pointer; 
@@ -209,19 +149,149 @@ article {
             border: rgba(255, 255, 255, .5);
         } 
     }
+  
    
  
 }
 
 
-//@include pour le bouton
+    //@include pour le bouton
 
-.btn {
-    @include button($color-txt, $hover-color);
-    margin: 40px auto;
-}
+    .btn {
+        @include button($color-txt, $hover-color);
+        margin: 40px auto;
+    }
 
-.section__footer {
-    @include footer;
 
-}
+    // footer
+    .section__footer {
+        padding-bottom: 33px;
+        @include font(500, 16px, 19px);
+
+    // @include font(400, 16px, 18px);
+
+        i{
+            margin-right: 20px;
+        }
+
+    
+
+    }
+
+    // medias querys
+    .menu-restaurant{
+
+    @include tablette {
+        margin: 0 20px;
+        border-radius: 30px 30px 0  0;
+    /*
+        &__div {
+            padding: 0 50px;
+        }
+    */
+        &__header {
+            justify-content: center;
+
+            i {
+                margin-left: 40px;
+            }
+        }
+        article{
+            display: grid;
+            grid-template-rows: auto;
+
+        }
+        .bloc-menu{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: auto;
+            column-gap: 30px;  
+
+            .bloc-menu__desserts{
+                justify-content: center;
+                grid-column: 1 / -1;
+                opacity: 0;
+                animation: appar 5s 1ms ease-in-out forwards ;
+                
+            }
+      
+            .bloc-menu__plats{
+                opacity: 0;
+                animation: appar 3s 1ms ease-in-out forwards ;
+            }
+        }
+
+
+    }
+
+    //  medias query pour desktop
+    @include desck {
+        margin: 0 193px;
+        border-radius: 20px 20px 0 0;
+
+        &__header {
+            margin-top: 50px;
+            justify-content: center;
+        }
+        .bloc-menu{
+            display: block;
+
+        }
+        &__div{
+            margin-top: -90px;
+        }
+    }
+    }
+
+    .section__footer{
+
+        @include tablette {           
+            display: flex;
+            justify-content: space-around;
+            .header__logo {
+                @include center;
+                order: 2;
+            }
+    
+            .footer__icon{
+            display: flex;
+            flex-direction: column;
+            }
+            .footer__contact{
+                display: flex;
+                flex-direction: column;
+    
+            }
+            /* .header__logo {
+                order: 2;
+            }*/
+            /* div {
+                display: flex;
+            //  justify-content: space-around;
+            }*/
+        }
+    
+        @include desck {
+            .grid{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+            
+            }
+            display: flex;
+            justify-content:space-around;
+            .header__logo {
+                order: 2;
+            }
+        /**/  .footer__icon{
+                display: flex;
+                justify-content:center;
+                flex-direction: row;
+            }
+            .footer__contact{
+                display: flex;
+                flex-direction: row;               
+            }/**/
+        
+        }
+
+    }

@@ -114,7 +114,7 @@ h1, h2 {
     padding: 0 100px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 992px) {
   .fonc-resto {
     padding: 0 193px;
   }
@@ -208,11 +208,17 @@ h1, h2 {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .section__fonctionnement .card__description {
   font-weight: 300;
   font-size: 17px;
   line-height: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   color: #353535;
 }
 .section__fonctionnement .card .icon-right {
@@ -301,7 +307,7 @@ h1, h2 {
     margin-left: 6px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 992px) {
   .section__fonctionnement {
     height: 262px;
   }
@@ -353,11 +359,17 @@ h1, h2 {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .section__restaurant .card__description {
   font-weight: 300;
   font-size: 17px;
   line-height: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   color: #353535;
 }
 .section__restaurant .card .icon-right {
@@ -402,7 +414,7 @@ h1, h2 {
     row-gap: 10px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 992px) {
   .section__restaurant .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -444,11 +456,17 @@ h1, h2 {
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
   .section__restaurant .card__description {
     font-weight: 300;
     font-size: 17px;
     line-height: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     color: #353535;
   }
   .section__restaurant .card .icon-right {
@@ -489,7 +507,6 @@ h1, h2 {
   animation: dispa 3s 3s;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .load .loading {
   width: 100px;
@@ -523,7 +540,6 @@ h1, h2 {
   .section__footer .header__logo {
     display: flex;
     justify-content: center;
-    align-items: center;
     order: 2;
   }
   .section__footer .footer__icon {
@@ -535,7 +551,7 @@ h1, h2 {
     flex-direction: column;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 992px) {
   .section__footer {
     display: flex;
     justify-content: space-around;

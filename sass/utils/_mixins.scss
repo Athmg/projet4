@@ -19,7 +19,7 @@
 @mixin center {
   display: flex;
   justify-content: center;
-  align-items: center;
+ // align-items: center;
 }
 
 @mixin flex-btwn {
@@ -28,9 +28,25 @@
   align-items: center;
 }
 
+@mixin grid{
+  display: grid;
+}
+
 
 @mixin cercle {
   border-radius: 100%;
+}
+
+@mixin txt-ellipsis{
+ 
+  text-overflow: ellipsis;
+ overflow: hidden;
+ white-space: nowrap;
+}
+
+@mixin padding-block($top, $left-right){
+  padding-block: $top $left-right;
+  writing-mode: horizontal-tb
 }
 
 
