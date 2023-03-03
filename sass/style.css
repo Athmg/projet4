@@ -172,8 +172,8 @@ h1, h2 {
   font-family: "Shrikhand", sans-serif, italic;
   color: #9356DC;
   /* position: relative;
-   right: 257px;
-   top: -60px;*/
+      right: 257px;
+      top: -60px;*/
 }
 
 .section__fonctionnement .card {
@@ -228,9 +228,6 @@ h1, h2 {
   color: transparent;
   opacity: 0;
 }
-.section__fonctionnement .card__txt {
-  @un;
-}
 .section__fonctionnement .card:hover .icon-right-color {
   opacity: 1;
   color: rgb(219, 12, 151);
@@ -250,6 +247,13 @@ h1, h2 {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  /* &__txt {
+   width: 211px;
+   word-spacing: nowrap;
+   }*/
+  /* &__txt {
+   color: black;
+   }*/
 }
 .section__fonctionnement .fonct-choix__cercle {
   font-weight: 500;
@@ -265,53 +269,36 @@ h1, h2 {
   margin-top: 25px;
   color: #353535;
 }
-.section__fonctionnement .fonct-choix__txt {
-  width: 211px;
-  word-spacing: nowrap;
-}
 .section__fonctionnement .fonct-choix:hover .section__fonctionnement .fonct-choix__icon {
   animation: test;
   cursor: pointer;
   background-color: #F5EDFF;
   color: #9356DC;
 }
-.section__fonctionnement .fonct-choix__txt {
-  color: black;
-}
 @media screen and (min-width: 768px) {
-  .section__fonctionnement .section__fonctionnement h2 {
+  .section__fonctionnement h2 {
+    padding-top: 60px;
     padding-bottom: 20px;
   }
-  .section__fonctionnement .section__fonctionnement .fonctionnement__choix {
-    background-color: aqua;
+  .section__fonctionnement .fonctionnement__choix {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     -moz-column-gap: 35px;
          column-gap: 35px;
     row-gap: 20px;
   }
-  .section__fonctionnement .section__fonctionnement .fonctionnement__choix div:nth-child(3) {
+  .section__fonctionnement .fonctionnement__choix div:nth-child(3) {
     grid-column: 1/-1;
-    width: 49%;
     margin: 0 auto;
   }
-  .section__fonctionnement .section__fonctionnement .fonctionnement__choix .fonct-choix__txt {
-    color: red;
+  .section__fonctionnement .fonctionnement__choix .fonct-choix {
     font-weight: 500;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 17px;
   }
-  .section__fonctionnement .section__restaurant {
-    padding-top: 5px;
-    background-color: #EAEAEA;
-    margin: 60px 0;
-  }
-  .section__fonctionnement .section__restaurant .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    -moz-column-gap: 25px;
-         column-gap: 25px;
-    row-gap: 10px;
+  .section__fonctionnement .fonctionnement__choix .fonct-choix i {
+    margin-right: 6px;
+    margin-left: 6px;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -320,11 +307,14 @@ h1, h2 {
   }
   .section__fonctionnement .fonctionnement__choix {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 323px);
+    grid-template-rows: 0;
     gap: 25px;
   }
-  .section__fonctionnement .fonctionnement__choix span__txt {
-    color: red;
+  .section__fonctionnement .fonctionnement__choix .fonct-choix {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
   }
 }
 
@@ -383,9 +373,6 @@ h1, h2 {
   color: transparent;
   opacity: 0;
 }
-.section__restaurant .card__txt {
-  @un;
-}
 .section__restaurant .card:hover .icon-right-color {
   opacity: 1;
   color: rgb(219, 12, 151);
@@ -400,6 +387,20 @@ h1, h2 {
 }
 .section__restaurant article {
   padding-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .section__restaurant {
+    background-color: #EAEAEA;
+    padding-top: 5px;
+    margin: 60px 0;
+  }
+  .section__restaurant .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 25px;
+         column-gap: 25px;
+    row-gap: 10px;
+  }
 }
 @media screen and (min-width: 1400px) {
   .section__restaurant .grid {
@@ -463,9 +464,6 @@ h1, h2 {
     color: transparent;
     opacity: 0;
   }
-  .section__restaurant .card__txt {
-    @un;
-  }
   .section__restaurant .card:hover .icon-right-color {
     opacity: 1;
     color: rgb(219, 12, 151);
@@ -501,47 +499,63 @@ h1, h2 {
   animation: load load-cycle 3s 1s cubic-bezier(0.6, 0.04, 0.98, 0.34) both infinite running;
 }
 
-@keyframes load {
-  0% {
-    opacity: 1;
-    transform: rotate(360deg);
-    box-shadow: 1px 2px 2px #FF79DA;
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(300deg);
-  }
+.section__footer {
+  padding-bottom: 33px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
 }
-@keyframes load-cycle {
-  from {
-    transform: scale(0);
-    opacity: 0;
-    box-shadow: 1px 2px 2px #FF79DA;
-  }
-  to {
-    transform: translateX(768px);
-    transform: scale(3);
-    opacity: 1;
-  }
+.section__footer i {
+  margin-right: 20px;
 }
-@keyframes dispa {
-  to {
-    transform: scale3d(0);
-    opacity: 0;
+@media screen and (min-width: 768px) {
+  .section__footer {
+    display: flex;
+    justify-content: space-around;
+    /* .header__logo {
+         order: 2;
+     }*/
+    /* div {
+         display: flex;
+       //  justify-content: space-around;
+     }*/
+  }
+  .section__footer .header__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+  }
+  .section__footer .footer__icon {
+    display: flex;
+    flex-direction: column;
+  }
+  .section__footer .footer__contact {
+    display: flex;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 1400px) {
   .section__footer {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    /**/
+    /**/
+  }
+  .section__footer .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
   .section__footer .header__logo {
     order: 2;
   }
-  .section__footer div {
+  .section__footer .footer__icon {
     display: flex;
-    justify-content: space-around;
-    width: 65%;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .section__footer .footer__contact {
+    display: flex;
+    flex-direction: row;
   }
 }/*# sourceMappingURL=style.css.map */

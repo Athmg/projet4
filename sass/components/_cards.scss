@@ -51,15 +51,10 @@
         color: transparent;
         opacity: 0;     
     }
-    &__txt{
-        @include font;
-    }
 
     &:hover .icon-right-color{
         opacity: 1;
-        color:rgb(219 12 151 / 100%);
-        
-        
+        color:rgb(219 12 151 / 100%);       
     }
 
     &__new{

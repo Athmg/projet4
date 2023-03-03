@@ -97,6 +97,61 @@ footer {
   color: #ffffff;
 }
 
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.5rem);
+  }
+  75% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes appar {
+  0% {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes appartX {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes apparition-bloc {
+  0% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
 .heading {
   display: flex;
   justify-content: center;
@@ -271,8 +326,8 @@ h1, h2 {
   font-family: "Shrikhand", sans-serif, italic;
   color: #9356DC;
   /* position: relative;
-   right: 257px;
-   top: -60px;*/
+      right: 257px;
+      top: -60px;*/
 }
 
 .section__fonctionnement .card {
@@ -327,7 +382,6 @@ h1, h2 {
   color: transparent;
   opacity: 0;
 }
-
 .section__fonctionnement .card:hover .icon-right-color {
   opacity: 1;
   color: rgb(219, 12, 151);
@@ -347,6 +401,13 @@ h1, h2 {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  /* &__txt {
+   width: 211px;
+   word-spacing: nowrap;
+   }*/
+  /* &__txt {
+   color: black;
+   }*/
 }
 .section__fonctionnement .fonct-choix__cercle {
   font-weight: 500;
@@ -362,53 +423,36 @@ h1, h2 {
   margin-top: 25px;
   color: #353535;
 }
-.section__fonctionnement .fonct-choix__txt {
-  width: 211px;
-  word-spacing: nowrap;
-}
 .section__fonctionnement .fonct-choix:hover .section__fonctionnement .fonct-choix__icon {
   animation: test;
   cursor: pointer;
   background-color: #F5EDFF;
   color: #9356DC;
 }
-.section__fonctionnement .fonct-choix__txt {
-  color: black;
-}
 @media screen and (min-width: 768px) {
-  .section__fonctionnement .section__fonctionnement h2 {
+  .section__fonctionnement h2 {
+    padding-top: 60px;
     padding-bottom: 20px;
   }
-  .section__fonctionnement .section__fonctionnement .fonctionnement__choix {
-    background-color: aqua;
+  .section__fonctionnement .fonctionnement__choix {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     -moz-column-gap: 35px;
          column-gap: 35px;
     row-gap: 20px;
   }
-  .section__fonctionnement .section__fonctionnement .fonctionnement__choix div:nth-child(3) {
+  .section__fonctionnement .fonctionnement__choix div:nth-child(3) {
     grid-column: 1/-1;
-    width: 49%;
     margin: 0 auto;
   }
-  .section__fonctionnement .section__fonctionnement .fonctionnement__choix .fonct-choix__txt {
-    color: red;
+  .section__fonctionnement .fonctionnement__choix .fonct-choix {
     font-weight: 500;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 17px;
   }
-  .section__fonctionnement .section__restaurant {
-    padding-top: 5px;
-    background-color: #EAEAEA;
-    margin: 60px 0;
-  }
-  .section__fonctionnement .section__restaurant .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    -moz-column-gap: 25px;
-         column-gap: 25px;
-    row-gap: 10px;
+  .section__fonctionnement .fonctionnement__choix .fonct-choix i {
+    margin-right: 6px;
+    margin-left: 6px;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -417,11 +461,14 @@ h1, h2 {
   }
   .section__fonctionnement .fonctionnement__choix {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 323px);
+    grid-template-rows: 0;
     gap: 25px;
   }
-  .section__fonctionnement .fonctionnement__choix span__txt {
-    color: red;
+  .section__fonctionnement .fonctionnement__choix .fonct-choix {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
   }
 }
 
@@ -480,7 +527,6 @@ h1, h2 {
   color: transparent;
   opacity: 0;
 }
-
 .section__restaurant .card:hover .icon-right-color {
   opacity: 1;
   color: rgb(219, 12, 151);
@@ -495,6 +541,20 @@ h1, h2 {
 }
 .section__restaurant article {
   padding-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .section__restaurant {
+    background-color: #EAEAEA;
+    padding-top: 5px;
+    margin: 60px 0;
+  }
+  .section__restaurant .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 25px;
+         column-gap: 25px;
+    row-gap: 10px;
+  }
 }
 @media screen and (min-width: 1400px) {
   .section__restaurant .grid {
@@ -558,7 +618,6 @@ h1, h2 {
     color: transparent;
     opacity: 0;
   }
- 
   .section__restaurant .card:hover .icon-right-color {
     opacity: 1;
     color: rgb(219, 12, 151);
@@ -594,248 +653,63 @@ h1, h2 {
   animation: load load-cycle 3s 1s cubic-bezier(0.6, 0.04, 0.98, 0.34) both infinite running;
 }
 
-@keyframes load {
-  0% {
-    opacity: 1;
-    transform: rotate(360deg);
-    box-shadow: 1px 2px 2px #FF79DA;
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(300deg);
-  }
+.section__footer {
+  padding-bottom: 33px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
 }
-@keyframes load-cycle {
-  from {
-    transform: scale(0);
-    opacity: 0;
-    box-shadow: 1px 2px 2px #FF79DA;
-  }
-  to {
-    transform: translateX(768px);
-    transform: scale(3);
-    opacity: 1;
-  }
+.section__footer i {
+  margin-right: 20px;
 }
-@keyframes dispa {
-  to {
-    transform: scale3d(0);
-    opacity: 0;
+@media screen and (min-width: 768px) {
+  .section__footer {
+    display: flex;
+    justify-content: space-around;
+    /* .header__logo {
+         order: 2;
+     }*/
+    /* div {
+         display: flex;
+       //  justify-content: space-around;
+     }*/
+  }
+  .section__footer .header__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+  }
+  .section__footer .footer__icon {
+    display: flex;
+    flex-direction: column;
+  }
+  .section__footer .footer__contact {
+    display: flex;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 1400px) {
   .section__footer {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    /**/
+    /**/
+  }
+  .section__footer .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
   .section__footer .header__logo {
     order: 2;
   }
-  .section__footer div {
+  .section__footer .footer__icon {
     display: flex;
-    justify-content: space-around;
-    width: 65%;
+    justify-content: center;
+    flex-direction: row;
   }
-}
-
-
-.section__reservation .cacher-vue .btn {
-  margin-right: -100px;
-  opacity: 0;
-  cursor: pointer;
-  transition: margin-right 2.5s ease-in;
-}
-.section__reservation .cacher-vue .btn:hover {
-  opacity: 1;
-  margin-right: 50px;
-}
-.section__reservation .parent {
-  height: 100vh;
-  animation: test 0.2s;
-}
-.section__reservation .bloc {
-  background-color: orangered;
-  padding: 30px;
-  margin: 20px;
-  width: 400px;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 20px;
-}
-.section__reservation .bloc:hover button {
-  background-color: red;
-}
-.section__reservation .b1 {
-  animation: test 0.5s;
-}
-.section__reservation .b2 {
-  animation: test 0.9s;
-}
-.section__reservation .b3 {
-  animation: test 1.2s;
-}
-.section__reservation .parent {
-  height: 100vh;
-  animation: test 0.2s;
-}
-.section__reservation .bloc {
-  background-color: orangered;
-  padding: 30px;
-  margin: 20px;
-  width: 400px;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 20px;
-}
-.section__reservation .b1 {
-  animation: jump 6s infinite running;
-}
-.section__reservation .circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  mix-blend-mode: screen;
-  position: absolute;
-  animation: loader 3s 2s infinite;
-}
-.section__reservation .circle-1 {
-  background: #99E2D0;
-  animation: load 3s 1s infinite;
-}
-.section__reservation .circle-2 {
-  background: #FF79DA;
-  left: 40px;
-  animation: load 3s 1s infinite;
-}
-.section__reservation .circle-3 {
-  background: #9356DC;
-  left: 20px;
-  top: 40px;
-  animation: load 3s 1s infinite;
-}
-.section__reservation .isolate {
-  isolation: isolate; /* Without isolation, the background color will be taken into account */
-  position: relative;
-}
-
-
-.section-svg .svg-icon {
-  width: 1.5em;
-  height: 1.5em;
-}
-.section-svg .svg-icon path,
-.section-svg .svg-icon polygon,
-.section-svg .svg-icon rect {
-  fill: black;
-}
-.section-svg .svg-icon polygon {
-  stroke: red;
-  fill-rule: evenodd;
-}
-.section-svg .svg-icon circle {
-  stroke: #4691f6;
-  stroke-width: 1;
-}
-
-@keyframes load {
-  0% {
-    opacity: 1;
-    transform: rotate(360deg);
+  .section__footer .footer__contact {
+    display: flex;
+    flex-direction: row;
   }
-  100% {
-    opacity: 0;
-    transform: rotate(300deg);
-  }
-}
-@keyframes jump {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(0.5rem);
-  }
-  75% {
-    transform: translateY(-0.5rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes appear {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-@keyframes loader {
-  100% {
-    opacity: 0;
-    z-index: -10;
-  }
-}
-@keyframes test {
-  0% {
-    opacity: 0;
-    transform: translateY(500px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes appar {
-  0% {
-    opacity: 0;
-    transform: translateY(500px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes appartX {
-  0% {
-    opacity: 0;
-    transform: translateX(500px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes apparition-bloc {
-  0% {
-    opacity: 0;
-    transform: translateY(-500px);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-/**/
-@keyframes annim-checkbox {
-  100% {
-    opacity: 1;
-    background-color: #99E2D0;
-  }
-} /**/
-/*
-h1 {
-    background-color: #9356dc;
-    animation: itemAppear 0.6s;
-    animation-timing-function: ease;
-    animation-delay: 0s;
-    animation-fill-mode: none;
-    animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-    animation-fill-mode: both;
-    transform: scale(2);
-    max-width: 100%;
-
-  }*//*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

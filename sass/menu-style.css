@@ -97,126 +97,6 @@ footer {
   color: #ffffff;
 }
 
-.section__reservation {
-  /* h1{
-     animation: itemAppear 3s 200ms;
-   }*/
-  /* button{
-      animation: itemAppear 3s infinite 200ms;
-   }*/
-}
-.section__reservation .cacher-vue .btn {
-  margin-right: -100px;
-  opacity: 0;
-  cursor: pointer;
-  transition: margin-right 2.5s ease-in;
-}
-.section__reservation .cacher-vue .btn:hover {
-  opacity: 1;
-  margin-right: 50px;
-}
-.section__reservation .parent {
-  height: 100vh;
-  animation: test 0.2s;
-}
-.section__reservation .bloc {
-  background-color: orangered;
-  padding: 30px;
-  margin: 20px;
-  width: 400px;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 20px;
-}
-.section__reservation .bloc:hover button {
-  background-color: red;
-}
-.section__reservation .b1 {
-  animation: test 0.5s;
-}
-.section__reservation .b2 {
-  animation: test 0.9s;
-}
-.section__reservation .b3 {
-  animation: test 1.2s;
-}
-.section__reservation .parent {
-  height: 100vh;
-  animation: test 0.2s;
-}
-.section__reservation .bloc {
-  background-color: orangered;
-  padding: 30px;
-  margin: 20px;
-  width: 400px;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 20px;
-}
-.section__reservation .b1 {
-  animation: jump 6s infinite running;
-}
-.section__reservation .circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  mix-blend-mode: screen;
-  position: absolute;
-  animation: loader 3s 2s infinite;
-}
-.section__reservation .circle-1 {
-  background: #99E2D0;
-  animation: load 3s 1s infinite;
-}
-.section__reservation .circle-2 {
-  background: #FF79DA;
-  left: 40px;
-  animation: load 3s 1s infinite;
-}
-.section__reservation .circle-3 {
-  background: #9356DC;
-  left: 20px;
-  top: 40px;
-  animation: load 3s 1s infinite;
-}
-.section__reservation .isolate {
-  isolation: isolate; /* Without isolation, the background color will be taken into account */
-  position: relative;
-}
-
-.section-svg {
-  /* -----
-  SVG Icons - svgicons.sparkk.fr
-  ----- */
-}
-.section-svg .svg-icon {
-  width: 1.5em;
-  height: 1.5em;
-}
-.section-svg .svg-icon path,
-.section-svg .svg-icon polygon,
-.section-svg .svg-icon rect {
-  fill: black;
-}
-.section-svg .svg-icon polygon {
-  stroke: red;
-  fill-rule: evenodd;
-}
-.section-svg .svg-icon circle {
-  stroke: #4691f6;
-  stroke-width: 1;
-}
-
-@keyframes load {
-  0% {
-    opacity: 1;
-    transform: rotate(360deg);
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(300deg);
-  }
-}
 @keyframes jump {
   0% {
     transform: translateY(0);
@@ -240,22 +120,6 @@ footer {
   100% {
     opacity: 1;
     transform: scale(1);
-  }
-}
-@keyframes loader {
-  100% {
-    opacity: 0;
-    z-index: -10;
-  }
-}
-@keyframes test {
-  0% {
-    opacity: 0;
-    transform: translateY(500px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 @keyframes appar {
@@ -288,26 +152,6 @@ footer {
     transform: none;
   }
 }
-/**/
-@keyframes annim-checkbox {
-  100% {
-    opacity: 1;
-    background-color: #99E2D0;
-  }
-} /**/
-/*
-h1 {
-    background-color: #9356dc;
-    animation: itemAppear 0.6s;
-    animation-timing-function: ease;
-    animation-delay: 0s;
-    animation-fill-mode: none;
-    animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-    animation-fill-mode: both;
-    transform: scale(2);
-    max-width: 100%;
-
-  }*/
 .menu-img img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -340,7 +184,7 @@ h1 {
 .menu-restaurant__header i {
   margin-right: 20px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 768px) {
   .menu-restaurant {
     margin: 0 70px;
     border-radius: 20px 20px 0 0;
@@ -354,6 +198,39 @@ h1 {
   .menu-restaurant__header i {
     padding: 0px 24px;
     margin-bottom: -12px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .menu-restaurant {
+    margin: 0 193px;
+    border-radius: 20px 20px 0 0;
+  }
+  .menu-restaurant article {
+    margin: 0 120px;
+  }
+  .menu-restaurant__header {
+    margin-top: 50px;
+    justify-content: center;
+  }
+  .menu-restaurant__header i {
+    padding: 0px 24px;
+    margin-bottom: -12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-restaurant .bloc-menu {
+    margin: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
+  .menu-restaurant .bloc-menu .bloc-menu__desserts {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -408,9 +285,6 @@ article p {
   padding: 0 10px;
   cursor: pointer;
   /**/
-  /* &:hover &__checkbox {
-       transform: rotate(0);
-   }*/
 }
 .card h3 {
   margin-top: 10px;
@@ -457,9 +331,6 @@ article p {
   bottom: 2.4rem;
   color: transparent;
   opacity: 0;
-}
-.card__txt {
-  @un;
 }
 .card:hover .icon-right-color {
   opacity: 1;
@@ -510,9 +381,6 @@ article p {
   align-items: center;
   color: #99E2D0;
   background-color: #ffffff;
-}
-.card__checkbox input:checked {
-  width: 20px;
 }
 .card__checkbox input {
   background-color: #99E2D0;

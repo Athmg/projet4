@@ -99,10 +99,10 @@
             color: $color-gray-3;
             }
 
-            &__txt {
+           /* &__txt {
             width: 211px;
             word-spacing: nowrap;
-            }
+            }*/
 
             &:hover &__icon {
             animation: test;
@@ -111,29 +111,34 @@
             color: $primar-color;
             }
 
-            &__txt {
+           /* &__txt {
             color: black;
-            }
+            }*/
         }
    // }
 
         @include tablette {
         //  .section__fonctionnement {
                 h2 {
+                    padding-top: 60px;
                     padding-bottom: 20px;
                 }
 
                 .fonctionnement__choix {
-                    background-color: aqua;
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     column-gap: 35px;
                     row-gap: 20px;
-
                     div:nth-child(3) {
                         grid-column: 1 / -1;
-                        width: 49%;
                         margin: 0 auto;
+                    }
+                    .fonct-choix{
+                        @include font(500, 16px, 17px);
+                        i{
+                            margin-right: 6px;
+                            margin-left: 6px;
+                        }
                     }
 
                 }   
@@ -143,24 +148,16 @@
   //  medias query pour desktop
         @include desck {
             height: 262px;
-            width: 60%;
-            background-color: aquamarine;
-
             .fonctionnement__choix {
-                //background-color: aquamarine;
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(3, 323px);
+                grid-template-rows:0;                
                 gap: 25px;
-                
-                div{
-                    @include card;
-                    .card{
-                        width: 322px;                                     
-                        color: red;
-                        @include font(500, 16px, 19px);
-                    }
-                        
+
+                .fonct-choix{
+                @include font(500, 16px, 19px);
                 }
+            
             }
         }
     }
@@ -168,19 +165,20 @@
 
 // les differents restaurant à la carte
     .section__restaurant {
+      
         padding-top: $padding-top;
         .card {
             @include card;
         }
         article {
+            
             padding-bottom: $margin-bor;
         }
 
   // media query tablette // restaurants
         @include tablette {
-                    
+            background-color: $color-gray-2;                
             padding-top: 5px;
-            background-color: #d51717;
             margin: 60px 0;
 
             .grid {
@@ -236,19 +234,64 @@
 
 // footer
     .section__footer {
-        @include desck {
+        padding-bottom: 33px;
+        @include font(500, 16px, 19px);
+
+       // @include font(400, 16px, 18px);
+
+        i{
+            margin-right: 20px;
+        }
+
+        @include tablette {           
+           display: flex;
+           justify-content: space-around;
+            .header__logo {
+                @include center;
+                order: 2;
+            }
+
+            .footer__icon{
             display: flex;
-            justify-content: space-around;
-            align-items: center;
+            flex-direction: column;
+            }
+            .footer__contact{
+                display: flex;
+                flex-direction: column;
+
+            }
+           /* .header__logo {
+                order: 2;
+            }*/
+           /* div {
+                display: flex;
+              //  justify-content: space-around;
+            }*/
+        }
+
+        @include desck {
+            .grid{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+           
+            }
+            display: flex;
+            justify-content:space-around;
             .header__logo {
                 order: 2;
             }
-            div {
+          /**/  .footer__icon{
                 display: flex;
-                justify-content: space-around;
-                width: 65%;
+                justify-content:center;
+                flex-direction: row;
             }
+            .footer__contact{
+                display: flex;
+                flex-direction: row;               
+            }/**/
+          
         }
+
     }
 
 
