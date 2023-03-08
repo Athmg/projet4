@@ -1,20 +1,7 @@
-.heading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 0;
-}
-.heading img {
-  height: 44px;
-  width: 162px;
-}
-.heading i {
-  position: relative;
-  left: -46px;
-}
-
 body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 * {
@@ -40,7 +27,7 @@ input, button {
 #page {
   max-width: 767px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .letter-space {
@@ -71,30 +58,88 @@ input, button {
   display: flex;
 }
 
-footer {
-  padding-left: 20px;
-  padding-top: 20px;
+/*footer {
+  padding-left: $margin-bor;
+  padding-top: $margin-bor;
 }
 
+@mixin footer {
+  background-color: $color-gray-3;
+  color: $color-txt;
+  .header__logo {
+    font-family: $font-fam-header;
+  }
+  span {
+    padding-left: 20px;
+    align-items: center;
+  }
+  i {
+    height: 12px;
+    width: 11px;
+  }
+}
+/*
+.section__footer{
+    @include footer; 
+    a{
+      color: $color-txt;
+    }
+  }*/
+/*
 .section__footer {
-  background-color: #353535;
-  color: #ffffff;
-}
-.section__footer .header__logo {
-  font-family: "Shrikhand", sans-serif, italic;
-}
-.section__footer span {
-  padding-left: 20px;
-  align-items: center;
-}
-.section__footer i {
-  height: 12px;
-  width: 11px;
-}
-.section__footer a {
-  color: #ffffff;
-}
+  padding-bottom: 33px;
+  display: flex;
+  flex-direction: column;
 
+  i {
+    margin-right: 20px;
+  }
+
+  .header__logo {
+    margin-left: 0;
+    margin-bottom: 16px;
+    @include font(400, 18px, 27px);
+    @include font-style;
+  }
+  .footer__icon {
+    @include font(500, 16px, 18px);
+  }
+  .footer__contact {
+    @include font(400, 16px, 18px);
+  }
+
+  @include tablette {
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    .header__logo {
+      // @include center;
+      order: 2;
+      margin-right: 0;
+    }
+
+    @include desck {
+      display: flex;
+      justify-content: center;
+      .header__logo {
+        margin-left: 35px;
+        order: 2;
+      }
+      .footer__icon {
+        flex-direction: row;
+        gap: 40px;
+      }
+      .footer__contact {
+        flex-direction: row;
+        gap: 40px;
+      } 
+    }
+  }
+}
+*/
 body {
   margin: 10px auto;
   font-family: "Roboto", sans-serif;
@@ -106,18 +151,14 @@ h1, h2 {
   padding-bottom: 10px;
 }
 
-.fonc-resto {
-  padding: 40px 20px;
+.heading {
+  display: block;
+  margin: auto;
+  padding: 15px 0;
 }
-@media screen and (min-width: 768px) {
-  .fonc-resto {
-    padding: 0 100px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .fonc-resto {
-    padding: 0 193px;
-  }
+.heading img {
+  height: 44px;
+  width: 162px;
 }
 
 .formulaire {
@@ -141,6 +182,10 @@ h1, h2 {
   margin-left: 45px;
 }
 
+.section__fonctionnement, .section__restaurant {
+  margin: 0 16px;
+}
+
 .section__reservation {
   background-color: #EAEAEA;
   text-align: center;
@@ -158,13 +203,12 @@ h1, h2 {
   height: 50px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
   border-radius: 25px;
-  background-color: #9356dc;
+  background-image: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
   transition: background-image 400ms;
   transition: box-shadow 500ms;
   margin: 30px auto;
 }
 .section__reservation .btn:hover {
-  background-image: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
   box-shadow: 4px 3px 3px 4px #353535;
 }
 .section__reservation span {
@@ -208,35 +252,18 @@ h1, h2 {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 .section__fonctionnement .card__description {
   font-weight: 300;
   font-size: 17px;
   line-height: 20px;
-  text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
-  color: #353535;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.section__fonctionnement .card .icon-right {
-  position: relative;
-  margin-top: 16px;
-  color: #000000;
-  transition: color 400ms;
-}
-.section__fonctionnement .card .icon-right-color {
-  position: absolute;
-  right: 1.3em;
-  bottom: 2.4rem;
-  color: transparent;
-  opacity: 0;
-}
-.section__fonctionnement .card:hover .icon-right-color {
-  opacity: 1;
-  color: rgb(219, 12, 151);
+.section__fonctionnement .card .icon-like {
+  width: 22px;
+  height: 21px;
 }
 .section__fonctionnement .card__new {
   background-color: #99E2D0;
@@ -282,6 +309,9 @@ h1, h2 {
   color: #9356DC;
 }
 @media screen and (min-width: 768px) {
+  .section__fonctionnement .section__fonctionnement, .section__fonctionnement .section__restaurant {
+    margin: 0;
+  }
   .section__fonctionnement h2 {
     padding-top: 60px;
     padding-bottom: 20px;
@@ -300,27 +330,29 @@ h1, h2 {
   .section__fonctionnement .fonctionnement__choix .fonct-choix {
     font-weight: 500;
     font-size: 16px;
-    line-height: 17px;
-  }
-  .section__fonctionnement .fonctionnement__choix .fonct-choix i {
-    margin-right: 6px;
-    margin-left: 6px;
+    line-height: 18px;
+    width: 350px;
   }
 }
 @media screen and (min-width: 992px) {
   .section__fonctionnement {
-    height: 262px;
+    padding: 0 180px;
   }
   .section__fonctionnement .fonctionnement__choix {
-    display: grid;
-    grid-template-columns: repeat(3, 323px);
-    grid-template-rows: 0;
+    display: flex;
     gap: 25px;
+    /*  */
+    /* */
+  }
+  .section__fonctionnement .fonctionnement__choix div:nth-child(3) {
+    display: inline;
+    margin: 0;
   }
   .section__fonctionnement .fonctionnement__choix .fonct-choix {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
+    width: 323px;
   }
 }
 
@@ -359,35 +391,18 @@ h1, h2 {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 .section__restaurant .card__description {
   font-weight: 300;
   font-size: 17px;
   line-height: 20px;
-  text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
-  color: #353535;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.section__restaurant .card .icon-right {
-  position: relative;
-  margin-top: 16px;
-  color: #000000;
-  transition: color 400ms;
-}
-.section__restaurant .card .icon-right-color {
-  position: absolute;
-  right: 1.3em;
-  bottom: 2.4rem;
-  color: transparent;
-  opacity: 0;
-}
-.section__restaurant .card:hover .icon-right-color {
-  opacity: 1;
-  color: rgb(219, 12, 151);
+.section__restaurant .card .icon-like {
+  width: 22px;
+  height: 21px;
 }
 .section__restaurant .card__new {
   background-color: #99E2D0;
@@ -397,13 +412,16 @@ h1, h2 {
   right: 20px;
   top: 25px;
 }
+.section__restaurant .card .icon-like {
+  margin-top: 16px;
+}
 .section__restaurant article {
   padding-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .section__restaurant {
     background-color: #EAEAEA;
-    padding-top: 5px;
+    padding: 5px 40px;
     margin: 60px 0;
   }
   .section__restaurant .grid {
@@ -411,10 +429,12 @@ h1, h2 {
     grid-template-columns: repeat(2, 1fr);
     -moz-column-gap: 25px;
          column-gap: 25px;
-    row-gap: 10px;
   }
 }
 @media screen and (min-width: 992px) {
+  .section__restaurant {
+    padding: 0px 193px;
+  }
   .section__restaurant .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -456,35 +476,18 @@ h1, h2 {
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
   }
   .section__restaurant .card__description {
     font-weight: 300;
     font-size: 17px;
     line-height: 20px;
-    text-overflow: ellipsis;
-    overflow: hidden;
     white-space: nowrap;
-    color: #353535;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-  .section__restaurant .card .icon-right {
-    position: relative;
-    margin-top: 16px;
-    color: #000000;
-    transition: color 400ms;
-  }
-  .section__restaurant .card .icon-right-color {
-    position: absolute;
-    right: 1.3em;
-    bottom: 2.4rem;
-    color: transparent;
-    opacity: 0;
-  }
-  .section__restaurant .card:hover .icon-right-color {
-    opacity: 1;
-    color: rgb(219, 12, 151);
+  .section__restaurant .card .icon-like {
+    width: 22px;
+    height: 21px;
   }
   .section__restaurant .card__new {
     background-color: #99E2D0;
@@ -495,7 +498,6 @@ h1, h2 {
     top: 25px;
   }
   .section__restaurant .card__img {
-    height: 230px;
     width: 341px;
   }
 }
@@ -505,8 +507,8 @@ h1, h2 {
   height: 100vh;
   background-color: rgba(196, 207, 207, 0.395);
   animation: dispa 3s 3s;
-  display: flex;
-  justify-content: center;
+  display: block;
+  margin: auto;
 }
 .load .loading {
   width: 100px;
@@ -516,62 +518,6 @@ h1, h2 {
   animation: load load-cycle 3s 1s cubic-bezier(0.6, 0.04, 0.98, 0.34) both infinite running;
 }
 
-.section__footer {
-  padding-bottom: 33px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-}
-.section__footer i {
-  margin-right: 20px;
-}
-@media screen and (min-width: 768px) {
-  .section__footer {
-    display: flex;
-    justify-content: space-around;
-    /* .header__logo {
-         order: 2;
-     }*/
-    /* div {
-         display: flex;
-       //  justify-content: space-around;
-     }*/
-  }
-  .section__footer .header__logo {
-    display: flex;
-    justify-content: center;
-    order: 2;
-  }
-  .section__footer .footer__icon {
-    display: flex;
-    flex-direction: column;
-  }
-  .section__footer .footer__contact {
-    display: flex;
-    flex-direction: column;
-  }
-}
-@media screen and (min-width: 992px) {
-  .section__footer {
-    display: flex;
-    justify-content: space-around;
-    /**/
-    /**/
-  }
-  .section__footer .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .section__footer .header__logo {
-    order: 2;
-  }
-  .section__footer .footer__icon {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-  }
-  .section__footer .footer__contact {
-    display: flex;
-    flex-direction: row;
-  }
-}/*# sourceMappingURL=style.css.map */
+/* .fonc-resto {
+
+ }*//*# sourceMappingURL=style.css.map */

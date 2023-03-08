@@ -52,4 +52,12 @@
     opacity: 1;
     transform: none;
   }
+}
+@keyframes slidein {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(30px);
+  }
 }/*# sourceMappingURL=animation.css.map */

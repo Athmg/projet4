@@ -1,0 +1,88 @@
+
+.icon-like {
+	position: relative;
+	cursor: pointer;
+}
+
+.icon-like:before {
+	content: "\f004";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 400;
+}
+
+.icon-like:after {
+	content: "\f004";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	
+	background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+	background-clip: text;
+	-webkit-background-clip: text; /* Pour une compatibilité avec les navigateurs WebKit */
+	color: transparent;
+	transition: width 0.3s ease;
+}
+
+.icon-like:hover:after {
+	width: 100%;
+}
+
+.icon-like:focus {
+	outline: none;
+}
+
+.icon-like:active:after {
+	width: 100%;
+	transition: none;
+}
+
+
+
+
+/*
+.fa-regular.fa-heart {
+	position: relative;
+	cursor: pointer;
+}
+
+.fa-regular.fa-heart:before {
+	content: "\f004";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 400;
+}
+
+.fa-regular.fa-heart:after {
+	content: "\f004";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+	background-clip: text;
+	-webkit-background-clip: text; /* Pour une compatibilité avec les navigateurs WebKit */
+/*
+	color: transparent;
+	transition: width 0.3s ease;
+    
+}
+
+.fa-regular.fa-heart:hover:after {
+	width: 100%;
+}
+
+.fa-regular.fa-heart:focus {
+	outline: none;
+}
+
+.fa-regular.fa-heart:active:after {
+	width: 100%;
+	transition: none;
+}
+*/

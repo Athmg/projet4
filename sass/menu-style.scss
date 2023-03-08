@@ -3,295 +3,276 @@
 @import "./breakpoints";
 @import "./components/buttons";
 @import "./components/cards";
+@import "./layouts/body";
 @import "animation";
+@import "./components/_coeur";
+@import "./components/checkbox";
 
+.heading {
+  @include center-flex;
+  padding: 20px 25px;
+
+  /* img{ 
+        width: 162;
+        height: 44;
+    }*/
+
+  i {
+    position: relative;
+    padding-right: 35px;
+    height: 17px;
+    width: 19px;
+  }
+
+  @include tablette {
+    i {
+      padding-right: 60px;
+    }
+  }
+
+  @include desck {
+    i {
+      padding-left: 75px;
+    }
+  }
+}
 
 .menu-img {
-    img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .menu-restaurant {
-    position: relative;
-    background-color: $color-gray-2;
-    border-radius: 40px 40px 0 0;
-    top: -60px;
+  height: 100%;
+  position: relative;
+  background-color: $color-gray-2;
+  border-radius: 40px 40px 0 0;
+  top: -60px;
 
-    &__div {
-        padding: 0 16px;
+  &__div {
+    padding: 0 16px;
+    //  margin: 0 auto;
+  }
+
+  &__header {
+    @include flex-btwn;
+    padding-top: 50px;
+
+    h1 {
+      font-family: $font-fam-header;
+      @include font(400, 28px, 41px);
+      white-space: nowrap;
     }
 
-    &__header {
-       @include flex-btwn;
-
-       h1 {
-            padding-top: 20px;
-            font-family: $font-fam-header;
-            @include font(400, 28px, 41px);
-            white-space: nowrap;
-       }
-        i {
-            margin-right: 24px;
-            padding-top: 20px;
-
-        }
-      
+    i {
+      margin-right: 0px;
+      width: 30px;
+      height: 25px;
     }
-    .bloc-menu__entree{
-        opacity: 0;
-        animation: appar 3s 5ms ease-in-out forwards ;
-
-    }
-    .bloc-menu__plats{
-        opacity: 0;
-        animation: appar 6s 5ms ease-in-out forwards ;
-    }
-    .bloc-menu__desserts{
-        opacity: 0;
-        animation: appar 9s 5ms ease-in-out forwards ;
-    }
+  }
+  .bloc-menu__entree {
+    opacity: 0;
+    animation: appar 3s 5ms ease-in-out forwards;
+  }
+  .bloc-menu__plats {
+    opacity: 0;
+    animation: appar 6s 5ms ease-in-out forwards;
+  }
+  .bloc-menu__desserts {
+    opacity: 0;
+    animation: appar 9s 5ms ease-in-out forwards;
+  }
 }
 
 article {
-    font-family: $font-fam-body;
+  font-family: $font-fam-body;
 
-    h2 {
-        text-transform: uppercase;
-        @include font(300, 16px, 19px);
-        margin: 30px 0px 20px 0;
-        position: relative;
-        opacity: 0;
-        animation: jump 2s  ease-in forwards;
-       // transition: font-size 4s 3s ;
-    }
-    // surligner
-    h2::after {
-        content: "";
-        color: $terti-color;
-        position: absolute;
-        left: 0;
-        bottom: -7px;
-        width: 40px;
-        border-bottom: 3px solid $terti-color;
-    }
+  h2 {
+    text-transform: uppercase;
+    @include font(300, 16px, 19px);
+    margin: 30px 0px 20px 0;
+    position: relative;
+    opacity: 0;
+    animation: jump 2s ease-in forwards;
+    // transition: font-size 4s 3s ;
+  }
+  // surligner
+  h2::after {
+    content: "";
+    color: $terti-color;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 40px;
+    border-bottom: 3px solid $terti-color;
+  }
 
-    h3 {
-        @include font(500, 18px, 21px);
-        font-weight: $font-weight-bold;
-        white-space: nowrap;
-     
-    }
+  h3 {
+    @include font(500, 18px, 21px);
+    font-weight: $font-weight-bold;
+    white-space: nowrap;
+  }
 
-    p {
-        @include font(300, 15px, 17px);
-        margin-right: 20px;
-        display: inline block;
-       
-       
-    }
-
+  p {
+    @include font(300, 15px, 17px);
+    margin-right: 20px;
+    display: inline block;
+  }
 }
 
 .card {
-   opacity: 0;
-   animation: appar ease-in-out forwards ;
-    position: relative;
-    @include card;
-   // width: 98%;
-    margin-bottom: 20px;
-    padding: 0 10px;
-    cursor: pointer; 
-    &__box {
-        @include flex-btwn;
-       // position: relative;
-    }
+  opacity: 0;
+  animation: appar ease-in-out forwards;
+  position: relative;
+  @include card;
+  margin-bottom: 20px;
+  //padding: 0 10px;
+  cursor: pointer;
+  &__box {
+     @include flex-arwnd;   
+     gap: 5px;
+  }
+  &__prix {
+    padding-top: 42px;
+    font-weight: $font-weight-bold;
+  }
 
-    &__prix {
-        padding-top: 42px;
-        font-weight: $font-weight-bold;
-    }
+  &:hover &__prix {
+    margin-right: 2rem;
+    transition: margin-left 0.3s ease;
+  }
+}
+//@include pour le bouton
 
-    &:hover &__prix{
-        margin-right: 6rem;
-        animation: appartX 100ms forwards; 
-    }
-
-    &__check {
-        @include center;
-        cursor: pointer;
-        opacity: 0;
-        width: 20%; // 20px;
-        height:  100%;  //70px; 
-        background-color:$terti-color;
-        position: absolute;
-        right: -5rem;
-        border-radius: 0px 15px 15px 0px;       
-              
-    }
-    &:hover &__check{  
-        right: 0;
-        animation: appartX 100ms forwards;   
-    } 
-   
-   /**/  
-
-    &__checkbox{
-        @include cercle;
-        @include center;
-        color:$terti-color;
-        background-color:  #ffffff ;  
-        input{
-            background-color: $terti-color;  
-            color:$terti-color;
-            border: rgba(255, 255, 255, .5);
-        } 
-    }
-  
-   
- 
+.btn {
+  @include button($color-txt, $hover-color);
+  margin: 40px auto;
 }
 
+// footer
+.section__footer {
+  background-color: $color-gray-3;
+  color: $color-txt;
+  padding-bottom: 33px;
 
-    //@include pour le bouton
+  display: flex;
+  justify-content: space-around;
 
-    .btn {
-        @include button($color-txt, $hover-color);
-        margin: 40px auto;
+  p {
+    @include font(500, 16px, 19px);
+  }
+  .header__logo {
+    @include center;
+    @include font(400, 16px, 18px);
+    //order: 2;
+  }
+  i {
+    margin-right: 20px;
+  }
+}
+
+// medias querys
+.menu-restaurant {
+  @include tablette {
+    margin: 0 50px;
+    border-radius: 30px 30px 0 0;
+
+    &__header {
+      @include center-flex;
+
+      i {
+        margin-left: 25px;
+      }
     }
 
-
-    // footer
-    .section__footer {
-        padding-bottom: 33px;
-        @include font(500, 16px, 19px);
-
-    // @include font(400, 16px, 18px);
-
-        i{
-            margin-right: 20px;
-        }
-
-    
-
+    article {
+      display: grid;
+      grid-template-rows: auto;
     }
 
-    // medias querys
-    .menu-restaurant{
-
-    @include tablette {
-        margin: 0 20px;
-        border-radius: 30px 30px 0  0;
-    /*
-        &__div {
-            padding: 0 50px;
-        }
-    */
-        &__header {
-            justify-content: center;
-
-            i {
-                margin-left: 40px;
-            }
-        }
-        article{
-            display: grid;
-            grid-template-rows: auto;
-
-        }
-        .bloc-menu{
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            grid-template-rows: auto;
-            column-gap: 30px;  
-
-            .bloc-menu__desserts{
-                justify-content: center;
-                grid-column: 1 / -1;
-                opacity: 0;
-                animation: appar 5s 1ms ease-in-out forwards ;
-                
-            }
-      
-            .bloc-menu__plats{
-                opacity: 0;
-                animation: appar 3s 1ms ease-in-out forwards ;
-            }
-        }
-
-
+    .bloc-menu {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      column-gap: 30px;
     }
 
-    //  medias query pour desktop
-    @include desck {
-        margin: 0 193px;
-        border-radius: 20px 20px 0 0;
-
-        &__header {
-            margin-top: 50px;
-            justify-content: center;
-        }
-        .bloc-menu{
-            display: block;
-
-        }
-        &__div{
-            margin-top: -90px;
-        }
-    }
+    .bloc-menu__desserts {
+      justify-content: center;
+      grid-column: 1 / -1;
+      opacity: 0;
+      animation: appar 5s 1ms ease-in-out forwards;
     }
 
-    .section__footer{
+    .bloc-menu__plats {
+      opacity: 0;
+      animation: appar 3s 1ms ease-in-out forwards;
+    }
+  }
 
-        @include tablette {           
-            display: flex;
-            justify-content: space-around;
-            .header__logo {
-                @include center;
-                order: 2;
-            }
-    
-            .footer__icon{
-            display: flex;
-            flex-direction: column;
-            }
-            .footer__contact{
-                display: flex;
-                flex-direction: column;
-    
-            }
-            /* .header__logo {
+  //  medias query pour desktop
+  @include desck {
+    margin: 0 193px;
+    border-radius: 20px 20px 0 0;
+    &__header {
+      justify-content: center;
+      i {
+        margin-left: 16px;
+      }
+    }
+
+    .bloc-menu {
+      display: block;
+    }
+    .bloc-menu__desserts {
+      display: block;
+    }
+  }
+}
+
+.section__footer {
+  @include tablette {
+    display: flex;
+    justify-content: space-around;
+    .header__logo {
+      //  @include center;
+      order: 2;
+    }
+
+    .footer__icon {
+      display: flex;
+      flex-direction: column;
+    }
+    .footer__contact {
+      display: flex;
+      flex-direction: column;
+    }
+    /* .header__logo {
                 order: 2;
             }*/
-            /* div {
-                display: flex;
-            //  justify-content: space-around;
-            }*/
-        }
-    
-        @include desck {
-            .grid{
-                display: grid;
-                grid-template-columns: repeat(3,1fr);
-            
-            }
-            display: flex;
-            justify-content:space-around;
-            .header__logo {
-                order: 2;
-            }
-        /**/  .footer__icon{
-                display: flex;
-                justify-content:center;
-                flex-direction: row;
-            }
-            .footer__contact{
-                display: flex;
-                flex-direction: row;               
-            }/**/
-        
-        }
+  }
 
+  @include desck {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
     }
+
+    .header__logo {
+      order: 2;
+    }
+    /**/
+    .footer__icon {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+    }
+    .footer__contact {
+      display: flex;
+      flex-direction: row;
+    } /**/
+  }
+}

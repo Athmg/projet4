@@ -7,7 +7,7 @@
 //bouttons
 
 @mixin gardient() {
-   background-image: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+  background-image: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
 }
 
 @mixin font($font-weight, $font-size, $line-height) {
@@ -16,11 +16,26 @@
   line-height: $line-height;
 }
 
+@mixin font-style {
+  font-style: italic;
+}
+
 @mixin center {
+  display: block;
+  margin: auto;
+}
+@mixin flex-arwnd{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin center-flex {
   display: flex;
   justify-content: center;
- // align-items: center;
+  align-items: center;
 }
+
 
 @mixin flex-btwn {
   display: flex;
@@ -28,7 +43,7 @@
   align-items: center;
 }
 
-@mixin grid{
+@mixin grid {
   display: grid;
 }
 
@@ -37,24 +52,31 @@
   border-radius: 100%;
 }
 
-@mixin txt-ellipsis{
- 
+@mixin txt-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
- overflow: hidden;
- white-space: nowrap;
+
 }
 
-@mixin padding-block($top, $left-right){
+@mixin padding-block($top, $left-right) {
   padding-block: $top $left-right;
   writing-mode: horizontal-tb
 }
 
+@mixin hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  width: 1px;
+}
 
-@mixin loop{
+
+@mixin loop {
   @for $i from 1 through 3 {
     &:nth-child(#{$i}) {
       animation-delay: 0.2s*$i;
     }
   }
 }
-

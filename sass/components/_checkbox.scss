@@ -1,0 +1,71 @@
+.card__box {
+  position: relative;
+  cursor: pointer;
+}
+
+.card__box:before {
+  content: "";
+  width: 0%;
+}
+
+.card__box:after {
+  content: "\f058";
+  font-family: "Font Awesome 5 Free";
+  font-size: 26px;
+  @include center-flex;
+  position: absolute;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 0px 15px 15px 0px;
+  background-color: $terti-color;
+  transition: width 0.3s ease;
+  //z-index: 2;
+}
+
+.card__box:hover:after {
+  width: 10%;
+}
+/*
+.card__box:focus {
+  outline: none;
+}*/
+
+.card__box:active:after {
+  width: 10%;
+  transition: none;
+  //z-index: -1;
+}
+
+
+.card__checkbox {
+    display: none;
+    /*
+    padding: 0 30px;   
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    */
+}
+/* 
+  .card__checkbox::after {
+    content: "\f058";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    color: $terti-color;
+    width: 60px;
+    height: 60px;   
+    display: block;   
+  }
+
+  .card__checkbox:hover:after {
+    width: 70px;
+    height: 70px; 
+    z-index: 1; 
+
+  }
+*/
+

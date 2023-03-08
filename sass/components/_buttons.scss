@@ -14,12 +14,11 @@
     height: 50px; 
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
     border-radius: 25px;
-    background-color:#9356dc;
+    @include gardient;
     transition: background-image 400ms;
     transition: box-shadow 500ms;    
 
     &:hover {   
-        @include gardient;
        box-shadow: 4px 3px 3px 4px $color-gray-3;      
     }
 }
