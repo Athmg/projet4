@@ -72,6 +72,14 @@
   width: 1px;
 }
 
+@mixin footer {
+  background-color: $color-gray-3;
+  color: $color-txt;
+  .header__logo {
+    font-family: $font-fam-header;
+  }
+}
+
 
 @mixin loop {
   @for $i from 1 through 3 {

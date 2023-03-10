@@ -60,4 +60,42 @@
   to {
     transform: translateX(30px);
   }
-}/*# sourceMappingURL=animation.css.map */
+}
+/* animation du loader*/
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rotate-a {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+}
+@keyframes rotate-b {
+  0% {
+    transform: rotateX(55deg) rotateY(15deg) rotateZ(360deg);
+  }
+  100% {
+    transform: rotateX(55deg) rotateY(15deg) rotateZ(0deg);
+  }
+}
+@keyframes rotate-c {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(15deg) rotateZ(0deg);
+  }
+}
+/**/
+/**//*# sourceMappingURL=animation.css.map */

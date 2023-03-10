@@ -11,12 +11,6 @@
 .heading {
   @include center-flex;
   padding: 20px 25px;
-
-  /* img{ 
-        width: 162;
-        height: 44;
-    }*/
-
   i {
     position: relative;
     padding-right: 35px;
@@ -152,27 +146,7 @@ article {
   margin: 40px auto;
 }
 
-// footer
-.section__footer {
-  background-color: $color-gray-3;
-  color: $color-txt;
-  padding-bottom: 33px;
 
-  display: flex;
-  justify-content: space-around;
-
-  p {
-    @include font(500, 16px, 19px);
-  }
-  .header__logo {
-    @include center;
-    @include font(400, 16px, 18px);
-    //order: 2;
-  }
-  i {
-    margin-right: 20px;
-  }
-}
 
 // medias querys
 .menu-restaurant {
@@ -234,45 +208,64 @@ article {
 }
 
 .section__footer {
-  @include tablette {
-    display: flex;
-    justify-content: space-around;
-    .header__logo {
-      //  @include center;
-      order: 2;
-    }
-
-    .footer__icon {
-      display: flex;
-      flex-direction: column;
-    }
-    .footer__contact {
-      display: flex;
-      flex-direction: column;
-    }
-    /* .header__logo {
-                order: 2;
-            }*/
+  padding-left: $margin-bor;
+  padding-top: $margin-bor;
+  padding-bottom: 33px;
+  display: flex;
+  flex-direction: row;  
+  @include footer;
+  a {
+    color: $color-txt;
+  }
+  i {
+    margin-right: 20px;
+  }
+  .header__logo {
+    margin-left: 0;
+    margin-bottom: 16px;
+    @include font(400, 18px, 27px);
+    @include font-style;
+  }
+  .footer__icon {
+    @include font(500, 16px, 18px);
+  }
+  .footer__contact {
+    @include font(400, 16px, 18px);
   }
 
-  @include desck {
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .header__logo {
-      order: 2;
-    }
-    /**/
-    .footer__icon {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-    }
-    .footer__contact {
-      display: flex;
-      flex-direction: row;
-    } /**/
-  }
 }
+
+.section__footer {
+   @include tablette {
+     padding-left: 40px;
+     padding-right: 40px;
+     display: flex;
+     flex-direction: column;
+    // justify-content: space-between;
+     gap: 40px;
+     .header__logo {
+       // @include center;
+       order: 2;
+       margin-right: 0;
+     }
+  }
+     @include desck {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       gap: 40px;
+       .header__logo {
+         margin-left: 35px;
+         order: 2;
+       }
+       .footer__icon {
+         flex-direction: row;
+         gap: 40px;
+       }
+       .footer__contact {
+         flex-direction: row;
+         gap: 40px;
+       } 
+     }
+   
+ }
