@@ -47,11 +47,14 @@
                 <div class="entrees">
                   <div class="card">
                     <div class="card__box">
-                      <div>
+                      <div class="card__titre-desc">
                         <h3 class="card__titre">Fricassée d'escargots</h3>
-                        <p class="card__description">Au piment d'Espelette</p>
+                        <p class="card__description">
+                          Au piment d'Espelette
+                          <span class="card__prix">25€</span>
+                        </p>
                       </div>
-                      <p class="card__prix">25€</p>
+
                       <div class="card__bloc-check">
                         <div class="card__checkbox">
                           <input type="checkbox" name="ch1" />
@@ -62,13 +65,13 @@
 
                   <div class="card">
                     <div class="card__box">
-                      <div>
+                      <div class="card__titre-desc">
                         <h3 class="card__titre">Foie gras de canard mi-cuit</h3>
                         <p class="card__description">
                           Et ses copeaux de truffe noire
+                          <span class="card__prix">35€</span>
                         </p>
                       </div>
-                      <p class="card__prix">35€</p>
                       <div class="card__check">
                         <div class="card__checkbox">
                           <input type="checkbox" id="ch2" />
@@ -79,13 +82,13 @@
 
                   <div class="card">
                     <div class="card__box">
-                      <div>
+                      <div class="card__titre-desc">
                         <h3 class="card__titre">Œuf au plat</h3>
                         <p class="card__description">
                           Assaisonné à la truffe sur lit de racines
+                          <span class="card__prix">20€</span>
                         </p>
                       </div>
-                      <p class="card__prix">20€</p>
                       <div class="card__check">
                         <div class="card__checkbox">
                           <input type="checkbox" name="ch3" />
@@ -104,13 +107,14 @@
                 <div class="plats">
                   <div class="card">
                     <div class="card__box">
-                      <div>
+                      <div class="card__titre-desc">
                         <h3 class="card__titre">Filet de bœuf aux herbes</h3>
                         <p class="card__description">
                           Accompagné de sa ribambelle de légumes
+                          <span class="card__prix">40€</span>
                         </p>
                       </div>
-                      <p class="card__prix">40€</p>
+
                       <div class="card__checkbox">
                         <input type="checkbox" name="ch4" />
                       </div>
@@ -119,13 +123,13 @@
 
                   <div class="card">
                     <div class="card__box">
-                      <div>
+                      <div class="card__titre-desc">
                         <h3 class="card__titre">Parmentier de queue de bœuf</h3>
                         <p class="card__description">
                           À la truffe noire sur sa purée de panais
+                          <span class="card__prix">35€</span>
                         </p>
                       </div>
-                      <p class="card__prix">35€</p>
                       <div class="card__checkbox">
                         <input type="checkbox" name="ch5" />
                       </div>
@@ -134,11 +138,13 @@
 
                   <div class="card">
                     <div class="card__box">
-                      <div>
+                      <div class="card__titre-desc">
                         <h3 class="card__titre">Filet de turbot</h3>
-                        <p class="card__description">Aux agrumes</p>
+                        <p class="card__description">
+                          Aux agrumes
+                          <span class="card__prix">44€</span>
+                        </p>
                       </div>
-                      <p class="card__prix">44€</p>
                       <div class="card__checkbox">
                         <input type="checkbox" name="ch6" />
                       </div>
@@ -155,11 +161,13 @@
                 <div class="deserts">
                   <div class="card">
                     <div class="card__box">
-                      <div>
+                      <div class="card__titre-desc">
                         <h3 class="card__titre">Paris-Brest</h3>
-                        <p class="card__description">Revisité</p>
+                        <p class="card__description">
+                          Revisité
+                          <span class="card__prix">18€</span>
+                        </p>
                       </div>
-                      <p class="card__prix">18€</p>
                       <div class="card__checkbox">
                         <input type="checkbox" name="ch7" />
                       </div>
@@ -168,15 +176,15 @@
 
                   <div class="card">
                     <div class="card__box">
-                      <div>
+                      <div class="card__titre-desc">
                         <h3 class="card__titre">
                           Macaron au chocolat d'exception
                         </h3>
                         <p class="card__description">
                           Et glace à la vanille de Madagascar
+                          <span class="card__prix">22€</span>
                         </p>
                       </div>
-                      <p class="card__prix">22€</p>
                       <div class="card__checkbox">
                         <input type="checkbox" name="ch8" />
                       </div>
@@ -185,13 +193,13 @@
 
                   <div class="card">
                     <div class="card__box">
-                      <div>
+                      <div class="card__titre-desc">
                         <h3 class="card__titre">Mousse au chocolat</h3>
                         <p class="card__description">
                           Au piment d'Espelette et à la truffe noire
+                          <span class="card__prix">23€</span>
                         </p>
                       </div>
-                      <p class="card__prix">23€</p>
                       <div class="card__checkbox">
                         <input type="checkbox" name="ch9" />
                       </div>
@@ -202,7 +210,6 @@
             </div>
           </div>
           <button class="btn">Commander</button>
-
         </section>
 
         <!--
@@ -213,16 +220,12 @@
       <footer class="section__footer">
         <p class="header__logo">ohmyfood</p>
         <div class="footer__icon">
-          <p>
-            <i class="fa-solid fa-utensils"></i>Proposer un restaurant
-          </p>
-          <p>
-            <i class="fa-solid fa-handshake-angle"></i>Devenir partenaire
-          </p>
+          <p><i class="fa-solid fa-utensils"></i>Proposer un restaurant</p>
+          <p><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p>
         </div>
         <div class="footer__contact">
-          <p>Mentions légales </p>
-          <p><a href="mailto:athamidath@hotmail.com">Contact</a></p> 
+          <p>Mentions légales</p>
+          <p><a href="mailto:athamidath@hotmail.com">Contact</a></p>
         </div>
       </footer>
     </div>

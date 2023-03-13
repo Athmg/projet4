@@ -9,24 +9,30 @@
 @import "./components/checkbox";
 
 .heading {
+  height: 63px;
   @include center-flex;
-  padding: 20px 25px;
+  img{
+    width: 162px;
+    height: 44px;
+  }
   i {
     position: relative;
-    padding-right: 35px;
     height: 17px;
     width: 19px;
+    padding-bottom: 20px;
+    right: 50px;
   }
 
   @include tablette {
     i {
-      padding-right: 60px;
+      right: 50px;
     }
   }
 
   @include desck {
     i {
-      padding-left: 75px;
+     // right: 90px;
+      align-self: flex-start;
     }
   }
 }
@@ -40,7 +46,6 @@
 }
 
 .menu-restaurant {
-  height: 100%;
   position: relative;
   background-color: $color-gray-2;
   border-radius: 40px 40px 0 0;
@@ -58,20 +63,22 @@
     h1 {
       font-family: $font-fam-header;
       @include font(400, 28px, 41px);
-      white-space: nowrap;
+     // white-space: nowrap;
     }
 
     i {
-      margin-right: 0px;
+      margin-right: 25px;
       width: 30px;
       height: 25px;
     }
   }
   .bloc-menu__entree {
+    margin-bottom: 60px;
     opacity: 0;
     animation: appar 3s 5ms ease-in-out forwards;
   }
   .bloc-menu__plats {
+    margin-bottom: 60px;
     opacity: 0;
     animation: appar 6s 5ms ease-in-out forwards;
   }
@@ -106,6 +113,7 @@ article {
 
   h3 {
     @include font(500, 18px, 21px);
+    padding-top:10px;
     font-weight: $font-weight-bold;
     white-space: nowrap;
   }
@@ -122,28 +130,34 @@ article {
   animation: appar ease-in-out forwards;
   position: relative;
   @include card;
-  margin-bottom: 20px;
-  //padding: 0 10px;
+  margin-bottom: 16px;
+  padding-left: 10px;
   cursor: pointer;
-  &__box {
-     @include flex-arwnd;   
-     gap: 5px;
-  }
+/**/
+  &__titre-desc{
+  max-width: 274px;   
+
+  }/**/
+
   &__prix {
-    padding-top: 42px;
+    position: absolute;
+   
+    right: 30px;
     font-weight: $font-weight-bold;
   }
 
   &:hover &__prix {
-    margin-right: 2rem;
+    margin-right: 13%;
     transition: margin-left 0.3s ease;
   }
 }
+
 //@include pour le bouton
 
 .btn {
   @include button($color-txt, $hover-color);
-  margin: 40px auto;
+  margin: 60px auto;
+ 
 }
 
 
@@ -156,7 +170,6 @@ article {
 
     &__header {
       @include center-flex;
-
       i {
         margin-left: 25px;
       }
@@ -167,11 +180,16 @@ article {
       grid-template-rows: auto;
     }
 
-    .bloc-menu {
+    .bloc-menu {      
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto;
       column-gap: 30px;
+    }
+
+    .bloc-menu__plats {     
+      opacity: 0;
+      animation: appar 3s 1ms ease-in-out forwards;
     }
 
     .bloc-menu__desserts {
@@ -179,11 +197,9 @@ article {
       grid-column: 1 / -1;
       opacity: 0;
       animation: appar 5s 1ms ease-in-out forwards;
-    }
-
-    .bloc-menu__plats {
-      opacity: 0;
-      animation: appar 3s 1ms ease-in-out forwards;
+      .deserts{
+        width: 450px;
+      }
     }
   }
 
@@ -197,22 +213,35 @@ article {
         margin-left: 16px;
       }
     }
+    /**/
+  &__titre-desc{
+      width: 100%;   
+  
+    }/**/
 
     .bloc-menu {
       display: block;
     }
     .bloc-menu__desserts {
       display: block;
+      .deserts{
+        width: 100%;
+      }
     }
   }
 }
 
+// footer
+/* */
 .section__footer {
+  position: relative;
+  top:-60px;
   padding-left: $margin-bor;
   padding-top: $margin-bor;
   padding-bottom: 33px;
   display: flex;
-  flex-direction: row;  
+  flex-direction: column;
+  
   @include footer;
   a {
     color: $color-txt;
@@ -223,6 +252,7 @@ article {
   .header__logo {
     margin-left: 0;
     margin-bottom: 16px;
+    font-family: $font-fam-header;
     @include font(400, 18px, 27px);
     @include font-style;
   }
@@ -233,15 +263,12 @@ article {
     @include font(400, 16px, 18px);
   }
 
-}
-
-.section__footer {
    @include tablette {
      padding-left: 40px;
-     padding-right: 40px;
+     padding-right: 42px;
      display: flex;
-     flex-direction: column;
-    // justify-content: space-between;
+     flex-direction: row;
+     justify-content: space-between;
      gap: 40px;
      .header__logo {
        // @include center;
@@ -249,23 +276,25 @@ article {
        margin-right: 0;
      }
   }
-     @include desck {
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       gap: 40px;
-       .header__logo {
-         margin-left: 35px;
-         order: 2;
-       }
-       .footer__icon {
-         flex-direction: row;
-         gap: 40px;
-       }
-       .footer__contact {
-         flex-direction: row;
-         gap: 40px;
-       } 
-     }
-   
+
+  @include desck {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+     // gap: 40px;
+      .header__logo {
+        margin-left: 35px;
+        order: 2;
+      }
+      .footer__icon {
+          display: flex;
+        flex-direction: row;
+        //gap: 40px;
+      }
+      .footer__contact {
+          display: flex;
+        flex-direction: row;
+        //gap: 40px;
+      } 
+    }
  }

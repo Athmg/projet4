@@ -12,6 +12,7 @@
 .card__box:after {
 
   content: "\f058";
+  visibility: hidden;
   font-family: "Font Awesome 5 Free";
   font-size: 26px;
   @include center-flex;
@@ -23,25 +24,26 @@
   border-radius: 0px 15px 15px 0px;
   background-color: $terti-color;
   transition: width 0.3s ease;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+ // background-clip: text;
+ //-webkit-background-clip: text;
+ color: white;
   //z-index: 2;
 }
 
 .card__box:hover:after {
-  width: 10%;
+  width: 15%;
+  visibility: visible;
   
 }
 
 .card__box:active:after {
-  width: 10%;
-  
+  width: 15%;  
   transition: none;
 }
 
 /*cacher le input*/
 .card__checkbox {
+
   position: relative;
  left: -3000px;
 }

@@ -67,9 +67,6 @@
             font-weight: font(400, 16px, 20px);
             font-family: $font-fam-header;
             color: $primar-color;
-            /* position: relative;
-                right: 257px;
-                top: -60px;*/
         }
     }
 
@@ -99,11 +96,6 @@
             color: $color-gray-3;
             }
 
-           /* &__txt {
-            width: 211px;
-            word-spacing: nowrap;
-            }*/
-
             &:hover &__icon {
             animation: test;
             cursor: pointer;
@@ -111,11 +103,9 @@
             color: $primar-color;
             }
 
-           /* &__txt {
-            color: black;
-            }*/
+         
         }
-   // }
+
 
         @include tablette {
             .section__fonctionnement , .section__restaurant{
@@ -137,10 +127,7 @@
                        // display:inline-block;
                         grid-column: 1 / -1;
                         margin: 0 auto;
-                     
                     }
-                   
-                    
                     .fonct-choix{
                         @include font(500, 16px, 18px);
                         width: 350px;
@@ -219,79 +206,14 @@
 
             .card {
                 @include card;
-                //margin: 0;
 
               &__img {
-                    //height: 230px;
                     width: 341px;
                 }
             }
         }
     }
 
-// footer
-/* */
-.section__footer {
-    padding-left: $margin-bor;
-    padding-top: $margin-bor;
-    padding-bottom: 33px;
-    display: flex;
-    flex-direction: row;
-    
-    @include footer;
-    a {
-      color: $color-txt;
-    }
-    i {
-      margin-right: 20px;
-    }
-    .header__logo {
-      margin-left: 0;
-      margin-bottom: 16px;
-      @include font(400, 18px, 27px);
-      @include font-style;
-    }
-    .footer__icon {
-      @include font(500, 16px, 18px);
-    }
-    .footer__contact {
-      @include font(400, 16px, 18px);
-    }
-
-   
-     @include tablette {
-       padding-left: 40px;
-       padding-right: 40px;
-       display: flex;
-       flex-direction: column;
-       justify-content: space-between;
-       gap: 40px;
-       .header__logo {
-         // @include center;
-         order: 2;
-         margin-right: 0;
-       }
-    }
-       @include desck {
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         gap: 40px;
-         .header__logo {
-           margin-left: 35px;
-           order: 2;
-         }
-         .footer__icon {
-           flex-direction: row;
-           gap: 40px;
-         }
-         .footer__contact {
-           flex-direction: row;
-           gap: 40px;
-         } 
-       }
-     
-   }
    
    /**/
 
@@ -318,19 +240,19 @@
         &__rond:nth-child(1){
             border-top-width:$border ;
             border-color: $second-color;     
-            animation: rotate-a 2s linear infinite  ;        
+            animation: rotate-a 2s linear  both ;        
         }
 
         &__rond:nth-child(2){
             border-right-width:$border ;
             border-color: $primar-color;
-            animation: rotate-b 2s linear infinite  ;             
+            animation: rotate-b 2s linear  both ;             
         }
         /**/
         &__rond:nth-child(3){
             border-left-width:$border;
             border-color: $terti-color;  
-            animation: rotate-c 2s linear  infinite  ;          
+            animation: rotate-c 2s linear both ;          
         }
         .header__logo{
             position: relative;

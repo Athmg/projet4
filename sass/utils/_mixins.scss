@@ -52,10 +52,10 @@
   border-radius: 100%;
 }
 
-@mixin txt-ellipsis {
+@mixin txt-ellipsis { 
+  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 
 }
 

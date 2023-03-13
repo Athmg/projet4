@@ -134,9 +134,6 @@ h1, h2 {
   font-weight: font(400, 16px, 20px);
   font-family: "Shrikhand", sans-serif, italic;
   color: #9356DC;
-  /* position: relative;
-      right: 257px;
-      top: -60px;*/
 }
 
 .section__fonctionnement .card {
@@ -199,13 +196,6 @@ h1, h2 {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  /* &__txt {
-   width: 211px;
-   word-spacing: nowrap;
-   }*/
-  /* &__txt {
-   color: black;
-   }*/
 }
 .section__fonctionnement .fonct-choix__cercle {
   font-weight: 500;
@@ -421,78 +411,6 @@ h1, h2 {
   }
 }
 
-/* */
-.section__footer {
-  padding-left: 20px;
-  padding-top: 20px;
-  padding-bottom: 33px;
-  display: flex;
-  flex-direction: row;
-  background-color: #353535;
-  color: #ffffff;
-}
-.section__footer .header__logo {
-  font-family: "Shrikhand", sans-serif, italic;
-}
-.section__footer a {
-  color: #ffffff;
-}
-.section__footer i {
-  margin-right: 20px;
-}
-.section__footer .header__logo {
-  margin-left: 0;
-  margin-bottom: 16px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
-  font-style: italic;
-}
-.section__footer .footer__icon {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
-}
-.section__footer .footer__contact {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-}
-@media screen and (min-width: 768px) {
-  .section__footer {
-    padding-left: 40px;
-    padding-right: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 40px;
-  }
-  .section__footer .header__logo {
-    order: 2;
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 992px) {
-  .section__footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 40px;
-  }
-  .section__footer .header__logo {
-    margin-left: 35px;
-    order: 2;
-  }
-  .section__footer .footer__icon {
-    flex-direction: row;
-    gap: 40px;
-  }
-  .section__footer .footer__contact {
-    flex-direction: row;
-    gap: 40px;
-  }
-}
-
 /**/
 .load {
   z-index: 1;
@@ -523,17 +441,17 @@ h1, h2 {
 .load__rond:nth-child(1) {
   border-top-width: 15px;
   border-color: #FF79DA;
-  animation: rotate-a 2s linear infinite;
+  animation: rotate-a 2s linear both;
 }
 .load__rond:nth-child(2) {
   border-right-width: 15px;
   border-color: #9356DC;
-  animation: rotate-b 2s linear infinite;
+  animation: rotate-b 2s linear both;
 }
 .load__rond:nth-child(3) {
   border-left-width: 15px;
   border-color: #99E2D0;
-  animation: rotate-c 2s linear infinite;
+  animation: rotate-c 2s linear both;
 }
 .load .header__logo {
   position: relative;
