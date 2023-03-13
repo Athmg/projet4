@@ -5,12 +5,13 @@
 // footer
 /* */
 .section__footer {
+  position: relative;
+  top:40px;
     padding-left: $margin-bor;
     padding-top: $margin-bor;
     padding-bottom: 33px;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
     @include footer;
     a {
       color: $color-txt;
@@ -50,7 +51,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-       // gap: 40px;
+        gap: 40px;
         .header__logo {
           margin-left: 35px;
           order: 2;
@@ -58,12 +59,12 @@
         .footer__icon {
             display: flex;
           flex-direction: row;
-          //gap: 40px;
+          gap: 40px;
         }
         .footer__contact {
             display: flex;
           flex-direction: row;
-          //gap: 40px;
+          gap: 40px;
         } 
       }
    }

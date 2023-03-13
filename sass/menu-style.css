@@ -288,6 +288,8 @@ input, button {
 
 /*cacher le input*/
 .card__checkbox {
+  width: 0;
+  height: 0;
   position: relative;
   left: -3000px;
 }
@@ -349,6 +351,8 @@ input, button {
   font-weight: 400;
   font-size: 28px;
   line-height: 41px;
+  white-space: nowrap;
+  margin-right: 20px;
 }
 .menu-restaurant__header i {
   margin-right: 25px;
@@ -417,7 +421,6 @@ article p {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   margin-bottom: 16px;
-  padding-left: 10px;
   cursor: pointer;
   /**/
   /**/
@@ -473,6 +476,7 @@ article p {
   top: 25px;
 }
 .card__titre-desc {
+  padding-left: 10px;
   max-width: 274px;
 }
 .card__prix {
@@ -559,7 +563,7 @@ article p {
     margin-left: 16px;
   }
   .menu-restaurant__titre-desc {
-    width: 100%;
+    width: 600px;
   }
   .menu-restaurant .bloc-menu {
     display: block;
@@ -639,9 +643,11 @@ article p {
   .section__footer .footer__icon {
     display: flex;
     flex-direction: row;
+    gap: 40px;
   }
   .section__footer .footer__contact {
     display: flex;
     flex-direction: row;
+    gap: 40px;
   }
 }/*# sourceMappingURL=menu-style.css.map */

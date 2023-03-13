@@ -15,6 +15,7 @@
     width: 162px;
     height: 44px;
   }
+
   i {
     position: relative;
     height: 17px;
@@ -63,7 +64,8 @@
     h1 {
       font-family: $font-fam-header;
       @include font(400, 28px, 41px);
-     // white-space: nowrap;
+      white-space: nowrap;
+      margin-right: 20px;
     }
 
     i {
@@ -98,7 +100,6 @@ article {
     position: relative;
     opacity: 0;
     animation: jump 2s ease-in forwards;
-    // transition: font-size 4s 3s ;
   }
   // surligner
   h2::after {
@@ -130,18 +131,17 @@ article {
   animation: appar ease-in-out forwards;
   position: relative;
   @include card;
-  margin-bottom: 16px;
-  padding-left: 10px;
+  margin-bottom: 16px;  
   cursor: pointer;
 /**/
   &__titre-desc{
+  padding-left: 10px;
   max-width: 274px;   
 
   }/**/
 
   &__prix {
-    position: absolute;
-   
+    position: absolute;   
     right: 30px;
     font-weight: $font-weight-bold;
   }
@@ -215,8 +215,7 @@ article {
     }
     /**/
   &__titre-desc{
-      width: 100%;   
-  
+      width: 600px;    
     }/**/
 
     .bloc-menu {
@@ -289,12 +288,12 @@ article {
       .footer__icon {
           display: flex;
         flex-direction: row;
-        //gap: 40px;
+        gap: 40px;
       }
       .footer__contact {
           display: flex;
-        flex-direction: row;
-        //gap: 40px;
+          flex-direction: row;
+        gap: 40px;
       } 
     }
  }

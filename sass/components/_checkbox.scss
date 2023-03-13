@@ -6,7 +6,6 @@
 .card__box:before {
   content: "";
   width: 0%;
- 
 }
 
 .card__box:after {
@@ -43,9 +42,10 @@
 
 /*cacher le input*/
 .card__checkbox {
-
+  width: 0;
+  height: 0;
   position: relative;
- left: -3000px;
+  left: -3000px;
 }
 /* */
 
