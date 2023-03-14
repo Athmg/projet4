@@ -92,20 +92,15 @@
     opacity: 1;  
  
   }
-   
-  50% {
-    opacity: 1;
-   
-  }
 
-  95% {
-    opacity: 1;
-   
+  99% {
+    opacity:0.5;
+    z-index: 0;
   }
   
   100% {
     opacity: 0;
-    display: none;   
+    z-index: 0;
   }
 
 }

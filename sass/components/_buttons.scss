@@ -18,8 +18,11 @@
     transition: background-image 400ms;
     transition: box-shadow 500ms;    
 
-    &:hover {   
-       box-shadow: 4px 3px 3px 4px $color-gray-3;      
+    &:hover {  
+        cursor: pointer;
+        transform: scale(0.9);
+        opacity: 0.9; 
+        box-shadow: 4px 3px 3px 4px $color-gray-3;      
     }
 }
 

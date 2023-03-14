@@ -60,14 +60,13 @@
   &__header {
     @include flex-btwn;
     padding-top: 50px;
-
     h1 {
-      font-family: $font-fam-header;
+      font-family:$font-fam-header;
       @include font(400, 28px, 41px);
       white-space: nowrap;
       margin-right: 20px;
     }
-
+    
     i {
       margin-right: 25px;
       width: 30px;
@@ -214,9 +213,9 @@ article {
       }
     }
     /**/
-  &__titre-desc{
-      width: 600px;    
-    }/**/
+    &__titre-desc{
+        min-width: 800px;    
+      }/**/
 
     .bloc-menu {
       display: block;

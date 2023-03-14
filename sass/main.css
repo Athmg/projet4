@@ -31,6 +31,7 @@ input, button {
   max-width: 767px;
   padding: 0;
   margin: 0 auto;
+  font-family: "Roboto", sans-serif, italic;
 }
 
 .letter-space {
@@ -174,6 +175,7 @@ input, button {
   max-width: 767px;
   padding: 0;
   margin: 0 auto;
+  font-family: "Roboto", sans-serif, italic;
 }
 
 .letter-space {
@@ -272,15 +274,13 @@ input, button {
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 1;
-  }
-  95% {
-    opacity: 1;
+  99% {
+    opacity: 0.5;
+    z-index: 0;
   }
   100% {
     opacity: 0;
-    display: none;
+    z-index: 0;
   }
 }
 @keyframes rotate-a {
@@ -653,6 +653,9 @@ article p {
   margin: 60px auto;
 }
 .btn:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+  opacity: 0.9;
   box-shadow: 4px 3px 3px 4px #353535;
 }
 
@@ -708,7 +711,7 @@ article p {
     margin-left: 16px;
   }
   .menu-restaurant__titre-desc {
-    width: 600px;
+    min-width: 800px;
   }
   .menu-restaurant .bloc-menu {
     display: block;
@@ -827,6 +830,7 @@ input, button {
   max-width: 767px;
   padding: 0;
   margin: 0 auto;
+  font-family: "Roboto", sans-serif, italic;
 }
 
 .letter-space {
@@ -900,6 +904,7 @@ input, button {
 }
 @media screen and (min-width: 768px) {
   .section__footer {
+    top: -10px;
     padding-left: 40px;
     padding-right: 42px;
     display: flex;
@@ -941,6 +946,12 @@ body {
   position: relative;
 }
 
+@media screen and (min-width: 768px) {
+  #page {
+    margin: 0;
+  }
+}
+
 h1, h2 {
   padding-top: 40px;
   padding-bottom: 10px;
@@ -980,6 +991,11 @@ h1, h2 {
 .section__fonctionnement, .section__restaurant {
   margin: 0 16px;
 }
+@media screen and (min-width: 768px) {
+  .section__fonctionnement, .section__restaurant {
+    margin: 0;
+  }
+}
 
 .section__reservation {
   background-color: #EAEAEA;
@@ -1004,6 +1020,9 @@ h1, h2 {
   margin: 30px auto;
 }
 .section__reservation .btn:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+  opacity: 0.9;
   box-shadow: 4px 3px 3px 4px #353535;
 }
 .section__reservation span {
@@ -1090,14 +1109,16 @@ h1, h2 {
   margin-top: 25px;
   color: #353535;
 }
-.section__fonctionnement .fonct-choix:hover .section__fonctionnement .fonct-choix__icon {
-  animation: test;
+.section__fonctionnement .fonct-choix:hover {
   cursor: pointer;
   background-color: #F5EDFF;
+}
+.section__fonctionnement .fonct-choix:hover i:hover {
   color: #9356DC;
 }
 @media screen and (min-width: 768px) {
-  .section__fonctionnement .section__fonctionnement, .section__fonctionnement .section__restaurant {
+  .section__fonctionnement {
+    padding: 0 40px;
     margin: 0;
   }
   .section__fonctionnement h2 {
@@ -1109,11 +1130,10 @@ h1, h2 {
     grid-template-columns: repeat(2, 1fr);
     -moz-column-gap: 35px;
          column-gap: 35px;
-    row-gap: 20px;
   }
   .section__fonctionnement .fonctionnement__choix div:nth-child(3) {
     grid-column: 1/-1;
-    margin: 0 auto;
+    margin: 25px auto;
   }
   .section__fonctionnement .fonctionnement__choix .fonct-choix {
     font-weight: 500;
@@ -1208,12 +1228,20 @@ h1, h2 {
 }
 .section__restaurant article {
   padding-bottom: 20px;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .section__restaurant {
     background-color: #EAEAEA;
-    padding: 5px 40px;
-    margin: 25px 0;
+    padding: 0 43px;
+    margin-top: 25px;
+    padding-bottom: 40px;
+    /*  .card {
+          @include card;
+          &__img {                
+              width: 100%;
+          }
+      }*/
   }
   .section__restaurant .grid {
     display: grid;
@@ -1292,7 +1320,7 @@ h1, h2 {
     top: 25px;
   }
   .section__restaurant .card__img {
-    width: 341px;
+    width: 355px;
   }
 }
 
@@ -1348,10 +1376,6 @@ h1, h2 {
   height: 18px;
   position: absolute;
   padding: 0px 35px;
-}
-
-.load::after {
-  display: none;
 }
 
 @keyframes jump {
@@ -1422,15 +1446,13 @@ h1, h2 {
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 1;
-  }
-  95% {
-    opacity: 1;
+  99% {
+    opacity: 0.5;
+    z-index: 0;
   }
   100% {
     opacity: 0;
-    display: none;
+    z-index: 0;
   }
 }
 @keyframes rotate-a {
@@ -1562,6 +1584,7 @@ h1, h2 {
 }
 @media screen and (min-width: 768px) {
   .section__footer {
+    top: -10px;
     padding-left: 40px;
     padding-right: 42px;
     display: flex;

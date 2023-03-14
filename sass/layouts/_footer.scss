@@ -1,7 +1,4 @@
 /* */
-
-
-
 // footer
 /* */
 .section__footer {
@@ -34,6 +31,7 @@
     }
 
      @include tablette {
+      top:-10px;
        padding-left: 40px;
        padding-right: 42px;
        display: flex;

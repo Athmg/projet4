@@ -12,6 +12,12 @@
         font-family: $font-fam-body;
         position: relative;
     }
+    #page{
+
+        @include tablette{
+            margin: 0;
+        }
+    }
 
     h1,h2 {
         padding-top: $padding-top;
@@ -52,6 +58,9 @@
 // reservation menu explorer et decouvrir les restaurants
 .section__fonctionnement , .section__restaurant{
         margin: 0 16px;
+        @include tablette{
+            margin: 0;
+        }
     }
 
     .section__reservation {
@@ -96,43 +105,38 @@
             color: $color-gray-3;
             }
 
-            &:hover &__icon {
-            animation: test;
-            cursor: pointer;
-            background-color: $color-primar-2;
-            color: $primar-color;
-            }
-
-         
+            &:hover {
+                cursor: pointer;
+                background-color: $color-primar-2;                 
+                i:hover{
+                    color: $primar-color;
+                }  
+            }      
         }
 
 
-        @include tablette {
-            .section__fonctionnement , .section__restaurant{
-                margin: 0;
-            }
-        //  .section__fonctionnement {
+        @include tablette {            
+                padding: 0 40px;
+                margin: 0;       
                 h2 {
                     padding-top: 60px;
                     padding-bottom: 20px;
                 }
 
-                .fonctionnement__choix {
-                   
+                .fonctionnement__choix {                   
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     column-gap: 35px;
-                    row-gap: 20px;
+                    //row-gap: 20px;
                     div:nth-child(3) {
                        // display:inline-block;
                         grid-column: 1 / -1;
-                        margin: 0 auto;
+                        margin: 25px auto;
+                        
                     }
                     .fonct-choix{
                         @include font(500, 16px, 18px);
-                        width: 350px;
-                       
-                      
+                        width: 350px;              
                     }
                     
                 }   
@@ -173,25 +177,33 @@
         }
         article {            
             padding-bottom: $margin-bor;
+            width: 100%;
         }
 
   // media query tablette // restaurants
         @include tablette {
             background-color: $color-gray-2;                
-            padding: 5px 40px;
-            margin: 25px 0;
+            padding: 0 43px;
+            margin-top: 25px;  
+            padding-bottom: 40px;  
             .grid {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 column-gap: 25px;
             }
+          /*  .card {
+                @include card;
+                &__img {                
+                    width: 100%;
+                }
+            }*/
         
         }
 
   // media query desktop
-        @include desck {            
+        @include desck {                      
             padding: 0px 193px;         
-            .grid {
+            .grid {                
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 column-gap: 25px;
@@ -203,9 +215,8 @@
 
             .card {
                 @include card;
-
-              &__img {
-                    width: 341px;
+                &__img {                
+                    width: 355px;
                 }
             }
         }
@@ -262,11 +273,8 @@
                 padding: 0px 35px;
             }  
         }
-    
     }
-    .load::after{
-        display: none;
-    }
+
 
 
 

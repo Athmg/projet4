@@ -29,6 +29,7 @@ input, button {
   max-width: 767px;
   padding: 0;
   margin: 0 auto;
+  font-family: "Roboto", sans-serif, italic;
 }
 
 .letter-space {
@@ -127,15 +128,13 @@ input, button {
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 1;
-  }
-  95% {
-    opacity: 1;
+  99% {
+    opacity: 0.5;
+    z-index: 0;
   }
   100% {
     opacity: 0;
-    display: none;
+    z-index: 0;
   }
 }
 @keyframes rotate-a {
@@ -508,6 +507,9 @@ article p {
   margin: 60px auto;
 }
 .btn:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+  opacity: 0.9;
   box-shadow: 4px 3px 3px 4px #353535;
 }
 
@@ -563,7 +565,7 @@ article p {
     margin-left: 16px;
   }
   .menu-restaurant__titre-desc {
-    width: 600px;
+    min-width: 800px;
   }
   .menu-restaurant .bloc-menu {
     display: block;

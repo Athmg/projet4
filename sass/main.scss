@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-@import "./utils/_vars";
-@import "./utils/_mixins";
+@import "./utils/vars";
+@import "./base/fonts";
+@import "./utils/mixins";
 
 
 @import "./layouts/header";
@@ -11,7 +12,7 @@
 
 @import "./components/buttons";
 @import "./components/cards";
-@import "./components/_coeur";
+@import "./components/coeur";
 
 @import "./breakpoints";
 
