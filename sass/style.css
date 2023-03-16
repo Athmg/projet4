@@ -308,17 +308,11 @@ h2 {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 .section__fonctionnement .card__description {
   font-weight: 300;
   font-size: 17px;
   line-height: 20px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 .section__fonctionnement .card .icon-like {
   width: 22px;
@@ -471,17 +465,11 @@ h2 {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 .section__restaurant .card__description {
   font-weight: 300;
   font-size: 17px;
   line-height: 20px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 .section__restaurant .card .icon-like {
   width: 22px;
@@ -569,17 +557,11 @@ h2 {
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
   }
   .section__restaurant .card__description {
     font-weight: 300;
     font-size: 17px;
     line-height: 20px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
   }
   .section__restaurant .card .icon-like {
     width: 22px;

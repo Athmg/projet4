@@ -33,11 +33,11 @@
     }
     &__titre{        
         @include font(700, 18px, 21px);
-        @include txt-ellipsis;       
+       // @include txt-ellipsis;       
     }
     &__description{        
         @include font(300, 17px, 20px);
-        @include txt-ellipsis;
+       // @include txt-ellipsis;
     }
 
     .icon-like{

@@ -172,7 +172,11 @@ article {
   /**/
   &__titre-desc {
     padding-left: 10px;
-    max-width: 274px;
+    max-width: 20%;
+    h3,p{
+    @include txt-ellipsis;
+    }
+   
 
   }
 
@@ -188,6 +192,14 @@ article {
     margin-right: 13%;
     transition: margin-left 0.3s ease;
   }
+  @include tablette{
+  &__titre-desc {
+    width: 60%;
+    h3,p{
+    @include txt-ellipsis;
+    }
+  }
+}
 }
 
 //@include pour le bouton
@@ -244,12 +256,7 @@ article {
       opacity: 0;
       animation: appar 5s 1ms ease-in-out forwards;
     }
-    @include card;
-    .card{
-    &__titre-desc {
-      width: 250px;
-    }
-  }
+  
   }
 
   //  medias query pour desktop
@@ -264,16 +271,7 @@ article {
       i {
         margin-left: 16px;
       }
-    }
-
-    @include card;
-    .card{
-    &__titre-desc {
-      max-width: 800px;
-    }
-  }
-
-  
+    }  
 
     .bloc-menu {
       display: block;
