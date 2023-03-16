@@ -16,12 +16,14 @@ $breakpoints:(
 {
     @media screen and (min-width: map-get($breakpoints, medium))
     {
+        
         @content;
     }
 }
 
 @mixin desck
 {
+    
     @media screen and (min-width: map-get($breakpoints, large))
     {
         @content;

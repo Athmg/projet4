@@ -1,280 +1,239 @@
 @import "./utils/_vars";
 @import "./utils/_mixins";
+@import "./breakpoints.scss";
 @import "./layouts/header";
 @import "./layouts/body";
 @import "./components/buttons";
 @import "./components/cards";
 @import "./layouts/footer";
-@import "./breakpoints.scss";
 
-    body {
-        margin: 0;
-        font-family: $font-fam-body;
-        position: relative;
-    }
-    #page{
-
-        @include tablette{
-            margin: 0;
-        }
-    }
-
-    h1,h2 {
-        padding-top: $padding-top;
-        padding-bottom: $margin;
-    }
-
-.heading{
-    @include center;
-    padding: 15px 0;
-    img{ 
-        height: 44px;
-        width: 162px;        
-    }
+h1,
+h2 {
+    padding-top: $padding-top;
+    padding-bottom: $margin;
 }
 
 // formulaire de recherche d'un restaurant
-    .formulaire {
+.formulaire {
+    color: $color-gray-3;
+    background-color: $color-gray-1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+
+    input {
+        @include font(500, 16px, 18px);
         color: $color-gray-3;
         background-color: $color-gray-1;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 60px;
-
-        input {
-            @include font(500, 16px, 18px);
-            color: $color-gray-3;
-            background-color: $color-gray-1;
-        }
-
-        i {
-            margin-right: 20px;
-            margin-left: 45px;
-        }
     }
+
+    i {
+        margin-right: 20px;
+        margin-left: 45px;
+    }
+}
 
 // reservation menu explorer et decouvrir les restaurants
-.section__fonctionnement , .section__restaurant{
-        margin: 0 16px;
-        @include tablette{
-            margin: 0;
-        }
+
+.section__reservation {
+    background-color: $color-gray-2;
+    text-align: center;
+
+    .btn {
+        @include button($color-txt, $color-gray-3);
+        margin: 30px auto;
     }
 
-    .section__reservation {
-        background-color: $color-gray-2;
-        text-align: center;
-
-        .btn {
-            @include button($color-txt, $hover-color);
-            margin: 30px auto;
-        }
-
-        span {
-            font-weight: font(400, 16px, 20px);
-            font-family: $font-fam-header;
-            color: $primar-color;
-        }
+    span {
+        font-weight: font(400, 16px, 20px);
+        font-family: $font-fam-header;
+        color: $primar-color;
     }
+}
 
 // fonctionnement : choix des menus
-    .section__fonctionnement {
-        .card {
-            @include card;
-        }
+.section__fonctionnement {
+    .card {
+        @include card;
+    }
 
-        .fonct-choix {
-            background-color: $color-gray-2;
-            height: 70px;
-            margin-bottom: 25px;
-            @include font(500, 16px, 19px);
+    .fonct-choix {
+        background-color: $color-gray-2;
+        height: 70px;
+        margin-bottom: 25px;
+        @include font(500, 16px, 19px);
 
-            &__cercle {
+        &__cercle {
             @include font(500, 14px, 17px);
             @include cercle;
             background-color: $primar-color;
             color: $color-txt;
             padding: 3px 6px;
-            }
+        }
 
-            &__icon {
+        &__icon {
             margin: 18px;
             margin-top: 25px;
             color: $color-gray-3;
-            }
-
-            &:hover {
-                cursor: pointer;
-                background-color: $color-primar-2;                 
-                i:hover{
-                    color: $primar-color;
-                }  
-            }      
         }
 
+        &:hover {
+            cursor: pointer;
+            background-color: $color-primar-2;
 
-        @include tablette {            
-                padding: 0 40px;
-                margin: 0;       
-                h2 {
-                    padding-top: 60px;
-                    padding-bottom: 20px;
-                }
-
-                .fonctionnement__choix {                   
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    column-gap: 35px;
-                    //row-gap: 20px;
-                    div:nth-child(3) {
-                       // display:inline-block;
-                        grid-column: 1 / -1;
-                        margin: 25px auto;
-                        
-                    }
-                    .fonct-choix{
-                        @include font(500, 16px, 18px);
-                        width: 350px;              
-                    }
-                    
-                }   
-        // }
-        }
-
-  //  medias query pour desktop
-        @include desck {
-            padding: 0 180px;
-            .fonctionnement__choix {
-               display: flex;
-               gap: 25px;         
-                         
-            /*  */  
-               div:nth-child(3) {
-                display: inline;
-                margin: 0;
-              }
-           /* */
-                .fonct-choix{
-                @include font(500, 16px, 19px);
-                width: 323px;
-                }
-            
+            .fonct-choix__icon {
+                color: $primar-color;
             }
         }
     }
-    
+
+    @include tablette {
+        padding: 0 40px;
+        margin: 0;
+
+        h2 {
+            padding-top: 60px;
+            padding-bottom: 20px;
+        }
+
+        .fonctionnement__choix {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 35px;
+
+            //row-gap: 20px;
+            div:nth-child(3) {
+                // display:inline-block;
+                grid-column: 1 / -1;
+                margin: 25px auto;
+            }
+
+            .fonct-choix {
+                @include font(500, 16px, 18px);
+                width: 350px;
+            }
+        }
+
+        // }
+    }
+
+    //  medias query pour desktop
+    @include desck {
+
+        /**/
+        h2 {
+            padding: 0;
+            margin: 0;
+            padding-top: 50px;
+            margin-bottom: -20px;
+        }
+
+        /**/
+
+        padding: 0 180px;
+        height: 240px;
+
+        .fonctionnement__choix {
+            display: flex;
+            gap: 35px;
+
+            /*  */
+            div:nth-child(3) {
+                display: inline;
+                margin: 0;
+            }
+
+            /* */
+            .fonct-choix {
+                @include font(500, 16px, 19px);
+                width: 323px;
+            }
+        }
+    }
+}
+
+.formulaire,
+.section__reservation {
+    @include desck {
+        max-width: 1445px;
+       // padding: 0 400px;
+    }
+}
+
+.section__fonctionnement,
+.section__restaurant {
+    margin: 0 16px;
+
+    @include tablette {
+        margin: 0;
+    }
+}
 
 // les differents restaurant à la carte
-    .section__restaurant {      
-        padding-top: $padding-top;
-        .card {
-            @include card;
-            .icon-like{
-                margin-top: 16px;
-            }
+.section__restaurant {
+    padding-top: $padding-top;
+
+    .card {
+        @include card;
+
+        .icon-like {
+            margin-top: 16px;
         }
-        article {            
-            padding-bottom: $margin-bor;
-            width: 100%;
+    }
+
+    article {
+        padding-bottom: $margin-bor;
+        width: 100%;
+    }
+
+    // media query tablette // restaurants
+    @include tablette {
+        background-color: $color-gray-2;
+        padding: 0 43px;
+        margin-top: 25px;
+        padding-bottom: 40px;
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 25px;
         }
 
-  // media query tablette // restaurants
-        @include tablette {
-            background-color: $color-gray-2;                
-            padding: 0 43px;
-            margin-top: 25px;  
-            padding-bottom: 40px;  
-            .grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                column-gap: 25px;
-            }
-          /*  .card {
+        /*  .card {
                 @include card;
                 &__img {                
                     width: 100%;
                 }
             }*/
-        
-        }
-
-  // media query desktop
-        @include desck {                      
-            padding: 0px 193px;         
-            .grid {                
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                column-gap: 25px;
-            }
-
-            h2 {
-                grid-column: 1 / -1;
-            }
-
-            .card {
-                @include card;
-                &__img {                
-                    width: 355px;
-                }
-            }
-        }
     }
 
-   
-   /**/
+    // media query desktop
+    @include desck {
+        padding: 0px 193px;
 
-    .load {
-        z-index: 1;
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        inset: 0;
-        background-color:#d2d2d2e0;
-        animation: loader 4s ease-out forwards;        
-        @include flex-arwnd;
-
-        &__rond{
-            position: absolute;
-            width:200px;
-            height: 200px;
-            border:0px solid;
-            border-radius:50%;
-            @include center-flex;
-            transform: translate(50%,50%);
+        /* */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 25px;
         }
 
-        &__rond:nth-child(1){
-            border-top-width:$border ;
-            border-color: $second-color;     
-            animation: rotate-a 2s linear  both ;        
+        h2 {
+            grid-column: 1 / -1;
         }
 
-        &__rond:nth-child(2){
-            border-right-width:$border ;
-            border-color: $primar-color;
-            animation: rotate-b 2s linear  both ;             
-        }
         /**/
-        &__rond:nth-child(3){
-            border-left-width:$border;
-            border-color: $terti-color;  
-            animation: rotate-c 2s linear both ;          
-        }
-        .header__logo{
-            position: relative;
-            font-family: $font-fam-header;
-            @include font(400,20px,22px);
-            i{
-                width: 20px;
-                height: 18px;
-                position: absolute;
-                padding: 0px 35px;
-            }  
+
+        .card {
+            @include card;
+
+            &__img {
+                width: 355px;
+            }
         }
     }
+}
 
-
-
-
+/**/

@@ -64,6 +64,18 @@
   writing-mode: horizontal-tb
 }
 
+// les font-family
+
+@mixin font-fam-header{
+  font-family: Shrikhand;
+  font-style: italic ;
+  font-weight: bold;
+}
+
+@mixin font-fam-body{
+  font-family:Roboto;
+}
+
 @mixin hidden {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
@@ -75,9 +87,11 @@
 @mixin footer {
   background-color: $color-gray-3;
   color: $color-txt;
-  .header__logo {
-    font-family: $font-fam-header;
+ /* */
+ .header__logo {
+   @include font-fam-header;
   }
+  /**/
 }
 
 

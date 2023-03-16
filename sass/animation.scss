@@ -93,9 +93,14 @@
  
   }
 
-  99% {
+  89% {
     opacity:0.5;
-    z-index: 0;
+    z-index: 0.5;
+  }
+
+  99% {
+    opacity:0.1;
+    z-index: 0.1;
   }
   
   100% {
@@ -110,6 +115,7 @@
   }
   100%{
     transform:rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    opacity: 0;
     
   }
 
@@ -120,6 +126,7 @@
   }
   100%{
     transform:rotateX(55deg) rotateY(15deg) rotateZ(0deg);
+    opacity: 0;
     
   }
 }
@@ -131,6 +138,7 @@
   }
   100%{
     transform:rotateX(35deg) rotateY(15deg) rotateZ(0deg) ;
+    opacity: 0;
    
   }
 }

@@ -1,24 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 
 @import "./utils/vars";
 @import "./base/fonts";
 @import "./utils/mixins";
-
+@import "./breakpoints";
 
 @import "./layouts/header";
 @import "./layouts/body";
-
 
 @import "./components/buttons";
 @import "./components/cards";
 @import "./components/coeur";
 
-@import "./breakpoints";
-
 @import "menu-style";
 @import "style";
 
 @import "animation";
+@import "loader";
 @import "medias";
 @import "./layouts/footer";

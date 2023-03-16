@@ -14,10 +14,10 @@
 </head>
 
 <body>
-  <div class="grid" id="page">
-    <header class="heading">
+  <div class="grid" id="page-menu">
+    <header class="head">
       <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
-      <img src="../assets/images/logo/ohmyfood.png" alt="logo">
+      <img src="../assets/images/logo/ohmyfood.png" alt="logo" />
     </header>
 
     <main class="grid">
@@ -39,37 +39,49 @@
           <!--
                 Entrées 
           -->
-          <article>
+          <div class="bloc-menu">
+            <article class="bloc-menu__entree">
             <h2>entrées</h2>
-            <div class="card">
-              <div class="flex-btwn card__desc-box">
-                <div>
+            <div class="entrees">
+              <div class="card">
+                <div class="card__box">
+                  <div class="card__titre-desc">
                   <h3 class="card__titre">Tartare de thon</h3>
-                  <p class="card__description">Assaisonné au yuzu</p>
+                  <p class="card__description">Assaisonné au yuzu
+                    <span class="card__prix icon-right">25€</span>
+                  </p>
                 </div>
-                <p class="card__prix icon-right">25€</p>
+                <div class="card__checkbox">
+                  <input type="checkbox" name="ch1" />
+                </div>
               </div>
             </div>
 
             <div class="card">
-              <div class="flex-btwn card__desc-box">
-                <div>
+              <div class="card__box">
+                <div class="card__titre-desc">
                   <h3 class="card__titre">Bouchée de homard croustillant</h3>
-                  <p class="card__description">Et sa farandole de petits légumes</p>
+                  <p class="card__description">Et sa farandole de petits légumes
+                    <span class="card__prix icon-right">35€</span>
+                  </p>
                 </div>
-                <p class="card__prix icon-right">35€</p>
-
+                <div class="card__checkbox">
+                  <input type="checkbox" name="ch2" />
+                </div>
               </div>
             </div>
 
             <div class="card">
-              <div class="flex-btwn card__desc-box">
-                <div>
+              <div class="card__box">
+                <div class="card__titre-desc">
                   <h3 class="card__titre">Velouté de cèpes</h3>
-                  <p class="card__description">Aux truffes</p>
+                  <p class="card__description">Aux truffes
+                    <span class="card__prix icon-right">20€</span>
+                  </p>
                 </div>
-                <p class="card__prix icon-right">20€</p>
-                <i class="fa-solid fa-check"></i>
+                <div class="card__checkbox">
+                  <input type="checkbox" name="ch3" />
+                </div>
               </div>
             </div>
           </article>
@@ -77,37 +89,49 @@
           <!--
                 Plats 
           -->
-          <article>
-            <div>
+          <article class="bloc-menu__plats">
+            
+            <div class="plats">
               <h2>plats</h2>
-            </div>
-            <div class="card">
-              <div class="flex-btwn card__desc-box">
-                <div>
-                  <h3 class="card__titre">Poulet rôti aux herbes de Prove...</h3>
-                  <p class="card__description"> Et sa crème de truffe</p>
+              <div class="card">
+                <div class="card__box">
+                  <div class="card__titre-desc">
+                  <h3 class="card__titre">Poulet rôti aux herbes de Provence</h3>
+                  <p class="card__description"> Et sa crème de truffe
+                    <span class="card__prix">40€</span>
+                  </p>
                 </div>
-                <p class="card__prix">40€</p>
+                <div class="card__checkbox">
+                  <input type="checkbox" name="ch4" />
+                </div>
               </div>
             </div>
 
             <div class="card">
-              <div class="flex-btwn card__desc-box">
-                <div>
+              <div class="card__box">
+                <div class="card__titre-desc">
                   <h3 class="card__titre">Langouste rôtie</h3>
-                  <p class="card__description"> Et ses légumes de saison</p>
+                  <p class="card__description"> Et ses légumes de saison
+                    <span class="card__prix">35€</span>
+                  </p>
                 </div>
-                <p class="card__prix">35€</p>
+                <div class="card__checkbox">
+                  <input type="checkbox" name="ch5" />
+                </div>
               </div>
             </div>
 
             <div class="card">
-              <div class="flex-btwn card__desc-box">
-                <div>
+              <div class="card__box">
+                <div class="card__titre-desc">
                   <h3 class="card__titre">Côte de bœuf Angus</h3>
-                  <p class="card__description">Et sa purée de panais</p>
+                  <p class="card__description">Et sa purée de panais
+                    <span class="card__prix">44€</span>
+                  </p>
                 </div>
-                <p class="card__prix">44€</p>
+                <div class="card__checkbox">
+                  <input type="checkbox" name="ch6" />
+                </div>
               </div>
             </div>
           </article>
@@ -115,52 +139,72 @@
           <!--
                 Deserts 
           -->
-          <article>
-            <div>
+          <article class="bloc-menu__desserts">
+          
+             
+            
+            <div class="deserts">
               <h2>deserts</h2>
-            </div>
-            <div class="card">
-              <div class="flex-btwn card__desc-box">
-                <div>
+              <div class="card">
+                <div class="card__box">
+                  <div class="card__titre-desc">
                   <h3 class="card__titre">Farandole de desserts</h3>
-                  <p class="card__description"> Du chef</p>
+                  <p class="card__description"> Du chef
+                    <span class="card__prix">18€</span>
+                  </p>
                 </div>
-                <p class="card__prix">18€</p>
+                <div class="card__checkbox">
+                  <input type="checkbox" name="ch7" />
+                </div>
               </div>
             </div>
 
             <div class="card">
-              <div class="flex-btwn card__desc-box">
-                <div>
+              <div class="card__box">
+                <div class="card__titre-desc">
                   <h3 class="card__titre">Crème brûlée</h3>
-                  <p class="card__description"> Revisitée</p>
+                  <p class="card__description"> Revisitée
+                    <span class="card__prix">22€</span>
+                  </p>
                 </div>
-                <p class="card__prix">22€</p>
+                <div class="card__checkbox">
+                  <input type="checkbox" name="ch8" />
+                </div>
               </div>
             </div>
 
             <div class="card">
-              <div class="flex-btwn card__desc-box">
-                <div>
+              <div class="card__box">
+                <div class="card__titre-desc">
                   <h3 class="card__titre">Tiramisu </h3>
-                  <p class="card__description">À la noisette</p>
+                  <p class="card__description">À la noisette
+                    <span class="card__prix">23€</span>
+                  </p>
                 </div>
-                <p class="card__prix">23€</p>
+                <div class="card__checkbox">
+                  <input type="checkbox" name="ch9" />
+                </div>
               </div>
             </div>
           </article>
         </div>
+        
         <!--Button pour commander-->
         <button class="btn">Commander</button>
+      </div>
       </section>
     </main>
 
     <footer class="section__footer">
       <p class="header__logo">ohmyfood</p>
-      <p><i class="fa-solid fa-utensils"></i><span>Proposer un restaurant</span></p>
-      <p><i class="fa-solid fa-handshake-angle"></i><span>Devenir partenaire</span></p>
-      <p>Mentions légales</p>
-      <p>Contact</p>
+      <div class="footer__icon">
+        <p><i class="fa-solid fa-utensils"></i>Proposer un restaurant</p>
+        <p><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p>
+      </div>
+      <div class="footer__contact">
+        <p>Mentions légales</p>
+        <p><a href="mailto:athamidath@hotmail.com">Contact</a></p>
+      </div>
     </footer>
   </div>
 </body>

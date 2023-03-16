@@ -1,185 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/00a609464e.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" type="text/css" href="../sass/menu-style.css" />
-    <title>Ohmyfood</title>
-  </head>
 
-  <body>
-    <div class="grid" id="page">
-      <header class="heading">
-        <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
-        <img src="../assets/images/logo/ohmyfood.png" alt="logo" />
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/00a609464e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="../sass/menu-style.css" />
+  <title>Ohmyfood</title>
+</head>
 
-      <main class="grid">
-        <section class="menu-img">
-          <img
-            src="../assets/images/img-restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-            alt="image palette-gout"
-          />
-        </section>
+<body>
+  <div class="grid" id="page-menu">
+    <header class="head">
+      <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+      <img src="../assets/images/logo/ohmyfood.png" alt="logo" />
+    </header>
 
-        <!--
+    <main class="grid">
+
+      <section class="menu-img">
+        <img src="../assets/images/img-restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="image palette-gout"
+          class="header-img" />
+      </section>
+
+      <!--
           Menu du restaurant la palette goût 
         -->
-        <section class="menu-restaurant">
-          <div class="menu-restaurant__div">
-            <div class="menu-restaurant__header">
-              <h1>À la française</h1>
-              <i class="fa-regular fa-heart icon-like"></i>
-            </div>
+      <section class="menu-restaurant grid">
+        <div class="menu-restaurant__div">
+          <div class="menu-restaurant__header">
+            <h1>À la française</h1>
+            <i class="fa-regular fa-heart icon-like"></i>
+          </div>
 
-            <!--
+          <!--
                 Entrées 
-          -->
-            <article>
+            -->
+          <div class="bloc-menu">
+            <article class="bloc-menu__entree">
               <h2>Entrées</h2>
-              <div class="card">
-                <div class="flex-btwn">
-                  <div class="card__titre-desc">
-                    <h3 class="card__titre">Tartare de poulpe acidulé</h3>
-                    <p class="card__description">Aux zestes d'orange
-                      <span class="card__prix">25€</span>
-                    </p>
-                  </div>                  
+              <div class="entrees">
+                <div class="card">
+                  <div class="card__box">
+                    <div class="card__titre-desc">
+                      <h3 class="card__titre">Tartare de poulpe acidulé</h3>
+                      <p class="card__description">
+                        Aux zestes d'orange
+                        <span class="card__prix">25€</span>
+                      </p>
+                    </div>
+                    <div class="card__checkbox">
+                      <input type="checkbox" name="ch9" />
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div class="card">
-                <div class="flex-btwn">
-                  <div class="card__titre-desc">
-                    <h3 class="card__titre">Velouté de légumes d'antan</h3>
-                    <p class="card__description">
-                      Carotte, panais, topinambour
-                      <span class="card__prix">35€</span>
-                    </p>
-                  </div>               
+                <div class="card">
+                  <div class="card__box">
+                    <div class="card__titre-desc">
+                      <h3 class="card__titre">Velouté de légumes d'antan</h3>
+                      <p class="card__description">
+                        Carotte, panais, topinambour
+                        <span class="card__prix">35€</span>
+                      </p>
+                    </div>
+                    <div class="card__checkbox">
+                      <input type="checkbox" name="ch9" />
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div class="card">
-                <div class="flex-btwn">
-                  <div class="card__titre-desc">
-                    <h3 class="card__titre">Soupe à l'oignon</h3>
-                    <p class="card__description">Revisitée
-                      <span class="card__prix">20€</span>
-                    </p>
-                  </div>              
+                <div class="card">
+                  <div class="card__box">
+                    <div class="card__titre-desc">
+                      <h3 class="card__titre">Soupe à l'oignon</h3>
+                      <p class="card__description">
+                        Revisitée
+                        <span class="card__prix">20€</span>
+                      </p>
+                    </div>
+                    <div class="card__checkbox">
+                      <input type="checkbox" name="ch9" />
+                    </div>
+                  </div>
                 </div>
-              </div>
             </article>
 
             <!--
                 Plats 
-          -->
-            <article>
-              <h2>plats</h2>
-              <div class="card">
-                <div class="flex-btwn">
-                  <div class="card__titre-desc">
-                    <h3 class="card__titre">Coquilles Saint-Jacques</h3>
-                    <p class="card__description">
-                      Accompagnées d'une purée de panais
-                      <span class="card__prix">40€</span>
-                    </p>
-                  </div>            
+            -->
+            <article class="bloc-menu__plats">
+              
+              <div class="plats">
+                <h2>plats</h2>
+                <div class="card">
+                  <div class="card__box">
+                    <div class="card__titre-desc">
+                      <h3 class="card__titre">Coquilles Saint-Jacques</h3>
+                      <p class="card__description">
+                        Accompagnées d'une purée de panais
+                        <span class="card__prix">40€</span>
+                      </p>
+                    </div>
+                    <div class="card__checkbox">
+                      <input type="checkbox" name="ch9" />
+                    </div>
+                  </div>
                 </div>
-              </div>
+          
 
-              <div class="card">
-                <div class="flex-btwn">
-                  <div class="card__titre-desc">
-                    <h3 class="card__titre">Magret de canard</h3>
-                    <p class="card__description">
-                      Et parmentier de pommes de terre
-                      <span class="card__prix">33€</span>
-                    </p>
-                  </div>            
+                <div class="card">
+                  <div class="card__box">
+                    <div class="card__titre-desc">
+                      <h3 class="card__titre">Magret de canard</h3>
+                      <p class="card__description">
+                        Et parmentier de pommes de terre
+                        <span class="card__prix">33€</span>
+                      </p>
+                    </div>
+                    <div class="card__checkbox">
+                      <input type="checkbox" name="ch9" />
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div class="card">
-                <div class="flex-btwn">
-                  <div class="card__titre-desc">
-                    <h3 class="card__titre">Pigeonneau d'Ille-et-Vilaine</h3>
-                    <p class="card__description">
-                      Sur son lit de gnocchis aux légumes
-                      <span class="card__prix">44€</span>
-                    </p>
-                  </div>                 
+                <div class="card">
+                  <div class="card__box">
+                    <div class="card__titre-desc">
+                      <h3 class="card__titre">Pigeonneau d'Ille-et-Vilaine</h3>
+                      <p class="card__description">
+                        Sur son lit de gnocchis aux légumes
+                        <span class="card__prix">44€</span>
+                      </p>
+                    </div>
+                    <div class="card__checkbox">
+                      <input type="checkbox" name="ch9" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </article>
 
             <!--
                 Deserts 
-          -->
-            <article>
-              <h2>deserts</h2>
-              <div class="card">
-                <div class="flex-btwn">
-                  <div class="card__titre-desc">
+            -->
+            <article class="bloc-menu__desserts">
+              
+              <div class="deserts">
+                <h2>deserts</h2>
+                <div class="card">
+                  <div class="card__box">
+                    <div class="card__titre-desc">
                     <h3 class="card__titre">Pétales de violettes glacés</h3>
-                    <p class="card__description">Et purée de noisettes
+                    <p class="card__description">
+                      Et purée de noisettes
                       <span class="card__prix">18€</span>
                     </p>
                   </div>
+                  <div class="card__checkbox">
+                    <input type="checkbox" name="ch9" />
+                  </div>
                 </div>
               </div>
 
               <div class="card">
-                <div class="flex-btwn">
+                <div class="card__box">
                   <div class="card__titre-desc">
                     <h3 class="card__titre">Fondant au chocolat</h3>
-                    <p class="card__description">Revisité
+                    <p class="card__description">
+                      Revisité
                       <span class="card__prix">22€</span>
                     </p>
                   </div>
+                  <div class="card__checkbox">
+                    <input type="checkbox" name="ch9" />
+                  </div>
                 </div>
               </div>
 
               <div class="card">
-                <div class="flex-btwn">
+                <div class="card__box">
                   <div class="card__titre-desc">
                     <h3 class="card__titre">Millefeuille croustillant</h3>
-                    <p class="card__description">Myrtilles et pâte d’amande
+                    <p class="card__description">
+                      Myrtilles et pâte d’amande
                       <span class="card__prix">23€</span>
                     </p>
                   </div>
-                 
+                  <div class="card__checkbox">
+                    <input type="checkbox" name="ch9" />
+                  </div>
                 </div>
               </div>
             </article>
-            <button class="btn">Commander</button>
           </div>
-        </section>
-
-        <!--
+          <!--
           Button pour commander
-        -->
-      </main>
+          -->
+        <button class="btn">Commander</button>
+      </div>
+      </section>
 
-      <footer class="section__footer">
-        <p class="header__logo">ohmyfood</p>
-        <p>
-          <i class="fa-solid fa-utensils"></i
-          ><span>Proposer un restaurant</span>
-        </p>
-        <p>
-          <i class="fa-solid fa-handshake-angle"></i
-          ><span>Devenir partenaire</span>
-        </p>
+    </main>
+
+    <footer class="section__footer">
+      <p class="header__logo">ohmyfood</p>
+      <div class="footer__icon">
+        <p><i class="fa-solid fa-utensils"></i>Proposer un restaurant</p>
+        <p><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p>
+      </div>
+      <div class="footer__contact">
         <p>Mentions légales</p>
-        <p>Contact</p>
-      </footer>
-    </div>
-  </body>
+        <p><a href="mailto:athamidath@hotmail.com">Contact</a></p>
+      </div>
+    </footer>
+  </div>
+</body>
+
 </html>

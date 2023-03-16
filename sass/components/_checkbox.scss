@@ -9,7 +9,6 @@
 }
 
 .card__box:after {
-
   content: "\f058";
   visibility: hidden;
   font-family: "Font Awesome 5 Free";
@@ -23,7 +22,7 @@
   border-radius: 0px 15px 15px 0px;
   background-color: $terti-color;
   transition: width 0.3s ease;
- // background-clip: text;
+  //background-clip: text;
  //-webkit-background-clip: text;
  color: white;
   //z-index: 2;

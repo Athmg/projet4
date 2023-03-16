@@ -1,4 +1,63 @@
+.heading {
+   // position: relative;
+   margin-bottom: 0;
+    height: 63px;  
+    img{   
+      @include center;
+      width: 162px;
+      height: 44px;
+      padding-top: 18px;    
+    }
+  
+    i {
+      position: absolute;
+      height: 17px;
+      width: 19px;
+      top: 21px;
+      left: 24px;
+    }
 
+  /*
+    @include tablette {
+     // display: block;
+      img{
+       // @include center;
+      }
+    }
+  */
+    @include desck {
+      width: 1445px;
+      height: 76px;
+      img{
+        width: 200px;
+        height: 54px;      
+      }
+      
+      i{
+        top:25px;
+      }
+     
+    }
+  }
+
+/**
+  .head{
+    @include center-flex;
+    //height: 63px;
+    img{ 
+        height: 44px;
+        width: 162px;        
+    }
+    @include desk{
+        margin-bottom: 0px;
+        height: 100px;
+        img{ 
+            height: 54px;
+            width: 200px;        
+        }
+    }
+}
+/**/
 
 
 

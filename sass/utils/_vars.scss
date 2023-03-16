@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 // variables couleurs
 
+/* couleurs primaires*/
 $primar-color: #9356DC;
 $color-primar-2:#F5EDFF;
 $second-color: #FF79DA;
@@ -7,6 +10,7 @@ $terti-color: #99E2D0;
 
 $color-txt: #ffffff;
 
+/* couleurs gray*/
 $color-gray-1:#D2D2D2;
 $color-gray-2:#EAEAEA;
 $color-gray-3:#353535;
@@ -20,9 +24,9 @@ $border:15px;
 
 // les backgrounds
 
-//$bckg-color-btn:$primar-color;
-
-
+/* font family*/
+$font-fam-body:('Roboto', sans-serif);
+$font-fam-header:('Shrikhand', sans-serif,);
 
 // les marges 
 

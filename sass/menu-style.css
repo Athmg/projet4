@@ -1,8 +1,14 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* couleurs primaires*/
+/* couleurs gray*/
+/* font family*/
 body {
   height: 100%;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 * {
@@ -26,10 +32,22 @@ input, button {
 }
 
 #page {
-  max-width: 767px;
-  padding: 0;
   margin: 0 auto;
-  font-family: "Roboto", sans-serif, italic;
+  max-width: 767px;
+  height: 100%;
+  padding: 0;
+  font-family: Roboto;
+}
+@media screen and (min-width: 768px) {
+  #page {
+    max-width: 991px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #page {
+    max-width: 1440px;
+    overflow-x: scroll;
+  }
 }
 
 .letter-space {
@@ -128,9 +146,13 @@ input, button {
   0% {
     opacity: 1;
   }
-  99% {
+  89% {
     opacity: 0.5;
-    z-index: 0;
+    z-index: 0.5;
+  }
+  99% {
+    opacity: 0.1;
+    z-index: 0.1;
   }
   100% {
     opacity: 0;
@@ -143,6 +165,7 @@ input, button {
   }
   100% {
     transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    opacity: 0;
   }
 }
 @keyframes rotate-b {
@@ -151,6 +174,7 @@ input, button {
   }
   100% {
     transform: rotateX(55deg) rotateY(15deg) rotateZ(0deg);
+    opacity: 0;
   }
 }
 @keyframes rotate-c {
@@ -159,6 +183,7 @@ input, button {
   }
   100% {
     transform: rotateX(35deg) rotateY(15deg) rotateZ(0deg);
+    opacity: 0;
   }
 }
 /**/
@@ -295,31 +320,37 @@ input, button {
 
 /* */
 /**/
-.heading {
-  height: 63px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body {
+  font-family: Roboto;
 }
-.heading img {
+
+.head {
+  height: 63px;
+}
+.head img {
+  display: block;
+  margin: auto;
   width: 162px;
   height: 44px;
+  padding-top: 20px;
 }
-.heading i {
-  position: relative;
+.head i {
+  position: absolute;
   height: 17px;
   width: 19px;
-  padding-bottom: 20px;
-  right: 50px;
-}
-@media screen and (min-width: 768px) {
-  .heading i {
-    right: 50px;
-  }
+  top: 21px;
+  left: 24px;
 }
 @media screen and (min-width: 992px) {
-  .heading i {
-    align-self: flex-start;
+  .head {
+    height: 76px;
+  }
+  .head img {
+    width: 200px;
+    height: 54px;
+  }
+  .head i {
+    top: 25px;
   }
 }
 
@@ -327,7 +358,19 @@ input, button {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: 275px;
+}
+@media screen and (min-width: 768px) {
+  .menu-img img {
+    width: 100%;
+    height: 375px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu-img img {
+    width: 100%;
+    height: 323px;
+  }
 }
 
 .menu-restaurant {
@@ -337,16 +380,28 @@ input, button {
   top: -60px;
 }
 .menu-restaurant__div {
-  padding: 0 16px;
+  padding: 0 2%;
+}
+@media screen and (min-width: 768px) {
+  .menu-restaurant__div {
+    padding: 0 3%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu-restaurant__div {
+    padding: 0 12%;
+  }
 }
 .menu-restaurant__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 50px;
+  font-family: Shrikhand;
+  font-style: italic;
+  font-weight: bold;
 }
 .menu-restaurant__header h1 {
-  font-family: "Shrikhand", sans-serif, italic;
   font-weight: 400;
   font-size: 28px;
   line-height: 41px;
@@ -359,12 +414,12 @@ input, button {
   height: 25px;
 }
 .menu-restaurant .bloc-menu__entree {
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   opacity: 0;
   animation: appar 3s 5ms ease-in-out forwards;
 }
 .menu-restaurant .bloc-menu__plats {
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   opacity: 0;
   animation: appar 6s 5ms ease-in-out forwards;
 }
@@ -373,9 +428,6 @@ input, button {
   animation: appar 9s 5ms ease-in-out forwards;
 }
 
-article {
-  font-family: "Roboto", sans-serif, italic;
-}
 article h2 {
   text-transform: uppercase;
   font-weight: 300;
@@ -400,7 +452,6 @@ article h3 {
   font-size: 18px;
   line-height: 21px;
   padding-top: 10px;
-  font-weight: bold;
   white-space: nowrap;
 }
 article p {
@@ -481,7 +532,6 @@ article p {
 .card__prix {
   position: absolute;
   right: 30px;
-  font-weight: bold;
 }
 .card:hover .card__prix {
   margin-right: 13%;
@@ -508,9 +558,8 @@ article p {
 }
 .btn:hover {
   cursor: pointer;
-  transform: scale(0.9);
   opacity: 0.9;
-  box-shadow: 4px 3px 3px 4px #353535;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (min-width: 768px) {
@@ -533,22 +582,27 @@ article p {
   .menu-restaurant .bloc-menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
     -moz-column-gap: 30px;
          column-gap: 30px;
   }
+  .menu-restaurant .bloc-menu__entree {
+    grid-column: 1/-1;
+    display: block;
+    margin: auto;
+    width: 75%;
+  }
   .menu-restaurant .bloc-menu__plats {
+    grid-column: 2/1;
     opacity: 0;
     animation: appar 3s 1ms ease-in-out forwards;
   }
   .menu-restaurant .bloc-menu__desserts {
-    justify-content: center;
-    grid-column: 1/-1;
+    grid-column: 2/3;
     opacity: 0;
     animation: appar 5s 1ms ease-in-out forwards;
-  }
-  .menu-restaurant .bloc-menu__desserts .deserts {
-    width: 450px;
+    /* .deserts {
+       width: 450px;
+     }*/
   }
 }
 @media screen and (min-width: 992px) {
@@ -570,11 +624,11 @@ article p {
   .menu-restaurant .bloc-menu {
     display: block;
   }
+  .menu-restaurant .bloc-menu__entree {
+    width: 100%;
+  }
   .menu-restaurant .bloc-menu__desserts {
     display: block;
-  }
-  .menu-restaurant .bloc-menu__desserts .deserts {
-    width: 100%;
   }
 }
 
@@ -589,9 +643,13 @@ article p {
   flex-direction: column;
   background-color: #353535;
   color: #ffffff;
+  /* */
+  /**/
 }
 .section__footer .header__logo {
-  font-family: "Shrikhand", sans-serif, italic;
+  font-family: Shrikhand;
+  font-style: italic;
+  font-weight: bold;
 }
 .section__footer a {
   color: #ffffff;
@@ -602,7 +660,9 @@ article p {
 .section__footer .header__logo {
   margin-left: 0;
   margin-bottom: 16px;
-  font-family: "Shrikhand", sans-serif, italic;
+  font-family: Shrikhand;
+  font-style: italic;
+  font-weight: bold;
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
@@ -634,9 +694,11 @@ article p {
 }
 @media screen and (min-width: 992px) {
   .section__footer {
+    padding-right: 120px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
+    gap: 40px;
   }
   .section__footer .header__logo {
     margin-left: 35px;

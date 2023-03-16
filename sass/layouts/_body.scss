@@ -4,6 +4,7 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 *{
@@ -27,10 +28,22 @@ input,button{
 
 
 #page {
-    max-width: 767px;
-    padding: 0;
     margin: 0 auto;
-    font-family: $font-fam-body;
+    max-width: 767px;
+    height: 100%;
+    padding: 0;
+   
+    @include font-fam-body;
+
+    @include tablette{      
+      
+        max-width: 991px;
+    }
+
+    @include desck{        
+        max-width: 1440px;
+        overflow-x: scroll;
+    }
 }
 
 
