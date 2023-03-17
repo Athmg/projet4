@@ -10,11 +10,7 @@
   background-image: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
 }
 
-@mixin font($font-weight, $font-size, $line-height) {
-  font-weight: $font-weight;
-  font-size: $font-size;
-  line-height: $line-height;
-}
+
 
 @mixin font-style {
   font-style: italic;
@@ -64,7 +60,13 @@
   writing-mode: horizontal-tb
 }
 
-// les font-family
+// les fontS
+
+@mixin font($font-weight, $font-size, $line-height) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}
 
 @mixin font-fam-header{
   font-family: Shrikhand;
@@ -74,6 +76,10 @@
 
 @mixin font-fam-body{
   font-family:Roboto;
+}
+
+@mixin font-weight{
+  font-weight: bold;
 }
 
 @mixin hidden {

@@ -1,4 +1,4 @@
-.card__box {
+/**/.card__box {
   position: relative;
   cursor: pointer;
 }
@@ -20,11 +20,9 @@
   width: 0%;
   height: 100%;
   border-radius: 0px 15px 15px 0px;
-  background-color: $terti-color;
+ background-color: $terti-color;
   transition: width 0.3s ease;
-  //background-clip: text;
- //-webkit-background-clip: text;
- color: white;
+ color:white;
   //z-index: 2;
 }
 
@@ -39,13 +37,125 @@
   transition: none;
 }
 
-/*cacher le input*/
 .card__checkbox {
+  position: absolute;
   width: 0;
   height: 0;
-  position: relative;
-  left: -3000px;
+  left: -999px;
+
 }
+
+/**/
+
+/*cacher le input*/
+/*
+
+.card__check{
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  @include center-flex;
+  width: 20%;
+  height: 100%;
+  background-color:$terti-color;
+  border-radius: 0px 15px 15px 0px;
+}
+
+
+
+.card__checkbox {
+  width: 25px;
+  height: 24px;
+  @include cercle;
+  border: 2px  $terti-color;
+  background-color: white;
+  position: relative;
+  z-index: 6;
+
+  input{
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -900px;
+  }
+}
+.card__checkbox::before{
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-size: 20px;
+  @include center;
+  position: absolute;
+  left:5px;
+  right: 5PX;
+  top:5px;
+  color: $terti-color;
+}
+.card__checkbox:hover:after {
+  width: 15%;
+  visibility: visible;
+  
+}
+
+.card__checkbox:active:after {
+  width: 15%;  
+  transition: none;
+}
+
+
+.card__check:hover:after {
+  width: 15%;
+  visibility: visible;
+  
+}
+
+.card__check:active:after {
+  width: 15%;  
+  transition: none;
+}
+
 /* */
 
 /**/
+
+
+/* check box 1)
+.card__box {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .card__box:before {
+    content: "";
+    width: 0%;
+  }
+  
+  .card__box:after {
+   // content: "\f058";
+    visibility: hidden;
+    font-family: "Font Awesome 5 Free";
+    font-size: 26px;
+    @include center-flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 0px 15px 15px 0px;
+   background-color: $terti-color;
+    transition: width 0.3s ease;
+   color:white;
+    //z-index: 2;
+  }
+  
+  .card__box:hover:after {
+    width: 15%;
+    visibility: visible;
+    
+  }
+  
+  .card__box:active:after {
+    width: 15%;  
+    transition: none;
+  }
+*/  

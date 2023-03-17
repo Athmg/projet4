@@ -8,6 +8,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 .heading {
   margin-bottom: 0;
   height: 63px;
@@ -300,6 +306,64 @@ input, button {
   display: flex;
 }
 
+/* couleurs primaires*/
+/* couleurs gray*/
+/* font family*/
+.load {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(210, 210, 210, 0.8784313725);
+  animation: loader 4s ease-out forwards;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /**/
+}
+.load__rond {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 0px solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(50%, 50%);
+}
+.load__rond:nth-child(1) {
+  border-top-width: 15px;
+  border-color: #FF79DA;
+  animation: rotate-a 2s linear both;
+}
+.load__rond:nth-child(2) {
+  border-right-width: 15px;
+  border-color: #9356DC;
+  animation: rotate-b 2s linear both;
+}
+.load__rond:nth-child(3) {
+  border-left-width: 15px;
+  border-color: #99E2D0;
+  animation: rotate-c 2s linear both;
+}
+.load .header__logo {
+  position: relative;
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  display: block;
+  margin: auto;
+  animation: scale 2s linear both;
+}
+.load .header__logo i {
+  width: 20px;
+  height: 18px;
+  position: absolute;
+  padding: 0px 35px;
+}
+
 @keyframes jump {
   0% {
     transform: translateY(0);
@@ -315,14 +379,14 @@ input, button {
     transform: translateY(0);
   }
 }
-@keyframes appear {
+@keyframes scale {
   0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  100% {
     opacity: 1;
     transform: scale(1);
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0.1);
   }
 }
 @keyframes appar {
@@ -345,40 +409,15 @@ input, button {
     transform: translateX(0);
   }
 }
-@keyframes apparition-bloc {
-  0% {
-    opacity: 0;
-    transform: translateY(-500px);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-@keyframes slidein {
-  from {
-    transform: translateX(0px);
-  }
-  to {
-    transform: translateX(30px);
-  }
-}
 /* animation du loader*/
 @keyframes loader {
   0% {
     opacity: 1;
   }
-  89% {
-    opacity: 0.5;
-    z-index: 0.5;
-  }
-  99% {
-    opacity: 0.1;
-    z-index: 0.1;
-  }
   100% {
     opacity: 0;
-    z-index: 0;
+    z-index: -2;
+    display: none;
   }
 }
 @keyframes rotate-a {
@@ -493,6 +532,7 @@ input, button {
 	transition: none;
 }
 */
+/**/
 .card__box {
   position: relative;
   cursor: pointer;
@@ -532,16 +572,123 @@ input, button {
   transition: none;
 }
 
-/*cacher le input*/
 .card__checkbox {
+  position: absolute;
   width: 0;
   height: 0;
+  left: -999px;
+}
+
+/**/
+/*cacher le input*/
+/*
+
+.card__check{
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  @include center-flex;
+  width: 20%;
+  height: 100%;
+  background-color:$terti-color;
+  border-radius: 0px 15px 15px 0px;
+}
+
+
+
+.card__checkbox {
+  width: 25px;
+  height: 24px;
+  @include cercle;
+  border: 2px  $terti-color;
+  background-color: white;
   position: relative;
-  left: -3000px;
+  z-index: 6;
+
+  input{
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -900px;
+  }
+}
+.card__checkbox::before{
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-size: 20px;
+  @include center;
+  position: absolute;
+  left:5px;
+  right: 5PX;
+  top:5px;
+  color: $terti-color;
+}
+.card__checkbox:hover:after {
+  width: 15%;
+  visibility: visible;
+
+}
+
+.card__checkbox:active:after {
+  width: 15%;  
+  transition: none;
+}
+
+
+.card__check:hover:after {
+  width: 15%;
+  visibility: visible;
+
+}
+
+.card__check:active:after {
+  width: 15%;  
+  transition: none;
 }
 
 /* */
 /**/
+/* check box 1)
+.card__box {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .card__box:before {
+    content: "";
+    width: 0%;
+  }
+
+  .card__box:after {
+   // content: "\f058";
+    visibility: hidden;
+    font-family: "Font Awesome 5 Free";
+    font-size: 26px;
+    @include center-flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 0px 15px 15px 0px;
+   background-color: $terti-color;
+    transition: width 0.3s ease;
+   color:white;
+    //z-index: 2;
+  }
+
+  .card__box:hover:after {
+    width: 15%;
+    visibility: visible;
+
+  }
+
+  .card__box:active:after {
+    width: 15%;  
+    transition: none;
+  }
+*/
 body {
   font-family: Roboto;
 }
@@ -638,16 +785,16 @@ body {
 .menu-restaurant .bloc-menu__entree {
   margin-bottom: 10px;
   opacity: 0;
-  animation: appar 3s 5ms ease-in-out forwards;
+  animation: appar 1s ease-in-out forwards;
 }
 .menu-restaurant .bloc-menu__plats {
   margin-bottom: 10px;
   opacity: 0;
-  animation: appar 6s 5ms ease-in-out forwards;
+  animation: appar 1.4s ease-in-out forwards;
 }
 .menu-restaurant .bloc-menu__desserts {
   opacity: 0;
-  animation: appar 9s 5ms ease-in-out forwards;
+  animation: appar 1.6s ease-in-out forwards;
 }
 
 article h2 {
@@ -682,6 +829,7 @@ article p {
   line-height: 17px;
   margin-right: 20px;
   display: inline block;
+  padding-bottom: 10px;
 }
 
 .card {
@@ -696,6 +844,14 @@ article p {
   cursor: pointer;
   /**/
   /**/
+  /*
+  @include desck{
+    &__titre-desc {
+      h3,p:not(){
+      @include txt-ellipsis;
+      }
+    }
+  }*/
 }
 .card h3 {
   margin-top: 10px;
@@ -743,7 +899,8 @@ article p {
 }
 .card__titre-desc {
   padding-left: 10px;
-  max-width: 20%;
+  margin-bottom: 15px;
+  width: 90%;
 }
 .card__titre-desc h3, .card__titre-desc p {
   text-overflow: ellipsis;
@@ -753,14 +910,15 @@ article p {
 .card__prix {
   position: absolute;
   right: 30px;
+  font-weight: bold;
 }
 .card:hover .card__prix {
   margin-right: 13%;
-  transition: margin-left 0.3s ease;
+  transition: margin-left 2s 0.5s;
 }
 @media screen and (min-width: 768px) {
   .card__titre-desc {
-    width: 60%;
+    width: 80%;
   }
   .card__titre-desc h3, .card__titre-desc p {
     text-overflow: ellipsis;
@@ -818,6 +976,8 @@ article p {
   }
   .menu-restaurant .bloc-menu__entree {
     grid-column: 1/-1;
+    opacity: 0;
+    animation: appar 1s ease-in-out forwards;
     display: block;
     margin: auto;
     width: 75%;
@@ -825,12 +985,12 @@ article p {
   .menu-restaurant .bloc-menu__plats {
     grid-column: 2/1;
     opacity: 0;
-    animation: appar 3s 1ms ease-in-out forwards;
+    animation: appar 1.5s ease-in-out forwards;
   }
   .menu-restaurant .bloc-menu__desserts {
     grid-column: 2/3;
     opacity: 0;
-    animation: appar 5s 1ms ease-in-out forwards;
+    animation: appar 1.5s ease-in-out forwards;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1520,122 +1680,14 @@ h2 {
 }
 
 /**/
-@keyframes jump {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(0.5rem);
-  }
-  75% {
-    transform: translateY(-0.5rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes appear {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-@keyframes appar {
-  0% {
-    opacity: 0;
-    transform: translateY(500px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes appartX {
-  0% {
-    opacity: 0;
-    transform: translateX(500px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes apparition-bloc {
-  0% {
-    opacity: 0;
-    transform: translateY(-500px);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-@keyframes slidein {
-  from {
-    transform: translateX(0px);
-  }
-  to {
-    transform: translateX(30px);
-  }
-}
-/* animation du loader*/
-@keyframes loader {
-  0% {
-    opacity: 1;
-  }
-  89% {
-    opacity: 0.5;
-    z-index: 0.5;
-  }
-  99% {
-    opacity: 0.1;
-    z-index: 0.1;
-  }
-  100% {
-    opacity: 0;
-    z-index: 0;
-  }
-}
-@keyframes rotate-a {
-  0% {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
-  }
-  100% {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
-    opacity: 0;
-  }
-}
-@keyframes rotate-b {
-  0% {
-    transform: rotateX(55deg) rotateY(15deg) rotateZ(360deg);
-  }
-  100% {
-    transform: rotateX(55deg) rotateY(15deg) rotateZ(0deg);
-    opacity: 0;
-  }
-}
-@keyframes rotate-c {
-  0% {
-    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
-  }
-  100% {
-    transform: rotateX(35deg) rotateY(15deg) rotateZ(0deg);
-    opacity: 0;
-  }
-}
-/**/
-/**/
+/* couleurs primaires*/
+/* couleurs gray*/
+/* font family*/
 .load {
   z-index: 1;
   position: fixed;
   width: 100%;
   height: 100vh;
-  inset: 0;
   background-color: rgba(210, 210, 210, 0.8784313725);
   animation: loader 4s ease-out forwards;
   display: flex;
@@ -1675,6 +1727,152 @@ h2 {
   font-weight: 400;
   font-size: 20px;
   line-height: 22px;
+  display: block;
+  margin: auto;
+  animation: scale 2s linear both;
+}
+.load .header__logo i {
+  width: 20px;
+  height: 18px;
+  position: absolute;
+  padding: 0px 35px;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.5rem);
+  }
+  75% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes scale {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0.1);
+  }
+}
+@keyframes appar {
+  0% {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes appartX {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* animation du loader*/
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -2;
+    display: none;
+  }
+}
+@keyframes rotate-a {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    opacity: 0;
+  }
+}
+@keyframes rotate-b {
+  0% {
+    transform: rotateX(55deg) rotateY(15deg) rotateZ(360deg);
+  }
+  100% {
+    transform: rotateX(55deg) rotateY(15deg) rotateZ(0deg);
+    opacity: 0;
+  }
+}
+@keyframes rotate-c {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(15deg) rotateZ(0deg);
+    opacity: 0;
+  }
+}
+/**/
+/**/
+/* couleurs primaires*/
+/* couleurs gray*/
+/* font family*/
+.load {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(210, 210, 210, 0.8784313725);
+  animation: loader 4s ease-out forwards;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /**/
+}
+.load__rond {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 0px solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(50%, 50%);
+}
+.load__rond:nth-child(1) {
+  border-top-width: 15px;
+  border-color: #FF79DA;
+  animation: rotate-a 2s linear both;
+}
+.load__rond:nth-child(2) {
+  border-right-width: 15px;
+  border-color: #9356DC;
+  animation: rotate-b 2s linear both;
+}
+.load__rond:nth-child(3) {
+  border-left-width: 15px;
+  border-color: #99E2D0;
+  animation: rotate-c 2s linear both;
+}
+.load .header__logo {
+  position: relative;
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  display: block;
+  margin: auto;
+  animation: scale 2s linear both;
 }
 .load .header__logo i {
   width: 20px;

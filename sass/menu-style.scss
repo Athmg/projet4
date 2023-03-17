@@ -111,18 +111,18 @@ body {
   .bloc-menu__entree {
     margin-bottom: 10px;
     opacity: 0;
-    animation: appar 3s 5ms ease-in-out forwards;
+    animation: appar 1s  ease-in-out forwards;
   }
 
   .bloc-menu__plats {
     margin-bottom: 10px;
     opacity: 0;
-    animation: appar 6s 5ms ease-in-out forwards;
+    animation: appar 1.4s  ease-in-out forwards;
   }
 
   .bloc-menu__desserts {
     opacity: 0;
-    animation: appar 9s 5ms ease-in-out forwards;
+    animation: appar 1.6s  ease-in-out forwards;
   }
 }
 
@@ -158,12 +158,13 @@ article {
     @include font(300, 15px, 17px);
     margin-right: 20px;
     display: inline block;
+    padding-bottom: 10px;
   }
 }
 
 .card {
   opacity: 0;
-  animation: appar ease-in-out forwards;
+ animation: appar ease-in-out forwards;
   position: relative;
   @include card;
   margin-bottom: 16px;
@@ -172,7 +173,8 @@ article {
   /**/
   &__titre-desc {
     padding-left: 10px;
-    max-width: 20%;
+    margin-bottom: 15px;
+    width: 90%;
     h3,p{
     @include txt-ellipsis;
     }
@@ -185,21 +187,30 @@ article {
   &__prix {
     position: absolute;
     right: 30px;
-    // font-weight: $font-weight-bold;
+    @include font-weight;
+    
   }
 
   &:hover &__prix {
     margin-right: 13%;
-    transition: margin-left 0.3s ease;
+    transition: margin-left 2s 0.5s;
   }
   @include tablette{
   &__titre-desc {
-    width: 60%;
+    width: 80%;
     h3,p{
     @include txt-ellipsis;
     }
   }
 }
+/*
+@include desck{
+  &__titre-desc {
+    h3,p:not(){
+    @include txt-ellipsis;
+    }
+  }
+}*/
 }
 
 //@include pour le bouton
@@ -240,21 +251,22 @@ article {
     }
     .bloc-menu__entree {
      grid-column: 1 / -1;  
+     opacity: 0;
+      animation: appar 1s  ease-in-out forwards;
      @include center;
      width: 75%;
     }
 
     .bloc-menu__plats {
-      grid-column: 2 / 1; 
-    
+      grid-column: 2 / 1;     
       opacity: 0;
-      animation: appar 3s 1ms ease-in-out forwards;
+      animation: appar 1.5s  ease-in-out forwards;
     }
 
     .bloc-menu__desserts {  
       grid-column: 2 / 3;   
       opacity: 0;
-      animation: appar 5s 1ms ease-in-out forwards;
+      animation: appar 1.5s ease-in-out forwards;
     }
   
   }
