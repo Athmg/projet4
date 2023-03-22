@@ -89,7 +89,7 @@ input, button {
   width: 100%;
   height: 100vh;
   background-color: rgba(210, 210, 210, 0.8784313725);
-  animation: loader 4s ease-out forwards;
+  animation: loader 4.5s ease-out forwards;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -109,17 +109,17 @@ input, button {
 .load__rond:nth-child(1) {
   border-top-width: 15px;
   border-color: #FF79DA;
-  animation: rotate-a 2s linear both;
+  animation: rotate-a 3s linear both;
 }
 .load__rond:nth-child(2) {
   border-right-width: 15px;
   border-color: #9356DC;
-  animation: rotate-b 2s linear both;
+  animation: rotate-b 3s linear both;
 }
 .load__rond:nth-child(3) {
   border-left-width: 15px;
   border-color: #99E2D0;
-  animation: rotate-c 2s linear both;
+  animation: rotate-c 3s linear both;
 }
 .load .header__logo {
   position: relative;
@@ -129,7 +129,7 @@ input, button {
   line-height: 22px;
   display: block;
   margin: auto;
-  animation: scale 2s linear both;
+  animation: scale 3.5s linear both;
 }
 .load .header__logo i {
   width: 20px;
@@ -163,6 +163,7 @@ input, button {
     transform: scale(0.1);
   }
 }
+/* apparitio: bas vers la haut*/
 @keyframes appar {
   0% {
     opacity: 0;
@@ -173,6 +174,7 @@ input, button {
     transform: translateY(0);
   }
 }
+/* apparition :right*/
 @keyframes appartX {
   0% {
     opacity: 0;
@@ -221,8 +223,6 @@ input, button {
     opacity: 0;
   }
 }
-/**/
-/**/
 .icon-like {
   position: relative;
   cursor: pointer;
@@ -306,163 +306,29 @@ input, button {
 	transition: none;
 }
 */
-/**/
-.card__box {
-  position: relative;
-  cursor: pointer;
-}
-
-.card__box:before {
-  content: "";
+.card__check {
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 0%;
-}
-
-.card__box:after {
-  content: "\f058";
-  visibility: hidden;
-  font-family: "Font Awesome 5 Free";
-  font-size: 26px;
+  height: 100%;
+  background-color: #99e2d0;
+  border-radius: 0px 15px 15px 0px;
+  transition: width 0.3s ease;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0%;
-  height: 100%;
-  border-radius: 0px 15px 15px 0px;
-  background-color: #99E2D0;
-  transition: width 0.3s ease;
-  color: white;
 }
 
-.card__box:hover:after {
-  width: 15%;
-  visibility: visible;
-}
-
-.card__box:active:after {
-  width: 15%;
-  transition: none;
-}
-
-.card__checkbox {
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: -999px;
-}
-
-/**/
-/*cacher le input*/
-/*
-
-.card__check{
+.card__checkbox i {
   visibility: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  @include center-flex;
-  width: 20%;
-  height: 100%;
-  background-color:$terti-color;
-  border-radius: 0px 15px 15px 0px;
-}
-
-
-
-.card__checkbox {
-  width: 25px;
-  height: 24px;
-  @include cercle;
-  border: 2px  $terti-color;
+  border-radius: 100%;
+  font-size: 25px;
   background-color: white;
-  position: relative;
-  z-index: 6;
-
-  input{
-    width: 0;
-    height: 0;
-    position: absolute;
-    left: -900px;
-  }
-}
-.card__checkbox::before{
-  content: "";
-  font-family: "Font Awesome 5 Free";
-  font-size: 20px;
-  @include center;
-  position: absolute;
-  left:5px;
-  right: 5PX;
-  top:5px;
-  color: $terti-color;
-}
-.card__checkbox:hover:after {
-  width: 15%;
-  visibility: visible;
-
+  color: #99e2d0;
+  text-align: center;
 }
 
-.card__checkbox:active:after {
-  width: 15%;  
-  transition: none;
-}
-
-
-.card__check:hover:after {
-  width: 15%;
-  visibility: visible;
-
-}
-
-.card__check:active:after {
-  width: 15%;  
-  transition: none;
-}
-
-/* */
-/**/
-/* check box 1)
-.card__box {
-    position: relative;
-    cursor: pointer;
-  }
-
-  .card__box:before {
-    content: "";
-    width: 0%;
-  }
-
-  .card__box:after {
-   // content: "\f058";
-    visibility: hidden;
-    font-family: "Font Awesome 5 Free";
-    font-size: 26px;
-    @include center-flex;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0%;
-    height: 100%;
-    border-radius: 0px 15px 15px 0px;
-   background-color: $terti-color;
-    transition: width 0.3s ease;
-   color:white;
-    //z-index: 2;
-  }
-
-  .card__box:hover:after {
-    width: 15%;
-    visibility: visible;
-
-  }
-
-  .card__box:active:after {
-    width: 15%;  
-    transition: none;
-  }
-*/
 body {
   font-family: Roboto;
 }
@@ -594,16 +460,12 @@ article h3 {
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  padding-top: 10px;
-  white-space: nowrap;
 }
 article p {
   font-weight: 300;
   font-size: 15px;
   line-height: 17px;
-  margin-right: 20px;
   display: inline block;
-  padding-bottom: 10px;
 }
 
 .card {
@@ -614,18 +476,13 @@ article p {
   background: #ffffff;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+  overflow: hidden;
   margin-bottom: 16px;
   cursor: pointer;
+  /* effet hover sur le checkbox*/
   /**/
   /**/
-  /*
-  @include desck{
-    &__titre-desc {
-      h3,p:not(){
-      @include txt-ellipsis;
-      }
-    }
-  }*/
+  /**/
 }
 .card h3 {
   margin-top: 10px;
@@ -671,18 +528,28 @@ article p {
   right: 20px;
   top: 25px;
 }
-.card__titre-desc {
-  padding-left: 10px;
-  margin-bottom: 15px;
-  width: 90%;
+.card__box {
+  min-width: 0;
+  overflow: hidden;
 }
-.card__titre-desc h3, .card__titre-desc p {
+.card__titre {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
+.card__description {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.card__titre-desc {
+  padding-left: 10px;
+  overflow: hidden;
+  min-width: 0;
+}
 .card__prix {
   position: absolute;
+  bottom: 10px;
   right: 30px;
   font-weight: bold;
 }
@@ -690,14 +557,26 @@ article p {
   margin-right: 13%;
   transition: margin-left 2s 0.5s;
 }
+.card:hover .card__prix .card__titre-desc {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.card:hover .card__check {
+  width: 15%;
+  transition: width 0.3s ease;
+}
+.card:hover .card__check i {
+  visibility: visible;
+}
 @media screen and (min-width: 768px) {
   .card__titre-desc {
-    width: 80%;
+    max-width: 40%;
   }
-  .card__titre-desc h3, .card__titre-desc p {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+}
+@media screen and (min-width: 992px) {
+  .card__titre-desc {
+    max-width: 100%;
   }
 }
 
@@ -721,8 +600,8 @@ article p {
 }
 .btn:hover {
   cursor: pointer;
+  transform: scale(1);
   opacity: 0.9;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (min-width: 768px) {
@@ -745,8 +624,8 @@ article p {
   .menu-restaurant .bloc-menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    -moz-column-gap: 30px;
-         column-gap: 30px;
+    -moz-column-gap: 2%;
+         column-gap: 2%;
   }
   .menu-restaurant .bloc-menu__entree {
     grid-column: 1/-1;
@@ -754,7 +633,7 @@ article p {
     animation: appar 1s ease-in-out forwards;
     display: block;
     margin: auto;
-    width: 75%;
+    width: 100%;
   }
   .menu-restaurant .bloc-menu__plats {
     grid-column: 2/1;

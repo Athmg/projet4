@@ -1,5 +1,5 @@
-
 @import "loader";
+
 @keyframes jump {
   0% {
     transform: translateY(0);
@@ -25,26 +25,25 @@
     opacity: 1;
     transform: scale(1)
   }
-
   100% {
     opacity: 0.1;
     transform: scale(0.1);
   }
 }
 
-
+/* apparitio: bas vers la haut*/
 @keyframes appar {
   0% {
     opacity: 0;
     transform: translateY(500px);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+/* apparition :right*/
 @keyframes appartX {
   0% {
     opacity: 0;
@@ -58,66 +57,49 @@
 }
 
 
-
 /* animation du loader*/
-@keyframes loader{
+@keyframes loader {
   0% {
-    opacity: 1;  
-  }  
+    opacity: 1;
+  }
+
   100% {
     opacity: 0;
-    z-index: -2;   
-    display: none; 
+    z-index: -2;
+    display: none;
   }
 }
 
 
-@keyframes rotate-a{
-  0%{
-    transform:rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+@keyframes rotate-a {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
   }
-  100%{
-    transform:rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
     opacity: 0;
-  
-    
+  }
+}
+
+@keyframes rotate-b {
+  0% {
+    transform: rotateX(55deg) rotateY(15deg) rotateZ(360deg);
   }
 
-}
-@keyframes rotate-b{
-  0%{
-    transform:rotateX(55deg) rotateY(15deg) rotateZ(360deg);
-  }
-  100%{
-    transform:rotateX(55deg) rotateY(15deg) rotateZ(0deg);
+  100% {
+    transform: rotateX(55deg) rotateY(15deg) rotateZ(0deg);
     opacity: 0;
-  
-    
   }
 }
-@keyframes rotate-c{
-  0%{
-    transform:rotateX(35deg) rotateY(55deg) rotateZ(360deg) ;
-     
 
+@keyframes rotate-c {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
-  100%{
-    transform:rotateX(35deg) rotateY(15deg) rotateZ(0deg) ;
+
+  100% {
+    transform: rotateX(35deg) rotateY(15deg) rotateZ(0deg);
     opacity: 0;
-   
   }
 }
-
-/**/
-
-/**/
-
-
-
-
-
-
-
-
-
-

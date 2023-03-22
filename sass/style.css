@@ -267,8 +267,8 @@ h2 {
 }
 .section__reservation .btn:hover {
   cursor: pointer;
+  transform: scale(1);
   opacity: 0.9;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 .section__reservation span {
   font-weight: font(400, 16px, 20px);
@@ -488,7 +488,7 @@ h2 {
 }
 .section__restaurant article {
   padding-bottom: 20px;
-  width: 100%;
+  max-width: 100%;
 }
 @media screen and (min-width: 768px) {
   .section__restaurant {
@@ -496,12 +496,6 @@ h2 {
     padding: 0 43px;
     margin-top: 25px;
     padding-bottom: 40px;
-    /*  .card {
-            @include card;
-            &__img {                
-                width: 100%;
-            }
-        }*/
   }
   .section__restaurant .grid {
     display: grid;
@@ -509,12 +503,18 @@ h2 {
     -moz-column-gap: 25px;
          column-gap: 25px;
   }
+  .section__restaurant article {
+    max-width: 100%;
+  }
 }
 @media screen and (min-width: 992px) {
   .section__restaurant {
     padding: 0px 193px;
+    max-width: 1445px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
     /* */
-    /**/
   }
   .section__restaurant .grid {
     display: grid;
@@ -530,6 +530,7 @@ h2 {
     background: #ffffff;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
+    width: 355px;
   }
   .section__restaurant .card h3 {
     margin-top: 10px;
@@ -574,9 +575,6 @@ h2 {
     border-radius: 2px;
     right: 20px;
     top: 25px;
-  }
-  .section__restaurant .card__img {
-    width: 355px;
   }
 }
 

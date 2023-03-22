@@ -9,7 +9,7 @@
   width: 100%;
   height: 100vh;
   background-color: rgba(210, 210, 210, 0.8784313725);
-  animation: loader 4s ease-out forwards;
+  animation: loader 4.5s ease-out forwards;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -29,17 +29,17 @@
 .load__rond:nth-child(1) {
   border-top-width: 15px;
   border-color: #FF79DA;
-  animation: rotate-a 2s linear both;
+  animation: rotate-a 3s linear both;
 }
 .load__rond:nth-child(2) {
   border-right-width: 15px;
   border-color: #9356DC;
-  animation: rotate-b 2s linear both;
+  animation: rotate-b 3s linear both;
 }
 .load__rond:nth-child(3) {
   border-left-width: 15px;
   border-color: #99E2D0;
-  animation: rotate-c 2s linear both;
+  animation: rotate-c 3s linear both;
 }
 .load .header__logo {
   position: relative;
@@ -49,7 +49,7 @@
   line-height: 22px;
   display: block;
   margin: auto;
-  animation: scale 2s linear both;
+  animation: scale 3.5s linear both;
 }
 .load .header__logo i {
   width: 20px;
@@ -83,6 +83,7 @@
     transform: scale(0.1);
   }
 }
+/* apparitio: bas vers la haut*/
 @keyframes appar {
   0% {
     opacity: 0;
@@ -93,6 +94,7 @@
     transform: translateY(0);
   }
 }
+/* apparition :right*/
 @keyframes appartX {
   0% {
     opacity: 0;
@@ -140,6 +142,4 @@
     transform: rotateX(35deg) rotateY(15deg) rotateZ(0deg);
     opacity: 0;
   }
-}
-/**/
-/**//*# sourceMappingURL=animation.css.map */
+}/*# sourceMappingURL=animation.css.map */

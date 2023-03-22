@@ -7,14 +7,12 @@
 @import "animation";
 @import "./components/coeur";
 @import "./components/checkbox";
-//@import "./components/header";
 
 body {
   @include font-fam-body;
 }
 
 .head {
-  // position: relative;
   height: 63px;
 
   img {
@@ -32,7 +30,6 @@ body {
     left: 24px;
   }
 
-
   @include desck {
     height: 76px;
 
@@ -44,9 +41,7 @@ body {
     i {
       top: 25px;
     }
-
   }
-
 }
 
 .menu-img {
@@ -69,7 +64,6 @@ body {
       height: 323px;
     }
   }
-
 }
 
 .menu-restaurant {
@@ -111,18 +105,18 @@ body {
   .bloc-menu__entree {
     margin-bottom: 10px;
     opacity: 0;
-    animation: appar 1s  ease-in-out forwards;
+    animation: appar 1s ease-in-out forwards;
   }
 
   .bloc-menu__plats {
     margin-bottom: 10px;
     opacity: 0;
-    animation: appar 1.4s  ease-in-out forwards;
+    animation: appar 1.4s ease-in-out forwards;
   }
 
   .bloc-menu__desserts {
     opacity: 0;
-    animation: appar 1.6s  ease-in-out forwards;
+    animation: appar 1.6s ease-in-out forwards;
   }
 }
 
@@ -149,68 +143,87 @@ article {
 
   h3 {
     @include font(500, 18px, 21px);
-    padding-top: 10px;
-    //font-weight: $font-weight-bold;
-    white-space: nowrap;
   }
 
   p {
     @include font(300, 15px, 17px);
-    margin-right: 20px;
     display: inline block;
-    padding-bottom: 10px;
   }
 }
 
 .card {
   opacity: 0;
- animation: appar ease-in-out forwards;
+  animation: appar ease-in-out forwards;
   position: relative;
   @include card;
+  @include overflow;
   margin-bottom: 16px;
   cursor: pointer;
 
-  /**/
-  &__titre-desc {
-    padding-left: 10px;
-    margin-bottom: 15px;
-    width: 90%;
-    h3,p{
-    @include txt-ellipsis;
-    }
-   
-
+  &__box {
+    min-width: 0;
+    @include overflow;
   }
 
-  /**/
+  &__titre {
+    @include txt-ellipsis;
+  }
+
+  &__description {
+    @include txt-ellipsis;
+  }
+
+  &__titre-desc {
+    padding-left: 10px;
+    @include overflow;
+    min-width: 0;
+  }
 
   &__prix {
     position: absolute;
+    bottom: 10px;
     right: 30px;
     @include font-weight;
-    
   }
+
+  /* effet hover sur le checkbox*/
 
   &:hover &__prix {
     margin-right: 13%;
     transition: margin-left 2s 0.5s;
-  }
-  @include tablette{
-  &__titre-desc {
-    width: 80%;
-    h3,p{
-    @include txt-ellipsis;
+
+    .card__titre-desc {
+      @include txt-ellipsis;
     }
   }
-}
-/*
-@include desck{
-  &__titre-desc {
-    h3,p:not(){
-    @include txt-ellipsis;
+
+  &:hover &__check {
+    width: 15%;
+    transition: width 0.3s ease;
+
+    i {
+      visibility: visible;
     }
   }
-}*/
+
+  /**/
+  @include tablette {
+    &__titre-desc {
+      max-width: 40%;
+
+    }
+  }
+
+  /**/
+
+  @include desck {
+    &__titre-desc {
+      max-width: 100%;
+
+    }
+  }
+
+  /**/
 }
 
 //@include pour le bouton
@@ -218,10 +231,7 @@ article {
 .btn {
   @include button($color-txt, $hover-color);
   margin: 60px auto;
-
 }
-
-
 
 // medias querys
 .menu-restaurant {
@@ -245,35 +255,35 @@ article {
     .bloc-menu {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      column-gap: 30px;
-        
-     
+      column-gap: 2%;
     }
+
     .bloc-menu__entree {
-     grid-column: 1 / -1;  
-     opacity: 0;
-      animation: appar 1s  ease-in-out forwards;
-     @include center;
-     width: 75%;
+      grid-column: 1 / -1;
+      opacity: 0;
+      animation: appar 1s ease-in-out forwards;
+      @include center;
+      width: 100%;
     }
 
     .bloc-menu__plats {
-      grid-column: 2 / 1;     
-      opacity: 0;
-      animation: appar 1.5s  ease-in-out forwards;
-    }
-
-    .bloc-menu__desserts {  
-      grid-column: 2 / 3;   
+      // @include center;
+      grid-column: 2 / 1;
       opacity: 0;
       animation: appar 1.5s ease-in-out forwards;
     }
-  
+
+    .bloc-menu__desserts {
+      // @include center;     
+      grid-column: 2 / 3;
+      opacity: 0;
+      animation: appar 1.5s ease-in-out forwards;
+    }
   }
 
   //  medias query pour desktop
   @include desck {
-    // margin: 0 193px;
+
     margin: 0 193px;
     border-radius: 20px 20px 0 0;
 
@@ -283,7 +293,7 @@ article {
       i {
         margin-left: 16px;
       }
-    }  
+    }
 
     .bloc-menu {
       display: block;
@@ -291,7 +301,6 @@ article {
 
     .bloc-menu__entree {
       width: 100%;
-
     }
 
     .bloc-menu__desserts {
