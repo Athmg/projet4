@@ -123,7 +123,7 @@ h2 {
       padding: 0;
       margin: 0;
       padding-top: 50px;
-      margin-bottom: -20px;
+     // margin-bottom: -20px;
     }
 
     padding: 0 180px;
@@ -131,18 +131,18 @@ h2 {
 
     .fonctionnement__choix {
       display: flex;
-      gap: 35px;
+      align-items: center;
 
       /*  */
       div:nth-child(3) {
-        display: inline;
-        margin: 0;
+        display: inline-block;       
       }
 
       /* */
       .fonct-choix {
         @include font(500, 16px, 19px);
         width: 323px;
+        margin: 0;
       }
     }
   }

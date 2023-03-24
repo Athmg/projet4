@@ -6,14 +6,6 @@
 .heading {
   margin-bottom: 0;
   height: 63px;
-  /*
-    @include tablette {
-     // display: block;
-      img{
-       // @include center;
-      }
-    }
-  */
 }
 .heading img {
   display: block;
@@ -74,7 +66,10 @@ body {
   box-sizing: border-box;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   margin-bottom: 10px;
 }
 
@@ -83,7 +78,8 @@ a {
   color: black;
 }
 
-input, button {
+input,
+button {
   border: none;
   text-decoration: none;
 }
@@ -224,7 +220,7 @@ h2 {
 
 .formulaire {
   color: #353535;
-  background-color: #D2D2D2;
+  background-color: #d2d2d2;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -236,7 +232,7 @@ h2 {
   font-size: 16px;
   line-height: 18px;
   color: #353535;
-  background-color: #D2D2D2;
+  background-color: #d2d2d2;
 }
 .formulaire i {
   margin-right: 20px;
@@ -244,7 +240,7 @@ h2 {
 }
 
 .section__reservation {
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   text-align: center;
 }
 .section__reservation .btn {
@@ -268,12 +264,12 @@ h2 {
 .section__reservation .btn:hover {
   cursor: pointer;
   transform: scale(1);
-  opacity: 0.9;
+  opacity: 10;
 }
 .section__reservation span {
   font-weight: font(400, 16px, 20px);
   font-family: "Shrikhand", sans-serif;
-  color: #9356DC;
+  color: #9356dc;
 }
 
 .section__fonctionnement .card {
@@ -319,7 +315,7 @@ h2 {
   height: 21px;
 }
 .section__fonctionnement .card__new {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   position: absolute;
   padding: 5px 9px;
   border-radius: 2px;
@@ -327,7 +323,7 @@ h2 {
   top: 25px;
 }
 .section__fonctionnement .fonct-choix {
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   height: 70px;
   margin-bottom: 25px;
   font-weight: 500;
@@ -339,7 +335,7 @@ h2 {
   font-size: 14px;
   line-height: 17px;
   border-radius: 100%;
-  background-color: #9356DC;
+  background-color: #9356dc;
   color: #ffffff;
   padding: 3px 6px;
 }
@@ -350,10 +346,10 @@ h2 {
 }
 .section__fonctionnement .fonct-choix:hover {
   cursor: pointer;
-  background-color: #F5EDFF;
+  background-color: #f5edff;
 }
 .section__fonctionnement .fonct-choix:hover .fonct-choix__icon {
-  color: #9356DC;
+  color: #9356dc;
 }
 @media screen and (min-width: 768px) {
   .section__fonctionnement {
@@ -390,23 +386,22 @@ h2 {
     padding: 0;
     margin: 0;
     padding-top: 50px;
-    margin-bottom: -20px;
   }
   .section__fonctionnement .fonctionnement__choix {
     display: flex;
-    gap: 35px;
+    align-items: center;
     /*  */
     /* */
   }
   .section__fonctionnement .fonctionnement__choix div:nth-child(3) {
-    display: inline;
-    margin: 0;
+    display: inline-block;
   }
   .section__fonctionnement .fonctionnement__choix .fonct-choix {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     width: 323px;
+    margin: 0;
   }
 }
 
@@ -474,7 +469,7 @@ h2 {
   height: 21px;
 }
 .section__restaurant .card__new {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   position: absolute;
   padding: 5px 9px;
   border-radius: 2px;
@@ -490,7 +485,7 @@ h2 {
 }
 @media screen and (min-width: 768px) {
   .section__restaurant {
-    background-color: #EAEAEA;
+    background-color: #eaeaea;
     padding: 0 43px;
     margin-top: 25px;
     padding-bottom: 40px;
@@ -570,13 +565,11 @@ h2 {
     height: 21px;
   }
   .section__restaurant .card__new {
-    background-color: #99E2D0;
+    background-color: #99e2d0;
     position: absolute;
     padding: 5px 9px;
     border-radius: 2px;
     right: 20px;
     top: 25px;
   }
-}
-
-/**//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

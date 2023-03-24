@@ -19,7 +19,10 @@ body {
   box-sizing: border-box;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   margin-bottom: 10px;
 }
 
@@ -28,7 +31,8 @@ a {
   color: black;
 }
 
-input, button {
+input,
+button {
   border: none;
   text-decoration: none;
 }
@@ -88,7 +92,6 @@ input, button {
   position: fixed;
   width: 100%;
   height: 100vh;
-  inset: 0;
   background-color: rgba(210, 210, 210, 0.8784313725);
   animation: loader 5s forwards;
   display: flex;
@@ -109,17 +112,17 @@ input, button {
 }
 .load__rond:nth-child(1) {
   border-top-width: 15px;
-  border-color: #FF79DA;
+  border-color: #ff79da;
   animation: rotate-a 3s linear both;
 }
 .load__rond:nth-child(2) {
   border-right-width: 15px;
-  border-color: #9356DC;
+  border-color: #9356dc;
   animation: rotate-b 3s linear both;
 }
 .load__rond:nth-child(3) {
   border-left-width: 15px;
-  border-color: #99E2D0;
+  border-color: #99e2d0;
   animation: rotate-c 3s linear both;
 }
 .load .header__logo {
@@ -193,7 +196,7 @@ input, button {
   }
   100% {
     opacity: 0;
-    z-index: 0;
+    z-index: -2;
     display: none;
   }
 }
@@ -243,7 +246,7 @@ input, button {
   height: 100%;
   background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
   background-clip: text;
-  -webkit-background-clip: text; /* Pour une compatibilité avec les navigateurs WebKit */
+  -webkit-background-clip: text;
   color: transparent;
   transition: width 0.3s ease;
 }
@@ -386,7 +389,7 @@ body {
 
 .menu-restaurant {
   position: relative;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   border-radius: 40px 40px 0 0;
   top: -60px;
   /* medias querys sur la section menus restaurant*/
@@ -429,12 +432,12 @@ body {
 }
 .menu-restaurant article h2::after {
   content: "";
-  color: #99E2D0;
+  color: #99e2d0;
   position: absolute;
   left: 0;
   bottom: -7px;
   width: 40px;
-  border-bottom: 3px solid #99E2D0;
+  border-bottom: 3px solid #99e2d0;
 }
 .menu-restaurant article h3 {
   font-weight: 500;
@@ -608,7 +611,7 @@ body {
   height: 21px;
 }
 .card__new {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   position: absolute;
   padding: 5px 9px;
   border-radius: 2px;
@@ -682,7 +685,7 @@ body {
 .btn:hover {
   cursor: pointer;
   transform: scale(1);
-  opacity: 0.9;
+  opacity: 10;
 }
 
 /* */
