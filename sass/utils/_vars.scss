@@ -3,44 +3,36 @@
 // variables couleurs
 
 /* couleurs primaires*/
-$primar-color: #9356DC;
-$color-primar-2:#F5EDFF;
-$second-color: #FF79DA;
-$terti-color: #99E2D0;
+$primar-color: #9356dc;
+$color-primar-2: #f5edff;
+$second-color: #ff79da;
+$terti-color: #99e2d0;
 
 $color-txt: #ffffff;
 
 /* couleurs gray*/
-$color-gray-1:#D2D2D2;
-$color-gray-2:#EAEAEA;
-$color-gray-3:#353535;
+$color-gray-1: #d2d2d2;
+$color-gray-2: #eaeaea;
+$color-gray-3: #353535;
 
-$color-black:#000000;
+$color-black: #000000;
 
 // borders
-$border:15px;
-
-
+$border: 15px;
 
 // les backgrounds
 
 /* font family*/
-$font-fam-body:('Roboto', sans-serif);
-$font-fam-header:('Shrikhand', sans-serif,);
+$font-fam-body: ("Roboto", sans-serif);
+$font-fam-header: ("Shrikhand", sans-serif);
 
-// les marges 
+// les marges
 
-$margin:10px;
-$margin-bor:20px;
+$margin: 10px;
+$margin-bor: 20px;
 $padding-top: 40px;
-$padding:50px;
+$padding: 50px;
 
 // button
-$shadow:(0 42px 13.37px hotpink);
+$shadow: (0 42px 13.37px hotpink);
 $hover-color: $terti-color;
-
-
-
-
-
-

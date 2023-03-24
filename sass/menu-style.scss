@@ -11,9 +11,8 @@
 body {
   @include font-fam-body;
 }
-#page-menu{
+#page-menu {
   margin: 0;
-
 }
 
 .head {
@@ -89,7 +88,6 @@ body {
       @include font(400, 28px, 41px);
       white-space: nowrap;
       padding-left: 10px;
-   
     }
 
     i {
@@ -100,8 +98,6 @@ body {
     }
   }
 
-
-
   article {
     h2 {
       text-transform: uppercase;
@@ -111,7 +107,7 @@ body {
       opacity: 0;
       animation: jump 2s ease-in forwards;
     }
-  
+
     // surligner
     h2::after {
       content: "";
@@ -122,22 +118,21 @@ body {
       width: 40px;
       border-bottom: 3px solid $terti-color;
     }
-  
+
     h3 {
       @include font(500, 18px, 21px);
     }
-  
+
     p {
       @include font(300, 15px, 17px);
       display: inline block;
     }
   }
 
-
   .bloc-menu {
-    padding: 0 20px;   
-    }
-  
+    padding: 0 20px;
+  }
+
   .bloc-menu__entree {
     opacity: 0;
     animation: appar 1s ease-in-out forwards;
@@ -155,11 +150,10 @@ body {
 
   /* medias querys sur la section menus restaurant*/
 
-  /* medias tablette */ 
+  /* medias tablette */
   @include tablette {
-
     &__div {
-        @include tablette {
+      @include tablette {
         padding: 0 3%;
       }
     }
@@ -198,7 +192,7 @@ body {
       animation: appar 1.5s ease-in-out forwards;
     }
 
-    .bloc-menu__desserts {    
+    .bloc-menu__desserts {
       grid-column: 2 / 3;
       opacity: 0;
       animation: appar 1.5s ease-in-out forwards;
@@ -207,12 +201,11 @@ body {
 
   //  medias desktop
   @include desck {
-    
     &__div {
-    @include desck {
-      padding: 0 12%;
+      @include desck {
+        padding: 0 12%;
+      }
     }
-  }
 
     margin: 0 193px;
     border-radius: 20px 20px 0 0;
@@ -237,7 +230,6 @@ body {
       display: block;
     }
   }
-
 }
 
 .card {
@@ -246,13 +238,13 @@ body {
   position: relative;
   @include card;
   @include overflow;
- // margin-bottom: 16px;
- margin-block: 16px;
-  
+  // margin-bottom: 16px;
+  margin-block: 16px;
+
   cursor: pointer;
 
   &__box {
-   width: 100%;
+    width: 100%;
   }
 
   &__titre {
@@ -303,7 +295,6 @@ body {
   @include desck {
     &__titre-desc {
       max-width: 100%;
-
     }
   }
 
@@ -316,9 +307,6 @@ body {
   @include button($color-txt, $hover-color);
   margin: 60px auto;
 }
-
-
-
 
 // footer
 /* */

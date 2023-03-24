@@ -383,8 +383,6 @@ h2 {
 }
 @media screen and (min-width: 992px) {
   .section__fonctionnement {
-    /**/
-    /**/
     padding: 0 180px;
     height: 240px;
   }
@@ -515,6 +513,9 @@ h2 {
     overflow-y: hidden;
     white-space: nowrap;
     /* */
+  }
+  .section__restaurant ::-webkit-scrollbar {
+    display: none;
   }
   .section__restaurant .grid {
     display: grid;

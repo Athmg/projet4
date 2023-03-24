@@ -314,8 +314,9 @@ input, button {
   position: fixed;
   width: 100%;
   height: 100vh;
+  inset: 0;
   background-color: rgba(210, 210, 210, 0.8784313725);
-  animation: loader 4s forwards;
+  animation: loader 5s forwards;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -355,7 +356,7 @@ input, button {
   line-height: 22px;
   display: block;
   margin: auto;
-  animation: scale 3.5s linear both;
+  animation: scal 3.5s linear both;
 }
 .load .header__logo i {
   width: 20px;
@@ -379,14 +380,14 @@ input, button {
     transform: translateY(0);
   }
 }
-@keyframes scale {
+@keyframes scal {
   0% {
     opacity: 1;
     transform: scale(1);
   }
   100% {
     opacity: 0.1;
-    transform: scale(0.1);
+    transform: scale(0.3);
   }
 }
 /* apparitio: bas vers la haut*/
@@ -418,6 +419,7 @@ input, button {
   }
   100% {
     opacity: 0;
+    z-index: 0;
     display: none;
   }
 }
@@ -1376,8 +1378,6 @@ h2 {
 }
 @media screen and (min-width: 992px) {
   .section__fonctionnement {
-    /**/
-    /**/
     padding: 0 180px;
     height: 240px;
   }
@@ -1509,6 +1509,9 @@ h2 {
     white-space: nowrap;
     /* */
   }
+  .section__restaurant ::-webkit-scrollbar {
+    display: none;
+  }
   .section__restaurant .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1580,8 +1583,9 @@ h2 {
   position: fixed;
   width: 100%;
   height: 100vh;
+  inset: 0;
   background-color: rgba(210, 210, 210, 0.8784313725);
-  animation: loader 4s forwards;
+  animation: loader 5s forwards;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -1621,7 +1625,7 @@ h2 {
   line-height: 22px;
   display: block;
   margin: auto;
-  animation: scale 3.5s linear both;
+  animation: scal 3.5s linear both;
 }
 .load .header__logo i {
   width: 20px;
@@ -1645,14 +1649,14 @@ h2 {
     transform: translateY(0);
   }
 }
-@keyframes scale {
+@keyframes scal {
   0% {
     opacity: 1;
     transform: scale(1);
   }
   100% {
     opacity: 0.1;
-    transform: scale(0.1);
+    transform: scale(0.3);
   }
 }
 /* apparitio: bas vers la haut*/
@@ -1684,6 +1688,7 @@ h2 {
   }
   100% {
     opacity: 0;
+    z-index: 0;
     display: none;
   }
 }
@@ -1742,8 +1747,9 @@ h2 {
   position: fixed;
   width: 100%;
   height: 100vh;
+  inset: 0;
   background-color: rgba(210, 210, 210, 0.8784313725);
-  animation: loader 4s forwards;
+  animation: loader 5s forwards;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -1783,7 +1789,7 @@ h2 {
   line-height: 22px;
   display: block;
   margin: auto;
-  animation: scale 3.5s linear both;
+  animation: scal 3.5s linear both;
 }
 .load .header__logo i {
   width: 20px;

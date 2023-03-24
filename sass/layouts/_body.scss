@@ -1,82 +1,75 @@
-
-
-body{
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    position: relative;
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-h1,h2,h3,p{
-    margin-bottom: 10px;
-}
-
-a{
-    text-decoration: none;
-    color: black;
+h1,
+h2,
+h3,
+p {
+  margin-bottom: 10px;
 }
 
-input,button{
-    border: none;
-    text-decoration: none;
+a {
+  text-decoration: none;
+  color: black;
 }
 
+input,
+button {
+  border: none;
+  text-decoration: none;
+}
 
 #page {
-    margin: 0 auto;
-    max-width: 767px;
-    height: 100%;
-    padding: 0;
-   
-    @include font-fam-body;
+  margin: 0 auto;
+  max-width: 767px;
+  height: 100%;
+  padding: 0;
 
-    @include tablette{      
-      
-        max-width: 991px;
-    }
+  @include font-fam-body;
 
-    @include desck{        
-        max-width: 1440px;
-        overflow-x: scroll;
-    }
+  @include tablette {
+    max-width: 991px;
+  }
+
+  @include desck {
+    max-width: 1440px;
+    overflow-x: scroll;
+  }
 }
 
-
-
-.letter-space
-{
-    letter-spacing: 0em;
+.letter-space {
+  letter-spacing: 0em;
 }
-
-
 
 .grid {
-    display: grid;
-    //row-gap: 1.5rem;
+  display: grid;
 }
 
-.flex-column{
-    display: flex;
-    flex-direction: column;   
-    align-items: center;
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.flex-btwn{
-    display: flex;
-    justify-content: space-between;    
+.flex-btwn {
+  display: flex;
+  justify-content: space-between;
 }
 
-.flex-arwd{
-    display: flex;
-    justify-content:space-around;
+.flex-arwd {
+  display: flex;
+  justify-content: space-around;
 }
 
-.flex-alignement{
-    display: flex;
+.flex-alignement {
+  display: flex;
 }
-

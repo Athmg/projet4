@@ -1,58 +1,54 @@
 // carte
 
 @mixin card {
-    position: relative; 
-    background:#ffffff;
-   // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 15px; 
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
 
-    h3{
-        margin-top: $margin;
-    }
-    
-    p{
-        color: $color-gray-3;
-    }
+  h3 {
+    margin-top: $margin;
+  }
 
-    &__img-box {
-        height:230px;   
-    }
+  p {
+    color: $color-gray-3;
+  }
 
-    &__desc-box{
-        padding-right: 20px;
-    }
-    &__img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10px 10px 0 0;
-    }
- 
-    &__titre-txt{
-        margin-left: $margin;
-    }
-    &__titre{        
-        @include font(700, 18px, 21px);
-       // @include txt-ellipsis;       
-    }
-    &__description{        
-        @include font(300, 17px, 20px);
-       // @include txt-ellipsis;
-    }
+  &__img-box {
+    height: 230px;
+  }
 
-    .icon-like{
-        width: 22px;
-        height: 21px;
-    }
-   
-    &__new{
-        background-color: $terti-color;
-        position: absolute; 
-        padding: 5px 9px;  
-        border-radius: 2px;    
-        right: 20px;
-        top:25px
-          
-    }
+  &__desc-box {
+    padding-right: 20px;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__titre-txt {
+    margin-left: $margin;
+  }
+  &__titre {
+    @include font(700, 18px, 21px);
+  }
+  &__description {
+    @include font(300, 17px, 20px);
+  }
+
+  .icon-like {
+    width: 22px;
+    height: 21px;
+  }
+
+  &__new {
+    background-color: $terti-color;
+    position: absolute;
+    padding: 5px 9px;
+    border-radius: 2px;
+    right: 20px;
+    top: 25px;
+  }
 }

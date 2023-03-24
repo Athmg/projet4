@@ -19,7 +19,7 @@
     margin-bottom: 16px;
     @include font(400, 18px, 27px);
     @include font-style;
-   // font-family: $font-fam-header;
+    // font-family: $font-fam-header;
   }
   .footer__icon {
     @include font(500, 16px, 18px);

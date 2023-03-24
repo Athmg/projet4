@@ -10,8 +10,6 @@
   background-image: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
 }
 
-
-
 @mixin font-style {
   font-style: italic;
 }
@@ -20,7 +18,7 @@
   display: block;
   margin: auto;
 }
-@mixin flex-arwnd{
+@mixin flex-arwnd {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -32,7 +30,6 @@
   align-items: center;
 }
 
-
 @mixin flex-btwn {
   display: flex;
   justify-content: space-between;
@@ -43,24 +40,23 @@
   display: grid;
 }
 
-
 @mixin cercle {
   border-radius: 100%;
 }
 
-@mixin txt-ellipsis { 
+@mixin txt-ellipsis {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-@mixin overflow{
+@mixin overflow {
   overflow: hidden;
 }
 
 @mixin padding-block($top, $left-right) {
   padding-block: $top $left-right;
-  writing-mode: horizontal-tb
+  writing-mode: horizontal-tb;
 }
 
 // les fontS
@@ -71,17 +67,17 @@
   line-height: $line-height;
 }
 
-@mixin font-fam-header{
+@mixin font-fam-header {
   font-family: Shrikhand;
-  font-style: italic ;
+  font-style: italic;
   font-weight: bold;
 }
 
-@mixin font-fam-body{
-  font-family:Roboto;
+@mixin font-fam-body {
+  font-family: Roboto;
 }
 
-@mixin font-weight{
+@mixin font-weight {
   font-weight: bold;
 }
 
@@ -96,18 +92,17 @@
 @mixin footer {
   background-color: $color-gray-3;
   color: $color-txt;
- /* */
- .header__logo {
-   @include font-fam-header;
+  /* */
+  .header__logo {
+    @include font-fam-header;
   }
   /**/
 }
 
-
 @mixin loop {
   @for $i from 1 through 3 {
     &:nth-child(#{$i}) {
-      animation-delay: 0.2s*$i;
+      animation-delay: 0.2s * $i;
     }
   }
 }

@@ -17,17 +17,16 @@
     opacity: 1;
     transform: translateY(0);
   }
-
 }
 
-@keyframes scale {
+@keyframes scal {
   0% {
     opacity: 1;
-    transform: scale(1)
+    transform: scale(1);
   }
   100% {
     opacity: 0.1;
-    transform: scale(0.1);
+    transform: scale(0.3);
   }
 }
 
@@ -56,7 +55,6 @@
   }
 }
 
-
 /* animation du loader*/
 @keyframes loader {
   0% {
@@ -65,11 +63,10 @@
 
   100% {
     opacity: 0;
-   // z-index: -2;
+    z-index: 0;
     display: none;
   }
 }
-
 
 @keyframes rotate-a {
   0% {
@@ -78,7 +75,6 @@
 
   100% {
     transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
-   // opacity: 0;
   }
 }
 
@@ -89,7 +85,6 @@
 
   100% {
     transform: rotateX(55deg) rotateY(15deg) rotateZ(0deg);
-    //opacity: 0;
   }
 }
 
@@ -100,6 +95,5 @@
 
   100% {
     transform: rotateX(35deg) rotateY(15deg) rotateZ(0deg);
-   // opacity: 0;
   }
 }
