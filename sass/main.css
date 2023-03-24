@@ -1373,22 +1373,24 @@ h2 {
 }
 @media screen and (min-width: 992px) {
   .section__fonctionnement {
-    padding: 0 180px;
+    padding: 0 193px;
     height: 240px;
   }
   .section__fonctionnement h2 {
     padding: 0;
     margin: 0;
-    padding-top: 50px;
+    padding-top: 35px;
+    padding-bottom: 0;
   }
   .section__fonctionnement .fonctionnement__choix {
-    display: flex;
-    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2px;
     /*  */
     /* */
   }
   .section__fonctionnement .fonctionnement__choix div:nth-child(3) {
-    display: inline-block;
+    margin: 0;
+    grid-column: 3/4;
   }
   .section__fonctionnement .fonctionnement__choix .fonct-choix {
     font-weight: 500;

@@ -122,27 +122,27 @@ h2 {
     h2 {
       padding: 0;
       margin: 0;
-      padding-top: 50px;
-     // margin-bottom: -20px;
+      padding-top: 35px;
+      padding-bottom: 0;
     }
 
-    padding: 0 180px;
+    padding: 0 193px;
     height: 240px;
 
     .fonctionnement__choix {
-      display: flex;
-      align-items: center;
-
+     grid-template-columns: repeat(3, 1fr);
+     row-gap: 2px;
       /*  */
       div:nth-child(3) {
-        display: inline-block;       
+        margin: 0;
+        grid-column: 3 / 4;
       }
 
       /* */
       .fonct-choix {
         @include font(500, 16px, 19px);
         width: 323px;
-        margin: 0;
+        margin: 0;        
       }
     }
   }
