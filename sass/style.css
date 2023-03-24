@@ -279,7 +279,7 @@ h2 {
 .section__fonctionnement .card {
   position: relative;
   background: #ffffff;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
 }
 .section__fonctionnement .card h3 {
@@ -436,7 +436,7 @@ h2 {
 .section__restaurant .card {
   position: relative;
   background: #ffffff;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
 }
 .section__restaurant .card h3 {
@@ -528,7 +528,7 @@ h2 {
   .section__restaurant .card {
     position: relative;
     background: #ffffff;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     width: 355px;
   }

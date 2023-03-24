@@ -8,7 +8,7 @@
     height: 100vh;
     //inset: 0;
     background-color: #d2d2d2e0;
-    animation: loader 4.5s  ease-out forwards;
+    animation: loader 4s forwards;
     @include flex-arwnd;
 
     &__rond {
