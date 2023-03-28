@@ -58,6 +58,11 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
+  overflow-y: hidden;
+}
+
+#page {
+  overflow-y: hidden;
 }
 
 * {
@@ -510,9 +515,6 @@ h2 {
     overflow-y: hidden;
     white-space: nowrap;
     /* */
-  }
-  .section__restaurant ::-webkit-scrollbar {
-    display: none;
   }
   .section__restaurant .grid {
     display: grid;

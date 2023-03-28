@@ -42,14 +42,15 @@ Le client peut composer son propre menu dans le site ce qui lui perment d'évite
 
 
 ## Developpement
-1. * SASS
-Mise en place de l'architecture 7:1, pour ce projet vous trouverez 
+1. Utilisation de git et github
+2. SASS
+A) Mise en place de l'architecture 7:1, pour ce projet vous trouverez 
 base: _normalize.scss
 components: les buttons, les cartes, les gestions des formulaires(coeur, checkbox)
 utils: les variables et les mixins
 layouts:body, header et le footer,
 
-2. Organisation du code
+B) Organisation du code
 Découpage du projet par des petits bouts de code sur differents fichier.scss
 * animations
 * breakpoints

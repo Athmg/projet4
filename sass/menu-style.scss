@@ -15,6 +15,7 @@ body {
   margin: 0;
 }
 
+/*header*/
 .head {
   height: 63px;
 
@@ -47,6 +48,7 @@ body {
   }
 }
 
+/*image bannier*/
 .menu-img {
   img {
     object-fit: cover;
@@ -69,6 +71,7 @@ body {
   }
 }
 
+/* les menus*/
 .menu-restaurant {
   position: relative;
   background-color: $color-gray-2;
@@ -232,13 +235,13 @@ body {
   }
 }
 
+/* cartes pour les menus*/
 .card {
   opacity: 0;
   animation: appar ease-in-out forwards;
   position: relative;
   @include card;
-  @include overflow;
-  // margin-bottom: 16px;
+  @include overflow; 
   margin-block: 16px;
 
   cursor: pointer;
@@ -298,7 +301,6 @@ body {
     }
   }
 
-  /**/
 }
 
 //@include pour le bouton
@@ -308,8 +310,8 @@ body {
   margin: 60px auto;
 }
 
-// footer
-/* */
+
+/* // footer//  */
 .section__footer {
   position: relative;
   top: -60px;
@@ -354,7 +356,6 @@ body {
     gap: 40px;
 
     .header__logo {
-      // @include center;
       order: 2;
       margin-right: 0;
     }
